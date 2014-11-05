@@ -23,10 +23,11 @@
   </div>
     
   <div><%= f.label :date_of_birth %><br />
-        <%= f.date_select :date_of_birth %></div>
+        <%= f.date_select :date_of_birth %></div><br />
 
-  <div><%= f.label :location %><br />
-  	<%= f.text_field :location %>
+  <div>	<%= f.label :location %>
+  		<%= f.select :location, options_for_select(
+  				%w[Edinburgh Perth Aberdeen Dundee Glasgow Inverness Stirling]) %>
   </div>
   
     <div><%= f.label :avatar_url %><br />
