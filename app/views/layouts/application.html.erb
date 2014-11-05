@@ -8,15 +8,13 @@
 </head>
 <body>
 
-<div>
-	<img src="<%= current_user.avatar_url %>" height= "50px">
-	<%= current_user.first_name %>
-</div>
-
 <%= yield %>
+
+
+
 
        <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
-       
+
 </body>
 </html>
