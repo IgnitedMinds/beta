@@ -16,7 +16,7 @@
     <% @articles.each do |article| %>
       <tr>
         <td><%= article.name %></td>
-        <td><%= article.content %></td>
+        <td><%= truncate( article.content , :length => 100, :separator => ' ') %></td>
         <td><%= article.description %></td>
         <td><%= article.thumbnail %></td>
         <td><%= article.tag %></td>
