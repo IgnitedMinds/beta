@@ -65,7 +65,13 @@
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
+  
+    <div>
+  <%= f.check_box :admin, :checked => false %> 
+    <%= label :admin, 'Admin User' %>
+  </div>
 
+<br />
   <div class="actions">
     <%= f.submit "Update" %>
   </div>

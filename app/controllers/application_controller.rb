@@ -34,7 +34,8 @@ class ApplicationController < ActionController::Base
             :its_female,
             :bio,
             :bg_url, 
-            :avatar_url,) }
+            :avatar_url,
+            :admin,) }
 
 
         end
