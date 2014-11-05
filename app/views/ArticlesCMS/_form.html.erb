@@ -1,0 +1,56 @@
+<%= form_for(@article) do |f| %>
+  <% if @article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+      <% @article.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :thumbnail %><br>
+    <%= f.text_field :thumbnail %>
+  </div>
+  <div class="field">
+    <%= f.label :video_id %><br>
+    <%= f.text_field :video_id %>
+  </div>
+  <div class="field">
+    <%= f.label :body_img1 %><br>
+    <%= f.text_field :body_img1 %>
+  </div>
+  <div class="field">
+    <%= f.label :bg_img %><br>
+    <%= f.text_field :bg_img %>
+  </div>
+  <div class="field">
+    <%= f.label :tag %><br>
+    <%= f.text_field :tag %>
+  </div>
+<div class="field">
+    <%= f.label :cta_button %><br>
+    <%= f.text_field :cta_button %>
+  </div>
+
+  
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
