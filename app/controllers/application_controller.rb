@@ -18,7 +18,8 @@ class ApplicationController < ActionController::Base
             :current_password,
             :date_of_birth,
             :location,
-            :its_female, ) }
+            :its_female,
+            :avatar_url,) }
 
  devise_parameter_sanitizer.for(:account_update) { |u| u.permit(
             :first_name, 
@@ -30,7 +31,10 @@ class ApplicationController < ActionController::Base
             :current_password,
             :date_of_birth,
             :location,
-            :its_female, ) }
+            :its_female,
+            :bio,
+            :bg_url, 
+            :avatar_url,) }
 
 
         end
