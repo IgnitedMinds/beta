@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141105213503) do
+ActiveRecord::Schema.define(version: 20141106161803) do
 
   create_table "articles", force: true do |t|
     t.text     "name"
@@ -25,6 +25,17 @@ ActiveRecord::Schema.define(version: 20141105213503) do
     t.string   "bg_img"
     t.string   "tag"
     t.string   "cta_button"
+  end
+
+  create_table "events", force: true do |t|
+    t.string   "title"
+    t.string   "location"
+    t.string   "venue"
+    t.datetime "date_time"
+    t.text     "description"
+    t.string   "ext_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
