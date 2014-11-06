@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @fund.title %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @fund.source %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @fund.type %>
+</p>
+
+<p>
+  <strong>Age range:</strong>
+  <%= @fund.age_range %>
+</p>
+
+<p>
+  <strong>Deadline:</strong>
+  <%= @fund.deadline %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @fund.location %>
+</p>
+
+<p>
+  <strong>External Url:</strong>
+  <%= @fund.ext_url %>
+</p>
+
+<%= link_to 'Edit', edit_fund_path(@fund) %> |
+<%= link_to 'Back', funds_path %>
