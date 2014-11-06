@@ -1,4 +1,54 @@
 <% if user_signed_in? %>
+	
+
+     
+      
+      
+      
+     
+         <div class="page-head">
+        <h3 class="content__heading">Inspiration</h3><!--
+        --><nav class="nav nav--filter">
+          <ul>
+            <li><a href="">Filter:</a></li>
+            <li class="nav--filter__all"><a href="">All</a></li>
+            <li class="nav--filter__design"><a href="">Design</a></li>
+            <li class="nav--filter__web"><a href="">Web</a></li>
+            <li class="nav--filter__business"><a href="">Business</a></li>
+            <li class="nav--filter__social"><a href="">Social</a></li>
+            <li class="nav--filter__events"><a href="">Events</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+      
+      
+      
+      
+
+ 
+  <% @articles.each do |article| %>
+  
+        <div class="l-article">
+          <h5 class="ribbon ribbon--design"><%= article.tag %></h5>
+          <div class="article-img">
+            <img src="<%= article.thumbnail %>" alt="">
+          </div>
+          <article class="article-content">
+            <h1 class="h6"><%= article.name %></h1>
+            <p><%= article.description %></p>
+            <a href="/article.html" class="btn btn--primary"><%= article.cta_button %></a>
+            
+            <%= link_to 'Show', article %>
+          </article>
+        </div>
+  
+  
+ <% end %>
+ 
+     
+          
+	
 	<div>
 		<a href="/<%= current_user.user_name %>">
 			<img src="<%= current_user.avatar_url %>" height= "50px"> 

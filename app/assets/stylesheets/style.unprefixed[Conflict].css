@@ -1,0 +1,1139 @@
+/*!
+ * fireshell
+ * Fiercely quick and opinionated front-ends
+ * http://getfireshell.com
+ * @author Todd Motto
+ * @version 1.1.0
+ * Copyright 2013. MIT licensed.
+ */
+
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+.modal__content {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/*------------------------------------*\
+    $CSSWIZARDRY-GRIDS
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * INTRODUCTION.........How the grid system works.
+ * VARIABLES............Your settings.
+ * MIXINS...............Library mixins.
+ * GRID SETUP...........Build the grid structure.
+ * WIDTHS...............Build our responsive widths around our breakpoints.
+ * PUSH.................Push classes.
+ * PULL.................Pull classes.
+ */
+/*------------------------------------*\
+    $INTRODUCTION
+\*------------------------------------*/
+/**
+ * csswizardry grids provides you with widths to suit a number of breakpoints
+ * designed around devices of a size you specify. Out of the box, csswizardry
+ * grids caters to the following types of device:
+ *
+ * palm     --  palm-based devices, like phones and small tablets
+ * lap      --  lap-based devices, like iPads or laptops
+ * portable --  all of the above
+ * desk     --  stationary devices, like desktop computers
+ * regular  --  any/all types of device
+ *
+ * These namespaces are then used in the library to give you the ability to
+ * manipulate your layouts based around them, for example:
+ *
+   <div class="grid__item  one-whole  lap--one-half  desk--one-third">
+ *
+ * This would give you a grid item which is 100% width unless it is on a lap
+ * device, at which point it become 50% wide, or it is on a desktop device, at
+ * which point it becomes 33.333% width.
+ *
+ * csswizardry grids also has push and pull classes which allow you to nudge
+ * grid items left and right by a defined amount. These follow the same naming
+ * convention as above, but are prepended by either `push--` or `pull--`, for
+ * example:
+ *
+   `class="grid__item  one-half  push--one-half"`
+ *
+ * This would give you a grid item which is 50% width and pushed over to the
+ * right by 50%.
+ *
+ * All classes in csswizardry grids follow this patten, so you should fairly
+ * quickly be able to piece together any combinations you can imagine, for
+ * example:
+ *
+   `class="grid__item  one-whole  lap--one-half  desk--one-third  push--desk--one-third"`
+ *
+   `class="grid__item  one-quarter  palm--one-half  push--palm--one-half"`
+ *
+   `class="grid__item  palm--one-third  desk--five-twelfths"`
+ */
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+/**
+ * If you are building a non-responsive site but would still like to use
+ * csswizardry-grids, set this to ‘false’:
+ */
+/**
+ * Is this build mobile first? Setting to ‘true’ means that all grids will be
+ * 100% width if you do not apply a more specific class to them.
+ */
+/**
+ * Set the spacing between your grid items.
+ */
+/**
+ * Would you like Sass’ silent classes, or regular CSS classes?
+ */
+/**
+ * Would you like push and pull classes enabled?
+ */
+/**
+ * Using `inline-block` means that the grid items need their whitespace removing
+ * in order for them to work correctly. Set the following to true if you are
+ * going to achieve this by manually removing/commenting out any whitespace in
+ * your HTML yourself.
+ *
+ * Setting this to false invokes a hack which cannot always be guaranteed,
+ * please see the following for more detail:
+ *
+ * github.com/csswizardry/csswizardry-grids/commit/744d4b23c9d2b77d605b5991e54a397df72e0688
+ * github.com/csswizardry/inuit.css/issues/170#issuecomment-14859371
+ */
+/**
+ * Define your breakpoints. The first value is the prefix that shall be used for
+ * your classes (e.g. `.palm--one-half`), the second value is the media query
+ * that the breakpoint fires at.
+ */
+/**
+ * Define which namespaced breakpoints you would like to generate for each of
+ * widths, push and pull. This is handy if you only need pull on, say, desk, or
+ * you only need a new width breakpoint at mobile sizes. It allows you to only
+ * compile as much CSS as you need. All are turned on by default, but you can
+ * add and remove breakpoints at will.
+ *
+ * Push and pull shall only be used if `$push` and/or `$pull` and `$responsive`
+ * have been set to ‘true’.
+ */
+/**
+ * You do not need to edit anything from this line onward; csswizardry-grids is
+ * good to go. Happy griddin’!
+ */
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/**
+ * These mixins are for the library to use only, you should not need to modify
+ * them at all.
+ *
+ * Enclose a block of code with a media query as named in `$breakpoints`.
+ */
+/**
+ * Drop relative positioning into silent classes which can’t take advantage of
+ * the `[class*="push--"]` and `[class*="pull--"]` selectors.
+ */
+/*------------------------------------*\
+    $GRID SETUP
+\*------------------------------------*/
+/**
+ * 1. Allow the grid system to be used on lists.
+ * 2. Remove any margins and paddings that might affect the grid system.
+ * 3. Apply a negative `margin-left` to negate the columns’ gutters.
+ */
+.nav--main, .main__content, .page-head, .l-events, .event-info, .landing {
+  list-style: none;
+  /* [1] */
+  margin: 0;
+  /* [2] */
+  padding: 0;
+  /* [2] */
+  margin-left: 0px;
+  /* [3] */
+  letter-spacing: -0.31em;
+}
+
+/* Opera hack */
+.opera:-o-prefocus,
+.nav--main,
+.main__content,
+.page-head,
+.l-events,
+.event-info,
+.landing {
+  word-spacing: -0.43em;
+}
+
+/**
+ * 1. Cause columns to stack side-by-side.
+ * 2. Space columns apart.
+ * 3. Align columns to the tops of each other.
+ * 4. Full-width unless told to behave otherwise.
+ * 5. Required to combine fluid widths and fixed gutters.
+ */
+.nav, .nav--landing, .nav--main ul, .nav--filter, .content__heading, .l-article, .l-event, .event-date, .event-blurb, .landing-intro, .modal__content, .modal__feature, .modal__footer {
+  display: inline-block;
+  /* [1] */
+  padding-left: 0px;
+  /* [2] */
+  vertical-align: top;
+  /* [3] */
+  width: 100%;
+  /* [4] */
+  -webkit-box-sizing: border-box;
+  /* [5] */
+  -moz-box-sizing: border-box;
+  /* [5] */
+  box-sizing: border-box;
+  /* [5] */
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+
+/**
+ * Reversed grids allow you to structure your source in the opposite order to
+ * how your rendered layout will appear. Extends `.grid`.
+ */
+/**
+ * Gutterless grids have all the properties of regular grids, minus any spacing.
+ * Extends `.grid`.
+ */
+/**
+ * Align the entire grid to the right. Extends `.grid`.
+ */
+/**
+ * Centered grids align grid items centrally without needing to use push or pull
+ * classes. Extends `.grid`.
+ */
+.modal {
+  text-align: center;
+}
+.modal > .nav, .modal > .nav--landing, .nav--main .modal > ul, .modal > .nav--filter, .modal > .content__heading, .modal > .l-article, .modal > .l-event, .modal > .event-date, .modal > .event-blurb, .modal > .landing-intro, .modal > .modal__content, .modal > .modal__feature, .modal > .modal__footer {
+  /*text-align:left;*/
+}
+
+/**
+ * Align grid cells vertically (`.grid--middle` or `.grid--bottom`). Extends
+ * `.grid`.
+ */
+/**
+ * Create grids with narrower gutters. Extends `.grid`.
+ */
+/**
+ * Create grids with wider gutters. Extends `.grid`.
+ */
+/*------------------------------------*\
+    $WIDTHS
+\*------------------------------------*/
+/**
+ * Create our width classes, prefixed by the specified namespace.
+ */
+/**
+ * Our regular, non-responsive width classes.
+ */
+/**
+ * Whole
+ */
+.nav--filter, .content__heading, .landing-intro, .modal__content {
+  width: 100%;
+}
+
+/**
+ * Halves
+ */
+.modal__footer {
+  width: 50%;
+}
+
+/**
+ * Thirds
+ */
+.l-event, .event-date {
+  width: 33.333%;
+}
+
+.event-blurb {
+  width: 66.666%;
+}
+
+/**
+ * Quarters
+ */
+.l-article {
+  width: 25%;
+}
+
+/**
+ * Fifths
+ */
+/**
+ * Sixths
+ */
+/**
+ * Eighths
+ */
+/**
+ * Tenths
+ */
+/**
+ * Twelfths
+ */
+/**
+ * Our responsive classes, if we have enabled them.
+ */
+@media only screen and (max-width: 480px) {
+  /**
+   * Whole
+   */
+  .nav--main, .l-article, .l-event {
+    width: 100%;
+  }
+
+  /**
+   * Halves
+   */
+  /**
+   * Thirds
+   */
+  /**
+   * Quarters
+   */
+  /**
+   * Fifths
+   */
+  /**
+   * Sixths
+   */
+  /**
+   * Eighths
+   */
+  /**
+   * Tenths
+   */
+  /**
+   * Twelfths
+   */
+}
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  /**
+   * Whole
+   */
+  .nav--filter ul {
+    width: 100%;
+  }
+
+  /**
+   * Halves
+   */
+  .l-article, .l-event {
+    width: 50%;
+  }
+
+  /**
+   * Thirds
+   */
+  /**
+   * Quarters
+   */
+  /**
+   * Fifths
+   */
+  /**
+   * Sixths
+   */
+  /**
+   * Eighths
+   */
+  /**
+   * Tenths
+   */
+  /**
+   * Twelfths
+   */
+}
+@media only screen and (max-width: 1023px) {
+  /**
+   * Whole
+   */
+  /**
+   * Halves
+   */
+  /**
+   * Thirds
+   */
+  /**
+   * Quarters
+   */
+  /**
+   * Fifths
+   */
+  /**
+   * Sixths
+   */
+  /**
+   * Eighths
+   */
+  /**
+   * Tenths
+   */
+  /**
+   * Twelfths
+   */
+}
+@media only screen and (min-width: 1024px) {
+  /**
+   * Whole
+   */
+  /**
+   * Halves
+   */
+  .modal__content {
+    width: 50%;
+  }
+
+  /**
+   * Thirds
+   */
+  .content__heading {
+    width: 33.333%;
+  }
+
+  .nav--filter {
+    width: 66.666%;
+  }
+
+  /**
+   * Quarters
+   */
+  /**
+   * Fifths
+   */
+  /**
+   * Sixths
+   */
+  /**
+   * Eighths
+   */
+  /**
+   * Tenths
+   */
+  /**
+   * Twelfths
+   */
+}
+/*------------------------------------*\
+    $PUSH
+\*------------------------------------*/
+/**
+ * Push classes, to move grid items over to the right by certain amounts.
+ */
+/*------------------------------------*\
+    $PULL
+\*------------------------------------*/
+/**
+ * Pull classes, to move grid items back to the left by certain amounts.
+ */
+/* Colours */
+.clear:before, .clear:after {
+  content: ' ';
+  display: table;
+}
+
+.clear {
+  *zoom: 1;
+}
+.clear:after {
+  clear: both;
+}
+
+* {
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: #fff;
+  color: #444;
+}
+
+@media (max-width: 1023px) {
+  body {
+    font-size: 90%;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    font-size: 85%;
+  }
+}
+h1 {
+  font-size: 42px;
+  font-size: 2.625rem;
+  line-height: 0.5714;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 0.75;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+
+h4 {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1;
+  margin-bottom: 6px;
+  margin-bottom: 0.375rem;
+}
+
+p {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.7143;
+  margin-bottom: 1px;
+  margin-bottom: 0.0625rem;
+}
+
+@font-face {
+  font-family: 'ig-icons';
+  src: url("../fonts/ig-icons.eot?47133879");
+  src: url("../fonts/ig-icons.eot?47133879#iefix") format("embedded-opentype"), url("../fonts/ig-icons.woff?47133879") format("woff"), url("../fonts/ig-icons.ttf?47133879") format("truetype"), url("../fonts/ig-icons.svg?47133879#ig-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'ig-icons';
+    src: url('../font/ig-icons.svg?47133879#ig-icons') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "ig-icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-pound:before {
+  content: '\e802';
+}
+
+/* '' */
+.icon-person:before {
+  content: '\e803';
+}
+
+/* '' */
+.icon-calendar:before {
+  content: '\e801';
+}
+
+/* '' */
+.icon-lightbulb:before {
+  content: '\e800';
+}
+
+/* '' */
+.nav li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.nav--landing {
+  font-weight: 300;
+  text-align: right;
+  padding: 2em;
+}
+.nav--landing li {
+  padding: 0 10px;
+}
+.nav--landing a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 480px) {
+  .nav--landing {
+    text-align: center;
+  }
+}
+
+.nav--main {
+  background-color: #232323;
+  height: 100%;
+  width: 80px;
+  padding: 10px;
+  position: fixed;
+  z-index: 50;
+}
+@media only screen and (max-width: 480px) {
+  .nav--main {
+    width: 100%;
+    height: 75px;
+  }
+}
+.nav--main ul {
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (max-width: 480px) {
+  .nav--main ul {
+    text-align: center;
+  }
+}
+.nav--main ul li {
+  font-size: 1.75em;
+  list-style-type: none;
+  padding: 10px 0;
+  text-align: center;
+}
+@media only screen and (max-width: 480px) {
+  .nav--main ul li {
+    display: inline-block;
+    padding: 0 10px;
+    vertical-align: middle;
+  }
+}
+.nav--main ul li a,
+.nav--main ul li a:visited {
+  color: #838484;
+  -webkit-transition: color .2s ease;
+  -moz-transition: color .2s ease;
+  -ms-transition: color .2s ease;
+  -o-transition: color .2s ease;
+  transition: color .2s ease;
+}
+.nav--main ul li a:hover {
+  color: #fff;
+}
+
+@media only screen and (max-width: 480px) {
+  .nav--main__profile-cont {
+    display: none;
+  }
+}
+
+.nav--main__profile {
+  bottom: 10px;
+  border: 2px solid #edeff0;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  width: 60px;
+}
+@media only screen and (max-width: 480px) {
+  .nav--main__profile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  ul li.nav--main__logo-d {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  ul li.nav--main__logo-m {
+    display: none;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  ul li.nav--main__logo-m {
+    display: none;
+  }
+}
+
+.nav--filter {
+  float: right;
+}
+.nav--filter ul {
+  background: #fff;
+  border-radius: 4px;
+  float: right;
+  margin: 0;
+  padding: 10px 15px;
+  text-align: center;
+}
+.nav--filter li {
+  padding-right: 10px;
+}
+.nav--filter li:first-child {
+  font-weight: 600;
+}
+.nav--filter li:last-child {
+  padding-right: 0;
+}
+.nav--filter li:not(:first-child):before {
+  content: "\2022";
+  font-size: 1.2em;
+  padding-right: 10px;
+  vertical-align: baseline;
+}
+.nav--filter a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav--filter__all:before {
+  content: "";
+}
+
+.nav--filter__design:before {
+  color: #f07023;
+}
+
+.nav--filter__web:before {
+  color: #59bbff;
+}
+
+.nav--filter__business:before {
+  color: #60b010;
+}
+
+.nav--filter__social:before {
+  color: #c416c2;
+}
+
+.nav--filter__events:before {
+  color: #de0d0d;
+}
+
+.body--grey {
+  background-color: #edeff0;
+}
+
+.main {
+  padding: 0 0 0 85px;
+}
+@media only screen and (max-width: 480px) {
+  .main {
+    padding: 75px 0 0 0;
+  }
+}
+
+.page-head {
+  padding: 15px;
+}
+
+@media only screen and (max-width: 480px) {
+  .content__heading {
+    text-align: center;
+  }
+}
+
+.l-article {
+  overflow: hidden;
+  padding: 15px;
+  position: relative;
+  z-index: 8;
+}
+
+.article-content {
+  background-color: #fff;
+  -webkit-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+  padding: 15px;
+}
+
+.article-img {
+  -webkit-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+  z-index: 9;
+}
+.article-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ribbon {
+  color: #fff;
+  left: 3px;
+  font-weight: 300;
+  padding: 3px 10px;
+  position: absolute;
+  text-transform: uppercase;
+}
+.ribbon:after {
+  border-width: 5px 10px;
+  border-style: solid;
+  content: ' ';
+  left: 0px;
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 100%;
+  z-index: -1;
+}
+
+.ribbon--design {
+  background-color: #f07023;
+}
+.ribbon--design:after {
+  border-color: #ea6210 #ea6210 transparent transparent;
+}
+
+.ribbon--web {
+  background-color: #59bbff;
+}
+.ribbon--web:after {
+  border-color: #40b1ff #40b1ff transparent transparent;
+}
+
+.ribbon--business {
+  background-color: #60b010;
+}
+.ribbon--business:after {
+  border-color: #53990e #53990e transparent transparent;
+}
+
+.ribbon--social {
+  background-color: #c416c2;
+}
+.ribbon--social:after {
+  border-color: #ad13ab #ad13ab transparent transparent;
+}
+
+.ribbon--events {
+  background-color: #de0d0d;
+}
+.ribbon--events:after {
+  border-color: #c60c0c #c60c0c transparent transparent;
+}
+
+/* Events */
+.l-event {
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.event-info {
+  background-color: #fff;
+  padding: 15px;
+}
+
+.event-date {
+  text-align: center;
+}
+.event-date h3 {
+  font-size: 3em;
+  margin: .25em 0 0 0;
+}
+@media only screen and (max-width: 480px) {
+  .event-date h3 {
+    margin: .75em 0 0 0;
+  }
+}
+.event-date p {
+  background-color: #d22632;
+  color: #fff;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  width: 75px;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+.event-blurb {
+  padding-left: 15px;
+}
+.event-blurb h4 {
+  margin-top: 0;
+}
+.event-blurb small {
+  display: block;
+  font-weight: 300;
+}
+
+.btn {
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  padding: 8px 15px;
+}
+.btn:hover {
+  background-color: #39A1CE;
+}
+
+.btn--nav {
+  background-color: #39a1ce;
+}
+
+.btn-social {
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 18px;
+  margin: 0 5px;
+}
+.btn-social i {
+  font-size: 1.2em;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+@media only screen and (max-width: 480px) {
+  .btn-social {
+    display: block;
+    margin: 10px;
+  }
+}
+
+.btn-fb {
+  background-color: #4c699e;
+}
+
+.btn-gp {
+  background-color: #d9563a;
+}
+
+.btn-twitter {
+  background-color: #22aee4;
+}
+
+::-moz-selection {
+  background: #333333;
+  color: white;
+  text-shadow: none;
+}
+
+::selection {
+  background: #333333;
+  color: white;
+  text-shadow: none;
+}
+
+html, body {
+  font-family: 'Lato', Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+}
+
+h1.logo {
+  background: url("../img/logo.png") center center no-repeat;
+  -webkit-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  height: 55px;
+  margin: 0;
+  text-indent: -9999px;
+}
+@media only screen and (max-width: 480px) {
+  h1.logo {
+    width: 51px;
+  }
+}
+
+.overlay {
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjY1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjY2JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjY1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 66%, transparent 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, 0.65)), color-stop(66%, rgba(0, 0, 0, 0.65)), color-stop(100%, transparent));
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 66%, transparent 100%);
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 66%, transparent 100%);
+  background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 66%, transparent 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 66%, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
+  height: 100%;
+}
+
+.landing {
+  background: url("../img/landing-bg.png") center center no-repeat;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.landing-intro {
+  color: #fff;
+  padding-top: 150px;
+  text-align: center;
+}
+.landing-intro h1, .landing-intro h2 {
+  font-weight: 300;
+}
+.landing-intro .fa-play {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  border: 3px solid #fff;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  display: inline-block;
+  padding: 15px 18px;
+}
+
+.logo {
+  margin: 0;
+}
+
+/* Sign up overlays */
+#step-1 {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.modal__content {
+  background-color: #edeff0;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.modal__head h1 + p {
+  color: #838484;
+}
+
+.modal__features {
+  margin: 30px 0 10px 0;
+}
+
+.modal__feature {
+  padding: 0 20px;
+  width: 20%;
+}
+@media only screen and (max-width: 480px) {
+  .modal__feature {
+    width: 100%;
+  }
+}
+.modal__feature h3 {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.7143;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  color: #838484;
+}
+
+.modal__sign-up {
+  background-color: #fff;
+  padding: 20px 0;
+}
+.modal__sign-up p {
+  color: #838484;
+  margin: 20px auto;
+  width: 90%;
+}
+
+.modal__footer p {
+  color: #838484;
+}
+.modal__footer a {
+  color: #232323;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
