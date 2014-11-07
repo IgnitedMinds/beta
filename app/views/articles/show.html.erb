@@ -94,7 +94,11 @@
 
 <style>
 body{
-  background: url(<%= @article.bg_img %>);
+  background: url(<%= @article.bg_img %>)no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 </style>
 
