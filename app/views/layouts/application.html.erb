@@ -51,7 +51,7 @@
       <nav class="nav nav--footer">
         <ul>
           <li>&copy; Ignited Minds</li>
-          <li><a href="#">Log Out</a></li>
+          <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
           <li><a href="#">Settings</a></li>
           <li><a href="#">Terms &amp; Conditions</a></li>
         </ul>

@@ -24,7 +24,8 @@
           
         <% end %> 
       
-      
+<% if @user_admin = false %>  
+     
 <table>
   <thead>
     <tr>
@@ -60,7 +61,8 @@
   </tbody>
 </table>
 
-<br>
+<% end %> 
+
 
 <%= link_to 'New Event', new_event_path %>
 
