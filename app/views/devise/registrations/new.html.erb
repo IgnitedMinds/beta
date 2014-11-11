@@ -30,9 +30,7 @@
   				%w[Edinburgh Perth Aberdeen Dundee Glasgow Inverness Stirling]) %>
   </div><br />
   
-    <div><%= f.label :avatar_url %><br />
-  	<%= f.text_field :avatar_url %>
-  </div>
+    <%= f.file_field :avatar %>
   
   <div class="field">
     <%= f.label :email %><br />

@@ -9,7 +9,7 @@
         </li>
         <li>
           <a href="<%= articles_path %>">
-            <i class="icon-lightbulb is-active"></i>
+            <i class="icon-lightbulb <%= "is-active" if current_page?(articles_path) || current_page?(root_path) %>"></i>
           </a>
         </li>
         <li>
