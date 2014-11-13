@@ -24,7 +24,7 @@
   <% @articles.each do |article| %>
   
         <div class="l-article">
-          <h5 class="ribbon ribbon--design"><%= article.tag %></h5>
+          <h5 class="ribbon ribbon--<%=article.tag%>"><%= article.tag %></h5>
           <div class="article-img">
             <img src="<%= article.thumbnail %>" alt="">
           </div>
