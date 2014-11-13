@@ -15,10 +15,8 @@ User.create({
 	email: "lewis@ignitedminds.co.uk",
 	password: DEFAULT_INSECURE_PASSWORD,
 	password_confirmation: DEFAULT_INSECURE_PASSWORD,
-	gender: false,
 	bio: "Default bio for Ignited Minds co-founder",
 	bg_url: "http://proof.nationalgeographic.com/files/2014/02/NationalGeographic_1754277-web-2.jpg",
-	avatar_url: "http://www.lewis-phillips.co.uk/app2/assets/img/lewis.png",
 	admin: true,
 	})
 	

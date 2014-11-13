@@ -1,50 +1,4 @@
-<% if user_signed_in? %>
-	 
-      	<nav class="nav--main" role="navigation">
-      <ul>
-        <li>
-          <a href="#">
-            <h1 class="logo">Logo</h1>
-          </a>
-        </li>
-        <li>
-          <a href="<%= articles_path %>">
-            <i class="icon-lightbulb <%= "is-active" if current_page?(articles_path) || current_page?(root_path) %>"></i>
-          </a>
-        </li>
-        <li>
-          <a href="<%= events_path %>">
-            <i class="icon-calendar"></i>
-          </a>
-        </li>
-        <li>
-          <a href="<%= funds_path %>">
-            <i class="icon-pound"></i>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <i class="icon-person"></i>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <i class="fa fa-comment-o"></i>
-          </a>
-        </li>
-        <li class="nav--main__profile-cont">
-          <a href="/<%= current_user.user_name %>">
-            <img src="<%= current_user.avatar_url %>" alt="" class="nav--main__profile">
-          </a>
-        </li>
-      </ul>
-    </nav>
-	
-
-      <div class="top-bar">
-        <a href="#" class="menu-link menu-link--light"><i class="fa fa-bars"></i> Menu</a>
-      </div>
-      
+   
       
      
          <div class="page-head">
@@ -62,10 +16,9 @@
         </nav>
       </div>
       
+<div class="main__content">  
       
-      
-      
-      
+          
 
  
   <% @articles.each do |article| %>
@@ -83,52 +36,13 @@
             <%= link_to 'Show', article %>
           </article>
         </div>
-  
-  
- <% end %>
- 
+        <% end %> 
+        
+        
+ </div>
 
 
-<% if @user_admin = false %>
-
-	<h1>Listing articles</h1>
-	
-	<table>
-	  <thead>
-	    <tr>
-	      <th>Name</th>
-	      <th>Content</th>
-	      <th>Description</th>
-	      <th>Thumbnail</th>
-	      <th>Tag</th>
-	      <th colspan="3"></th>
-	    </tr>
-	  </thead>
-	
-	  <tbody>
-	    <% @articles.each do |article| %>
-	      <tr>
-	        <td><%= article.name %></td>
-	        <td><%= truncate( article.content , :length => 100, :separator => ' ') %></td>
-	        <td><%= article.description %></td>
-	        <td><%= article.thumbnail %></td>
-	        <td><%= article.tag %></td>
-	        <td><%= link_to 'Show', article %></td>
-	        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-	        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-	      </tr>
-	    <% end %>
-	  </tbody>
-	</table>
-	
-<% end %> 
 
 <%= link_to 'New Article', new_article_path %>
 
 
-<% else %>
-
-<h1>Hello</h1>
-<p><%= link_to "Log In", new_user_session_path %></p>
-<p><%= link_to "Sign Up", new_user_registration_path %></p>
-<% end %>
