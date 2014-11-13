@@ -31,9 +31,9 @@
           <article class="article-content">
             <h1 class="h6"><%= article.name %></h1>
             <p><%= article.description %></p>
-            <a href="/article.html" class="btn btn--primary"><%= article.cta_button %></a>
+            <%= link_to article.cta_button, article, class: "btn btn--primary" %>
             
-            <%= link_to 'Show', article %>
+            
           </article>
         </div>
         <% end %> 
