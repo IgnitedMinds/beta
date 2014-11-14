@@ -2,8 +2,9 @@
         <p>
                 <strong>
                         Posted <%= time_ago_in_words(comment.created_at) %> ago
-                </strong>
+                </strong><br/>
+                <u>By: <%= comment.user.full_name %></u>
                 <br/>
-                <%= comment.body %>
+                <%= comment.body %><br/>
         </p>
 <% end %>
