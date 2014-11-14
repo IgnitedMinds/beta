@@ -22,8 +22,7 @@
 
  
   <% @articles.each do |article| %>
-  
-        <div class="l-article">
+  		<div class="l-article">
           <h5 class="ribbon ribbon--<%=article.tag%>"><%= article.tag %></h5>
           <div class="article-img">
             <img src="<%= article.thumbnail %>" alt="">
@@ -32,11 +31,9 @@
             <h1 class="h6"><%= article.name %></h1>
             <p><%= article.description %></p>
             <%= link_to article.cta_button, article, class: "btn btn--primary" %>
-            
-            
           </article>
         </div>
-        <% end %> 
+	<% end %> 
         
         
  </div>
