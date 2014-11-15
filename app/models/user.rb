@@ -7,6 +7,10 @@ class User < ActiveRecord::Base
 has_attached_file :avatar 
 validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
+has_many :posts
+has_many :comments
+
+
 def avatar_url
 	avatar.url
 end
