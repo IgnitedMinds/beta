@@ -1,3 +1,52 @@
+ <div class="l-discussions">
+ 
+<%= link_to 'New Post', new_post_path, class: "btn btn--primary" %><br/>
+
+	
+ 	<% @posts.each do |post| %>
+ 	<div class="discussion">
+ 
+	 		<div class="discussion__post">
+	              <a href="/<%= post.user.user_name %>" class="discussion__profile">
+	                <img src="<%= post.user.avatar_url%>" width="75px" height="75px" />
+	              </a>
+	
+	              <div class="discussion__content">
+	                <h1 class="h5 type--light"><%= post.user.full_name %></h1><br/>
+	                <p><%= post.content %></p>
+	              </div>
+	              
+	              
+	              <%= render :partial => post.comments %>
+	              
+	              
+	              <%= simple_form_for [post, Comment.new] do |f| %>
+				        
+			                <%= f.hidden_field :user_id, :value => current_user.id %> 
+			            
+				  
+
+	              <div class="discussion__post--reply reply--new">
+	                <a href="/<%= current_user.user_name %>" class="discussion__profile">
+	                  <img src="<%= current_user.avatar.url %>" />
+	                </a>
+	
+	                <div class="discussion__content">
+	                  <%= f.text_area :body, :class => "input--full", :placeholder => "Have your say..."%>
+	                  <%= f.submit "Reply", :class => "btn btn--primary right" %>
+	                </div>
+	              </div>
+	             <% end %>
+	          </div>
+ 
+ 	</div>
+ 	<% end %>	
+ 	
+ 	
+ </div>
+
+
+
 <h1>Listing posts</h1>
 
 <table>

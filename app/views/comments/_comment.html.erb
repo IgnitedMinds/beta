@@ -1,10 +1,12 @@
 <%= div_for comment do %>
-        <p>
-                <strong>
-                        Posted <%= time_ago_in_words(comment.created_at) %> ago
-                </strong><br/>
-                <u>By: <%= comment.user.full_name %></u>
-                <br/>
-                <%= comment.body %><br/>
-        </p>
-<% end %>
+<div class="discussion__post--reply">
+	                <a href="/<%= comment.user.user_name %>" class="discussion__profile">
+	                  <img src="<%= comment.user.avatar.url %>" />
+	                </a>
+	
+	                <div class="discussion__content">
+	                  <h1 class="h5 type--light"><b><%= comment.user.full_name %></b> Posted <%= time_ago_in_words(comment.created_at) %> ago </h1><br/>
+	                  <p><%= comment.body %></p><br/>
+	                </div>
+	              </div>
+<% end %>	              
