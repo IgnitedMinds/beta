@@ -67,8 +67,8 @@
           </a>
         </li>
         <li>
-          <a href="">
-            <i class="fa fa-comment-o"></i>
+          <a href="<%= posts_path %>">
+            <i class="fa fa-comment-o <%= "is-active" if current_page?(posts_path) %>"></i> 
           </a>
         </li>
         <li class="nav--main__profile-cont">
