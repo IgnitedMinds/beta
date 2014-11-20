@@ -2,9 +2,9 @@
  
 <%= link_to 'New Post', new_post_path, class: "btn btn--primary" %><br/>
 
-	
+	<div class="discussion">
  	<% @posts.each do |post| %>
- 	<div class="discussion">
+ 	
  
 	 		<div class="discussion__post">
 	              <a href="/<%= post.user.user_name %>" class="discussion__profile">
@@ -37,11 +37,11 @@
 	                </div>
 	              </div>
 	             <% end %>
-	          </div>
+	          
  
  	</div>
  	<% end %>	
- 	
+ 	</div>
  	
  </div>
 
