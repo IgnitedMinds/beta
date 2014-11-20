@@ -1729,7 +1729,8 @@ p {
     color: #fff;
     float: left;
     padding: 15px;
-    position: absolute;
+    position: relative; 
+    margin-top: 40%;
 }
 .profile-content h1, .profile-content h2, .profile-content p {
     margin: 0;
