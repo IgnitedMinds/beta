@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  
+  resources :landing
+    
   resources :posts do
     resources :comments, :only => [:create]
   end
@@ -8,12 +9,14 @@ Rails.application.routes.draw do
 
   resources :events
 
+  resources :landing
+  
   get 'profiles/show'
 
   devise_for :users
   resources :articles
   
-  root to: 'articles#index'
+  root to: 'landing#index'
   
   get '/:id', to: 'profiles#show'
 
