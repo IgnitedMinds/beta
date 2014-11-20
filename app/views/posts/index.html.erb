@@ -8,7 +8,7 @@
  
 	 		<div class="discussion__post">
 	              <a href="/<%= post.user.user_name %>" class="discussion__profile">
-	                <img src="<%= post.user.avatar_url%>" width="75px" height="75px" />
+	                <img src="<%= post.user.avatar_url%>" width="75px" height="75px" class="community-avatar" />
 	              </a>
 	
 	              <div class="discussion__content">
@@ -28,7 +28,7 @@
 
 	              <div class="discussion__post--reply reply--new">
 	                <a href="/<%= current_user.user_name %>" class="discussion__profile">
-	                  <img src="<%= current_user.avatar.url %>" />
+	                  <img src="<%= current_user.avatar.url %>" class="community-avatar" />
 	                </a>
 	
 	                <div class="discussion__content">

@@ -7,6 +7,10 @@
  * Copyright 2013. MIT licensed.
  */
 
+.community-avatar {
+	border-radius: 50%;
+}
+
 @charset "UTF-8";
     .modal__content {
     position: relative;
@@ -39,7 +43,7 @@
 .centered-form, .menu-link, .modal__footer, .features {
     width: 50%}
 .l-event, .profile, .profile__img {
-    width: 33.333%}
+    width: 33%}
 .event-blurb, .profile__blurb {
     width: 66.666%}
 .l-article, .featurette {

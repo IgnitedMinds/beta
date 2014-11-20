@@ -1,7 +1,7 @@
 <%= div_for comment do %>
 <div class="discussion__post--reply">
 	                <a href="/<%= comment.user.user_name %>" class="discussion__profile">
-	                  <img src="<%= comment.user.avatar.url %>" />
+	                  <img src="<%= comment.user.avatar.url %>" class="community-avatar"/>
 	                </a>
 	
 	                <div class="discussion__content">
