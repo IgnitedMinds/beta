@@ -1455,6 +1455,10 @@ p {
 .type--light {
     font-weight: 300;
 }
+a, .h5 type--light {
+	color: #ffffff;
+	text-decoration: none;
+}
 .align-left {
     text-align: left;
 }
