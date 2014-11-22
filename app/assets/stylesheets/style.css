@@ -2592,6 +2592,7 @@ h1.logo {
 .discussion__profile {
     float: left;
     margin-right: 20px;
+    border-radius: 50%;
 }
 .discussion__content {
     overflow: hidden;

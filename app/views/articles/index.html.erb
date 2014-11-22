@@ -29,7 +29,7 @@
           </div>
           <article class="article-content">
             <h1 class="h6"><%= article.name %></h1>
-            <p><%= article.description %></p>
+            <p><%= truncate( article.description , length: 180, separator: ' ') %></p>
             <%= link_to article.cta_button, article, class: "btn btn--primary" %>
           </article>
         </div>
