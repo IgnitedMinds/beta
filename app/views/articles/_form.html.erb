@@ -44,6 +44,9 @@ Header
 <%= f.file_field :header %><br/>
 Body 1
 <%= f.file_field :body1 %><br/>
+
+<%= f.hidden_field :user_id, :value => current_user.id %>
+
   <br />
   <br />
   

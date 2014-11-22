@@ -9,6 +9,7 @@ validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
 has_many :posts
 has_many :comments
+has_many :articles
 
 
 def avatar_url

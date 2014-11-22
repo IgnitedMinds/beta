@@ -71,6 +71,7 @@ class ArticlesController < ApplicationController
     def article_params
       params.require(:article).permit(
       	:name, 
+      	:user_id,
       	:content, 
       	:description, 
       	:thumbnail,
@@ -81,7 +82,7 @@ class ArticlesController < ApplicationController
       	:cta_button, 
       	:background, 	
       	:header,
-      	:body1,
+      	:body1
       	)
     end
 end
