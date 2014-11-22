@@ -78,7 +78,10 @@ class ArticlesController < ApplicationController
       	:body_img1,
       	:bg_img,
       	:tag,
-      	:cta_button,  	
+      	:cta_button, 
+      	:background, 	
+      	:header,
+      	:body1,
       	)
     end
 end

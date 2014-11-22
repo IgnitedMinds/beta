@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
          
-has_attached_file :avatar 
+has_attached_file :avatar, :styles => {:thumb => '100x100#' }
 validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
 has_many :posts
@@ -12,7 +12,7 @@ has_many :comments
 
 
 def avatar_url
-	avatar.url
+	avatar.url(:thumb)
 end
 	
 def full_name
