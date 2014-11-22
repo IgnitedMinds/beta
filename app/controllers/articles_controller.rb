@@ -73,6 +73,7 @@ class ArticlesController < ApplicationController
       	:name, 
       	:user_id,
       	:content, 
+      	:content2,
       	:description, 
       	:thumbnail,
       	:video_id,
