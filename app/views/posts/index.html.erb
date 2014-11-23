@@ -12,8 +12,12 @@
 	              </a>
 	
 	              <div class="discussion__content">
+	              <% if current_user.user_name == post.user.user_name %>
+	              	<%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn--delete right'%>
+	              <% end %> 
 	                <h1 class="h5 type--light"><%= post.user.full_name %></h1><br/>
 	                <p><%= post.content %></p>
+	                
 	              </div>
 	              
 	              
@@ -28,7 +32,7 @@
 
 	              <div class="discussion__post--reply reply--new">
 	                <a href="/<%= current_user.user_name %>" class="discussion__profile">
-	                  <img src="<%= current_user.avatar.url %>" class="community-avatar" />
+	                  <img src="<%= current_user.avatar.url(:thumb) %>" class="community-avatar" />
 	                </a>
 	
 	                <div class="discussion__content">

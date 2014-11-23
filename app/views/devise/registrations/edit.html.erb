@@ -35,13 +35,12 @@
   	<%= f.text_field :bio %>
   </div>
   
-    <div><%= f.label :avatar_url %><br />
-  	<%= f.text_field :avatar_url %>
-  </div>
+  Avatar:<br/>
+   <%= f.file_field :avatar %>
   
-    <div><%= f.label :bg_url %><br />
-  	<%= f.text_field :bg_url %>
-  </div>  
+   Background:<br/>
+   <%= f.file_field :backgroundimg %>
+
     
   <div class="field">
     <%= f.label :email %><br />

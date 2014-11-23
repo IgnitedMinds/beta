@@ -5,6 +5,9 @@
  	<div class="discussion">
  
 	 		<div class="discussion__post">
+	 			<% if current_user.user_name == @post.user.user_name %>
+	              	<%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn--delete right'%>
+	            <% end %>
 	              <a href="/<%= @post.user.user_name %>" class="discussion__profile">
 	                <img src="<%= @post.user.avatar_url%>" width="75px" height="75px" />
 	              </a>

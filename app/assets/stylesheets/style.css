@@ -1456,7 +1456,7 @@ p {
     font-weight: 300;
 }
 a, .h5 type--light {
-	color: #ffffff;
+	color: #333;
 	text-decoration: none;
 }
 .align-left {
@@ -2046,7 +2046,7 @@ a, .h5 type--light {
     background-image: url(../img/fancybox/fancybox_loading@2x.gif);
     background-size: 24px 24px;
 }
-}.btn--primary, .btn--secondary, .btn--delete {
+}.btn--primary, .btn--secondary {
     border-radius: 4px;
     border: 0;
     display: inline-block;
@@ -2059,8 +2059,21 @@ a, .h5 type--light {
     -webkit-transition: background-color .2s ease;
     transition: background-color .2s ease;
 }
+.btn--delete {
+	border-radius: 4px;
+    border: 0;
+    display: inline-block;
+    font-weight: 200;
+    font-size: 1rem;
+    margin: 15px 0;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: background-color .2s ease;
+    transition: background-color .2s ease;
+}
 @media only screen and (max-width:480px) {
-    .btn--primary, .btn--secondary, .btn--delete {
+    .btn--primary, .btn--secondary{
     width: 100%}
 }.btn--primary {
     background-color: #3ca1e2;
