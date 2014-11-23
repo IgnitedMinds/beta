@@ -9,7 +9,7 @@
 	              	<%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn--delete right'%>
 	            <% end %>
 	              <a href="/<%= @post.user.user_name %>" class="discussion__profile">
-	                <img src="<%= @post.user.avatar_url%>" width="75px" height="75px" />
+	                <img src="<%= @post.user.avatar.url(:thumb)%>" width="75px" height="75px" />
 	              </a>
 	
 	              <div class="discussion__content">
@@ -29,7 +29,7 @@
 
 	              <div class="discussion__post--reply reply--new">
 	                <a href="/<%= current_user.user_name %>" class="discussion__profile">
-	                  <img src="<%= current_user.avatar.url %>" />
+	                  <img src="<%= current_user.avatar.url(:thumb) %>" />
 	                </a>
 	
 	                <div class="discussion__content">
