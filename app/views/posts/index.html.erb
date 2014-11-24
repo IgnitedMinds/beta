@@ -17,6 +17,9 @@
 	              <% end %> 
 	                <h1 class="h5 type--light"><%= post.user.full_name %></h1><br/>
 	                <p><%= post.content %></p>
+	                <% if post.postimg.exists? %>
+	                	<img src="<%= post.postimg.url%>" />
+	                <% end %> 
 	                
 	              </div>
 	              
