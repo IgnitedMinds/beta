@@ -13,7 +13,7 @@
                 <p><%= fund.type %></p>
               </div><!--
               --><div class="event-blurb">
-                <h4><%= fund.title %></h4>
+                <h4><a href="http://<%=fund.ext_url%>"><%= fund.title %></a></h4>
                 <small><%= fund.source %>, <%= fund.location %></small>
                 <small>Expires: <%= fund.deadline.strftime("%e %b %Y") %></small>
                 <p></p>
