@@ -65,7 +65,7 @@ respond_to do |format|
     def event_params
       params.require(:event).permit(
       		:title, 
-      		:location, 
+      		:location_list, 
       		:venue,
       		:date_time,
       		:description,

@@ -4,9 +4,10 @@
   <div class="form-inputs">
     <%= f.input :title %>
 	
-	<%= f.label :location %>
-	<%= f.select :location, options_for_select(
+	<%= f.label :location_list, "Location" %><br />
+	<%= f.select :location_list, options_for_select(
   				%w[Edinburgh Perth Aberdeen Dundee Glasgow Inverness Stirling]) %>
+  				
     <%= f.input :venue %>
     <%= f.input :date_time %>
     <%= f.input :description %>
