@@ -17,11 +17,11 @@ class ApplicationController < ActionController::Base
             :password, 
             :current_password,
             :date_of_birth,
-            :location,
+            :location_list,
             :its_female,
             :avatar,
             :backgroundimg,
-            :tag_list,) }
+            :skill_list,) }
 
  devise_parameter_sanitizer.for(:account_update) { |u| u.permit(
             :first_name, 
@@ -32,14 +32,14 @@ class ApplicationController < ActionController::Base
             :password, 
             :current_password,
             :date_of_birth,
-            :location,
+            :location_list,
             :its_female,
             :bio,
             :bg_url, 
             :avatar,
             :admin,
             :backgroundimg,
-            :tag_list,) }
+            :skill_list,) }
 
 
         end

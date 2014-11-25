@@ -30,7 +30,11 @@
   <div><%= f.label :date_of_birth %><br />
         <%= f.date_select :date_of_birth %></div><br />
 
-
+ <div class="field">
+  <%= f.label :location_list, "Location" %><br />
+  <%= f.select :location_list, options_for_select(
+  				%w[Edinburgh Perth Aberdeen Dundee Glasgow Inverness Stirling]) %>
+  </div>
   
     <%= f.file_field :avatar %>
   
@@ -53,8 +57,8 @@
   </div>
   
   <div class="field">
-  <%= f.label :tag_list, "Skills (separated by commas)" %><br />
-  <%= f.text_field :tag_list %>
+  <%= f.label :skill_list, "Skills (separated by commas)" %><br />
+  <%= f.text_field :skill_list %>
   </div>
 
   <div class="actions">

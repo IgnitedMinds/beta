@@ -5,9 +5,9 @@
           </div>
           <div class="profile__info--main">
             <h1 class="profile__header type--light"><%= @user.first_name %> <%= @user.last_name %></h1>
-            <h2 class="h6 type--light"><i class="fa fa-map-marker"></i><%= @user.location %></h2>
+            <h2 class="h6 type--light"><i class="fa fa-map-marker"></i><%= @user.location_list %></h2>
             <p class="profile__stub"><%= @user.bio %> </p>
-            <p class="profile__stub">Skills: <%= @user.tag_list %></p>
+            <p class="profile__stub">Skills: <%= @user.skill_list %></p>
             <% if current_user.user_name == @user.user_name %>
             	<%= link_to "Edit Profile", edit_user_registration_path, :class => "btn btn--primary" %>
             <% end %>

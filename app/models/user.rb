@@ -15,7 +15,7 @@ has_many :comments
 has_many :articles
 
 acts_as_taggable 
-acts_as_taggable_on :skills
+acts_as_taggable_on :skill, :location
 
 def avatar_url
 	avatar.url(:thumb)
