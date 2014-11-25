@@ -1,8 +1,8 @@
 class LandingController < ApplicationController
 
-layout 'landing'
+layout 'landing.html.erb'
 
 def show
 end
 
-end
+end 
