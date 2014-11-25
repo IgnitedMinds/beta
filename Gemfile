@@ -8,6 +8,7 @@ gem 'rails', '4.1.5'
 gem 'devise'
 gem 'simple_form'
 gem 'paperclip', "~> 4.2"
+gem 'acts-as-taggable-on', '~> 3.4'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development

@@ -30,10 +30,7 @@
   <div><%= f.label :date_of_birth %><br />
         <%= f.date_select :date_of_birth %></div><br />
 
-  <div>	<%= f.label :location %>
-  		<%= f.select :location, options_for_select(
-  				%w[Edinburgh Perth Aberdeen Dundee Glasgow Inverness Stirling]) %>
-  </div><br />
+
   
     <%= f.file_field :avatar %>
   
@@ -53,6 +50,11 @@
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+  <%= f.label :tag_list, "Skills (separated by commas)" %><br />
+  <%= f.text_field :tag_list %>
   </div>
 
   <div class="actions">

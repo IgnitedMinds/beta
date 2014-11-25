@@ -70,6 +70,11 @@
   <%= f.check_box :admin, :checked => false %> 
     <%= label :admin, 'Admin User' %>
   </div>
+  
+  <div class="field">
+  <%= f.label :tag_list, "Skills (separated by commas)" %><br />
+  <%= f.text_field :tag_list %>
+  </div>
 
 <br />
   <div class="actions">
