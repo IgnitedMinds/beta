@@ -2,12 +2,12 @@
         <h3 class="content__heading">Events</h3>
       </div>
 
+<%= raw Event.location_counts %> 
       
       <div class="l-events">
  <div class="main__content">      
          <% @events.each do |event| %>
     
-        
           <div class="l-event">
             <div class="event-info">
               <div class="event-date">
