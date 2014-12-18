@@ -8,67 +8,63 @@
             <h2 class="h6 type--light"><i class="fa fa-map-marker"></i><%= @user.location_list %></h2>
             <p class="profile__stub"><%= @user.bio %> </p>
             <p class="profile__stub">Skills: <%= @user.skill_list %></p>
-            <% if current_user.user_name == @user.user_name %>
+            <% if can? :edit, @user %>
             	<%= link_to "Edit Profile", edit_user_registration_path, :class => "btn btn--primary" %>
             <% end %>
-          </div> 
+          </div>
         </div>
 
-<style> 
+<style>
 body {
-	background: url(<%= @user.backgroundimg.url %>) no-repeat center center fixed; 
+	background: url(<%= @user.backgroundimg.url %>) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 
-</style> 
+</style>
 
 <% if @user.admin = false %>
 
 		<div>
-		
+
 				<h1>Profile</h1>
 				<p>Find me in app/views/profiles/show.html.erb</p>
-				
+
 				<h2>User_name</h2>
 				<%= @user.user_name %> <br />
 				<br />
-				<%= @user.first_name %> 
+				<%= @user.first_name %>
 				<br />
-				<%= @user.last_name %> 
+				<%= @user.last_name %>
 				<br />
-				<%= @user.email %> 
+				<%= @user.email %>
 				<br />
-				<%= @user.encrypted_password %> 
+				<%= @user.encrypted_password %>
 				<br />
-				<%= @user.location %> 
+				<%= @user.location %>
 				<br />
-				<%= @user.its_female %> 
+				<%= @user.its_female %>
 				<br />
-				<%= @user.date_of_birth %> 
+				<%= @user.date_of_birth %>
 				<br />
-				<%= @user.bio %> 
+				<%= @user.bio %>
 				<br />
-				<%= image_tag @user.avatar.url %> 
+				<%= image_tag @user.avatar.url %>
 				<br />
-				<%= @user.bg_url %> 
+				<%= @user.bg_url %>
 				<br />
-				- - - - 
+				- - - -
 				<br />
 				<strong>Avatar avatar_url</strong><br />
 				<img src="<%= @user.backgroundimg.url %> " height="50px">
-				
+
 				<br /><strong>Background bg_url </strong><br />
 				<img src="<%= @user.bg_url %> " height="200px">
-				
+
 				<br />
-		
-		</div> 
+
+		</div>
 
 
-<% end %> 
-
-
-
-
+<% end %>

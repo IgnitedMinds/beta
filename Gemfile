@@ -19,6 +19,9 @@ group :production do
 end
 
 gem 'activeadmin', github: 'activeadmin'
+gem 'cancan'
+gem 'inherited_resources'
+gem 'has_scope'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'

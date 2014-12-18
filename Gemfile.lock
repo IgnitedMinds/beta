@@ -55,6 +55,7 @@ GEM
       sass (~> 3.2)
       thor
     builder (3.2.2)
+    cancan (1.6.10)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.4)
@@ -195,8 +196,11 @@ PLATFORMS
 DEPENDENCIES
   activeadmin!
   acts-as-taggable-on (~> 3.4)
+  cancan
   coffee-rails (~> 4.0.0)
   devise
+  has_scope
+  inherited_resources
   jbuilder (~> 2.0)
   jquery-rails
   paperclip (~> 4.2)

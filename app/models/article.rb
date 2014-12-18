@@ -2,6 +2,7 @@ class Article < ActiveRecord::Base
 
 belongs_to :user
 
+scope :has_tag, ->(tag) { where(tag: tag) }
 
 has_attached_file :background
 validates_attachment_content_type :background, :content_type => /\Aimage\/.*\Z/
