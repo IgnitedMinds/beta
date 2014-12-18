@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :landing
-    
+
   resources :posts do
     resources :comments, :only => [:create]
   end
@@ -12,18 +12,20 @@ Rails.application.routes.draw do
   resources :events
 
   resources :landing
-  
+
+  resources :people, only: [:index]
+
   get 'profiles/show'
 
   devise_for :users
   resources :articles
-  
+
   authenticated :user do
   root :to => 'articles#index', as: :authenticated_root
 end
 
 root to: 'landing#index'
-  
+
   get '/:id', to: 'profiles#show'
 
   # The priority is based upon order of creation: first created -> highest priority.

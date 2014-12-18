@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-         
+
 has_attached_file :avatar, :styles => {:thumb => '100x100#' }
 validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
@@ -14,13 +14,16 @@ has_many :posts
 has_many :comments
 has_many :articles
 
-acts_as_taggable 
+scope :by_name, ->(name) { where("first_name LIKE ? or last_name LIKE ? or (first_name + \" \" + last_name) LIKE ?", name, name, name)}
+scope :has_skill, ->(skill) { tagged_with(skill, on: :skill) }
+
+acts_as_taggable
 acts_as_taggable_on :skill, :location
 
 def avatar_url
 	avatar.url(:thumb)
 end
-	
+
 def full_name
 	first_name + " " + last_name
 end

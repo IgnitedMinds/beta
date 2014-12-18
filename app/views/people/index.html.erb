@@ -1,0 +1,19 @@
+<%= form_tag people_path, method: :get do |f| %>
+  <%= text_field_tag :by_name, params[:by_name] %>
+  <%= hidden_field_tag :has_skill, params[:has_skill] %>
+<% end %>
+<%= link_to 'Many', people_path(has_skill: "many", by_name: params[:by_name]) %>
+<div class="profiles">
+  <% @users.each do |user| %>
+  <div class="profile">
+    <div class="profile__info">
+      <div class="profile__img">
+        <img src="assets/img/profile.png" alt="">
+      </div><!--
+      --><div class="profile__blurb">
+      <h1 class="h5"><%= user.full_name %></h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, tempore harum fuga dignissimos.</p>
+    </div>
+  </div>
+  <% end %>
+</div>
