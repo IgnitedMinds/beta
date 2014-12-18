@@ -1733,7 +1733,7 @@ a, .h5 type--light {
     color: #fff;
     float: left;
     padding: 15px;
-    position: relative; 
+    position: relative;
     margin-top: 40%;
 }
 .profile-content h1, .profile-content h2, .profile-content p {
@@ -2260,15 +2260,17 @@ h1.logo {
 @media only screen and (min-width:1024px) {
     .top-bar {
     display: none;
+		}
 }
-}.overlay {
-    background: url(data:image/svg+xml;
-    base64, PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjY1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjY2JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjY1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, .65)), color-stop(66%, rgba(0, 0, 0, .65)), color-stop(100%, transparent));
-    background: -webkit-linear-gradient(left, rgba(0, 0, 0, .65) 0, rgba(0, 0, 0, .65) 66%, transparent 100%);
-    background: linear-gradient(to right, rgba(0, 0, 0, .65) 0, rgba(0, 0, 0, .65) 66%, transparent 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000',  endColorstr='#00000000',  GradientType=1);
-    height: 100%}
+/*.overlay {
+  background: url(data:image/svg+xml;
+  base64, PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjY1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjY2JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjY1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, .65)), color-stop(66%, rgba(0, 0, 0, .65)), color-stop(100%, transparent));
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, .65) 0, rgba(0, 0, 0, .65) 66%, transparent 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, .65) 0, rgba(0, 0, 0, .65) 66%, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000',  endColorstr='#00000000',  GradientType=1);
+  height: 100%
+}*/
 .landing {
     background: url(../img/landing-bg.png) center center no-repeat;
     background-size: cover;
