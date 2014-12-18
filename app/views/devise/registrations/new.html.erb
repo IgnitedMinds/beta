@@ -1,13 +1,8 @@
-<%= @layout = 'landing' %>
-
-
-
-
 <h2>Register</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-  
+
   <div><%= f.label :first_name %><br />
   	<%= f.text_field :first_name %>
   </div>
@@ -15,18 +10,18 @@
   <div><%= f.label :last_name %><br />
   	<%= f.text_field :last_name %>
   </div>
-  
+
   <div><%= f.label :user_name %><br />
   	<%= f.text_field :user_name %>
   </div>
- 
+
   <div>
-  <%= f.radio_button :its_female, 'female', :checked => true %> 
+  <%= f.radio_button :its_female, 'female', :checked => true %>
   <%= label :its_female, 'Female' %>
   <%= f.radio_button :its_female, 'male' %>
   <%= label :its_female, 'Male' %>
   </div>
-    
+
   <div><%= f.label :date_of_birth %><br />
         <%= f.date_select :date_of_birth %></div><br />
 
@@ -35,9 +30,9 @@
   <%= f.select :location_list, options_for_select(
   				%w[Edinburgh Perth Aberdeen Dundee Glasgow Inverness Stirling]) %>
   </div>
-  
+
     <%= f.file_field :avatar %>
-  
+
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
@@ -55,7 +50,7 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
-  
+
   <div class="field">
   <%= f.label :skill_list, "Skills (separated by commas)" %><br />
   <%= f.text_field :skill_list %>
@@ -67,4 +62,3 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
-
