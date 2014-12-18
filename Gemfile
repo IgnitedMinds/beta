@@ -18,6 +18,7 @@ group :production do
 	gem 'rails_12factor'
 end
 
+gem 'activeadmin', github: 'activeadmin'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -51,4 +52,3 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
