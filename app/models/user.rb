@@ -14,7 +14,7 @@ has_many :posts
 has_many :comments
 has_many :articles
 
-scope :by_name, ->(name) { where("first_name LIKE ? or last_name LIKE ? or (first_name + \" \" + last_name) LIKE ?", name, name, name)}
+scope :by_name, ->(name) { where("first_name LIKE ? or last_name LIKE ? or (first_name || \" \" || last_name) LIKE ?", name, name, name)}
 scope :has_skill, ->(skill) { tagged_with(skill, on: :skill) }
 
 acts_as_taggable
