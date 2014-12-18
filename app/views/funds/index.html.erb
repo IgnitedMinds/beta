@@ -1,10 +1,10 @@
 <div class="page-head">
         <h3 class="content__heading">Funding</h3>
       </div>
-      
-      
+
+
          <% @funds.each do |fund| %>
-    
+
         <div class="l-events">
           <div class="l-event">
             <div class="event-info">
@@ -20,12 +20,12 @@
               </div>
             </div>
           </div>
-          
-          
-  
-        <% end %> 
-  
-<% if @user_admin = false %>    
+
+
+
+        <% end %>
+
+<% if @user_admin = false %>
 <table>
   <thead>
     <tr>
@@ -61,6 +61,3 @@
 <br>
 
 <% end %>
-
-<%= link_to 'New Fund', new_fund_path %>
-
