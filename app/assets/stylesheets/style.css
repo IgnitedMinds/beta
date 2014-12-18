@@ -2683,7 +2683,7 @@ footer {
     padding-right: 15px;
 }
 @media only screen and (max-width:480px) {
-    .nav--footer ul li: first-of-type {
+    .nav--footer ul li :first-of-type {
     display: block;
 }
 }.footer--light {
