@@ -1,7 +1,9 @@
 class ArticlesController < InheritedResources::Base
-  actions :index
+  before_action :set_article, only: [:show]
+  actions :index, :show
   has_scope :has_tag
-end
 
-def show
+
+
+
 end

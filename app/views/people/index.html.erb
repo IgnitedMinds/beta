@@ -1,19 +1,39 @@
-<%= form_tag people_path, method: :get do |f| %>
-  <%= text_field_tag :by_name, params[:by_name] %>
-  <%= hidden_field_tag :has_skill, params[:has_skill] %>
-<% end %>
-<%= link_to 'Many', people_path(has_skill: "many", by_name: params[:by_name]) %>
-<div class="profiles">
-  <% @users.each do |user| %>
-  <div class="profile">
-    <div class="profile__info">
-      <div class="profile__img">
-        <img src="assets/img/profile.png" alt="">
-      </div><!--
-      --><div class="profile__blurb">
-      <h1 class="h5"><%= user.full_name %></h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, tempore harum fuga dignissimos.</p>
+<div class="main">
+
+  <div class="page-head">
+    <h3 class="content__heading">People</h3><!--
+    --><aside class="nav nav--search">
+
+    <form action="" class="search-bar">
+      <input type="search" name="Search" id="" placeholder="Search for names or skills...">
+      <button class="btn btn--search"><span class="icon-search"></span></button>
+    </form>
+
+    <%= form_tag people_path, method: :get do |f| %>
+    <%= text_field_tag :by_name, params[:by_name] %>
+    <%= hidden_field_tag :has_skill, params[:has_skill] %>
+    <% end %>
+
+  </aside>
+</div>
+<div class="main__content">
+  <div class="profiles">
+
+    <% @users.each do |user| %>
+    <div class="profile">
+      <div class="profile__info">
+        <div class="profile__img">
+          <img src="<%= user.avatar_url %>" alt="">
+        </div><!--
+        --><div class="profile__blurb">
+        <h1 class="h5"><%= user.full_name %></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, tempore harum fuga dignissimos.</p>
+      </div>
     </div>
   </div>
   <% end %>
+
+
+</div>
+</div>
 </div>

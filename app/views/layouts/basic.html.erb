@@ -34,7 +34,7 @@
 
 
 <% if user_signed_in? %>
-      
+
 
 
 
@@ -53,22 +53,22 @@
         </li>
         <li>
           <a href="<%= events_path %>">
-            <i class="icon-calendar <%= "is-active" if current_page?(events_path) %>"></i>       
+            <i class="icon-calendar <%= "is-active" if current_page?(events_path) %>"></i>
 		  </a>
         </li>
         <li>
           <a href="<%= funds_path %>">
-            <i class="icon-pound <%= "is-active" if current_page?(funds_path) %>"></i> 
+            <i class="icon-pound <%= "is-active" if current_page?(funds_path) %>"></i>
           </a>
         </li>
         <li>
-          <a href="">
-            <i class="icon-person"></i>
+          <a href="<%= people_path %>">
+            <i class="icon-person <%= "is-active" if current_page?(people_path) %>"></i>
           </a>
         </li>
         <li>
           <a href="<%= posts_path %>">
-            <i class="fa fa-comment-o <%= "is-active" if current_page?(posts_path) %>"></i> 
+            <i class="fa fa-comment-o <%= "is-active" if current_page?(posts_path) %>"></i>
           </a>
         </li>
         <li class="nav--main__profile-cont">
@@ -78,7 +78,7 @@
         </li>
       </ul>
     </nav>
-	
+
 
       <div class="top-bar">
         <a href="#" class="menu-link menu-link--light"><i class="fa fa-bars"></i> Menu</a>
@@ -122,11 +122,11 @@
     <script>
       $(document).ready(function() {
         $('body').addClass('js');
-        
+
         var $menu = $('.nav--main'),
           $menulink = $('.menu-link'),
           $wrap = $('.js-main');
-        
+
         $menulink.click(function() {
           $menulink.toggleClass('active');
           $wrap.toggleClass('active');
