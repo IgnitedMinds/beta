@@ -2487,7 +2487,7 @@ h1.logo {
 .article-post__detail {
     bottom: 10px;
     color: #fff;
-    right: 15px;
+    left: 15px;
     min-width: 225px;
     text-shadow: 0 0 10px #000;
     position: absolute;
@@ -2496,10 +2496,13 @@ h1.logo {
     display: inline-block;
     bottom: 15px;
     position: absolute;
+		left:55px;
+		min-width:300px;
 }
 .article-post__img {
     height: auto;
-    width: 100%}
+    width: 100%;
+		}
 .article-post__img--head {
     border-radius: 4px 4px 0 0;
 }
@@ -2508,7 +2511,8 @@ h1.logo {
     width: 45px;
     height: 45px;
     margin: 15px 0;
-    float: right;
+    float: left;
+		border-radius:50%;
 }
 .article-post__content {
     padding: 30px;
