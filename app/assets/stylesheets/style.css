@@ -1479,8 +1479,11 @@ a, .h5 type--light {
     right: 51%}
 @font-face {
     font-family: ig-icons;
-    src: url(../fonts/ig-icons.eot?47133879);
-    src: url(../fonts/ig-icons.eot?47133879#iefix) format("embedded-opentype"), url(../fonts/ig-icons.woff?47133879) format("woff"), url(../fonts/ig-icons.ttf?47133879) format("truetype"), url(../fonts/ig-icons.svg?47133879#ig-icons) format("svg");
+    src:font-url('fonts/ig-icons.eot');
+		src:font-url('fonts/ig-icons.eot') format("embedded-opentype"),
+			url('fonts/ig-icons.woff') format("woff"),
+			url('fonts/ig-icons.ttf') format("truetype"),
+			url('fonts/ig-icons.svg') format("svg");
     font-weight: 400;
     font-style: normal;
 }
