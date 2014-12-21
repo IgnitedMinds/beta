@@ -4,13 +4,9 @@
     <h3 class="content__heading">People</h3><!--
     --><aside class="nav nav--search">
 
-    <form action="" class="search-bar">
-      <input type="search" name="Search" id="" placeholder="Search for names or skills...">
-      <button class="btn btn--search"><span class="icon-search"></span></button>
-    </form>
-
-    <%= form_tag people_path, method: :get do |f| %>
-    <%= text_field_tag :by_name, params[:by_name] %>
+    <%= form_tag people_path, class: 'search-bar', method: :get do |f| %>
+    <%= text_field_tag :by_name, params[:by_name], :placeholder => 'Search for names or skills...' %>
+    <button class="btn btn--search"><span class="icon-search"></span></button>
     <%= hidden_field_tag :has_skill, params[:has_skill] %>
     <% end %>
 
