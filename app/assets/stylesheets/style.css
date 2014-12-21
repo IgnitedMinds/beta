@@ -2407,6 +2407,7 @@ h1.logo {
     color: #fff;
     border-radius: 4px;
     padding: 15px;
+		height: 170px;
 }
 .profile__info {
     background: -webkit-linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../img/profile-bg.png);
@@ -2424,7 +2425,8 @@ h1.logo {
     text-align: center;
 }
 .profile__img img {
-    padding: 40px 0;
+    padding: 20px 0;
+		border-radius: 50%;
 }
 .profile__blurb {
     padding-left: 10px;
