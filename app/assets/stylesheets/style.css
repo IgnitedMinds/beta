@@ -2593,6 +2593,11 @@ h1.logo {
 		min-width:47%;
 		position:relative;
 }
+@media(max-width:1016px){
+	.discussion__post{
+		min-width:96%;
+	}
+}
 .discussion__post h1, .discussion__post p {
     display: inline-block;
 }
