@@ -16,16 +16,21 @@
 
     <% @users.each do |user| %>
     <div class="profile">
-      <div class="profile__info">
+      <div class="profile__info"
+          style="background-image: url('<%= user.backgroundimg.url %>'); width: 100%; background-size: 100%; 		background-color: #555; ">
         <div class="profile__img">
-          <a href=""><img src="<%= user.avatar_url %>" alt=""></a>
+          <a href="/<%= user.user_name %>"><img src="<%= user.avatar_url %>" alt=""></a>
         </div><!--
         --><div class="profile__blurb">
-        <h1 class="h5"><a href=""><%= user.full_name %></a></h1>
+        <h1 class="people--name"><a href="/<%= user.user_name %>"><%= user.full_name %></a></h1>
         <p><%= truncate(user.bio, :length => 150) %></p>
       </div>
     </div>
   </div>
+
+
+
+
   <% end %>
 
 

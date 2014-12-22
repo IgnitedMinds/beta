@@ -1460,6 +1460,14 @@ a, .h5 type--light {
 	color: #333;
 	text-decoration: none;
 }
+.people--name a {
+	font-size: 12px;
+	font-size: 1.2rem;
+	font-weight: 600;
+	margin: .5rem 0;
+	color: #fff;
+
+}
 .align-left {
     text-align: left;
 }
@@ -2406,7 +2414,7 @@ h1.logo {
 }.profile__info, .profile__info--alt-1, .profile__info--alt-2 {
     color: #fff;
     border-radius: 4px;
-    padding: 15px;
+    padding: 15px 0px 0px 0px ;
 		height: 170px;
 }
 .profile__info {
