@@ -1,0 +1,4023 @@
+/*!
+ * fireshell
+ * Fiercely quick and opinionated front-ends
+ * http://getfireshell.com
+ * @author Todd Motto
+ * @version 1.1.0
+ * Copyright 2013. MIT licensed.
+ */
+/* line 11, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.community-avatar {
+  border-radius: 50%;
+}
+
+/* line 16, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.modal__content {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* line 23, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--main, .main__content, .page-head, .landing, .l-events, .event-info, .l-profiles, .profile__info, .profile__info--alt-1, .profile__info--alt-2, .l-discussions, .sign-up, .features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 0;
+}
+
+/* line 29, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.centered-form, .nav, .nav--landing, .menu-link, .nav--main ul, .nav--search, .nav--filter, .content__heading, .page-head, .landing-intro, .modal__content, .modal__feature, .modal__footer, .l-event, .event-date, .event-blurb, .profile, .profile__img, .profile__blurb, .l-article, .discussion, .discussion__post--reply, .tabs__container, .sign-up__header, .sign-up__footer, .featurette {
+  display: inline-block;
+  padding-left: 0;
+  vertical-align: top;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 37, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.modal {
+  text-align: center;
+}
+
+/* line 42, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--search, .nav--filter, .content__heading, .landing-intro, .modal__content, .event-date, .discussion, .discussion__post--reply, .sign-up__header, .sign-up__footer {
+  width: 100%;
+}
+
+/* line 44, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.centered-form, .menu-link, .modal__footer, .features {
+  width: 50%;
+}
+
+/* line 46, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.l-event, .profile, .profile__img {
+  width: 33%;
+}
+
+/* line 48, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.event-blurb, .profile__blurb {
+  width: 66.666%;
+}
+
+/* line 50, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.l-article, .featurette {
+  width: 24.5%;
+}
+
+/* line 52, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.sign-up {
+  width: 60%;
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 55, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .centered-form, .l-event, .event-blurb, .profile, .l-article, .sign-up, .featurette {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  /* line 58, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .nav--filter ul, .event-blurb {
+    width: 100%;
+  }
+
+  /* line 60, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .l-event, .profile, .l-article, .featurette {
+    width: 49%;
+  }
+
+  /* line 62, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .sign-up {
+    width: 75%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* line 67, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .modal__content, .discussion, .tabs__container {
+    width: 100%;
+    display: inline-block;
+  }
+
+  /* line 70, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .content__heading, .event-date {
+    width: 33.333%;
+  }
+
+  /* line 72, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .nav--search, .nav--filter {
+    width: 66.666%;
+  }
+}
+/* line 74, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.centered-form {
+  text-align: left;
+}
+
+/* line 77, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.form-dob input {
+  margin: 5px 0;
+}
+
+/* line 80, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.form-dob .form-dob__day {
+  width: 15%;
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  /* line 83, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .form-dob .form-dob__day {
+    width: 17%;
+  }
+}
+/* line 85, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.form-dob .form-dob__month {
+  width: 40%;
+}
+
+/* line 87, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.form-dob .form-dob__year {
+  width: 40%;
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 90, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .form-dob .form-dob__day, .form-dob .form-dob__month, .form-dob .form-dob__year {
+    width: 100%;
+  }
+}
+/* line 92, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.form-gender label {
+  display: inline-block;
+}
+
+/* line 95, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.form-optional h4 {
+  text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 99, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .form-optional h4 {
+    text-align: left;
+  }
+}
+/* line 102, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-overlay {
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  zoom: 1;
+  overflow: hidden;
+}
+
+/* line 112, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-overlay-background {
+  background: #000;
+  filter: alpha(opacity=90);
+  opacity: .9;
+  float: left;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* line 121, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window, .fr-window-fixed-measure {
+  z-index: 100000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+/* line 130, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-ui-outside .fr-info {
+  z-index: 100001;
+}
+
+/* line 133, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-loading {
+  z-index: 100001;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 52px;
+  height: 52px;
+  margin-top: -26px;
+  margin-left: -26px;
+  overflow: visible;
+}
+
+/* line 144, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-loading-offset {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* line 151, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-loading-background, .fr-loading-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 157, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-loading-background {
+  background: #0d0d0d url(skins/loading.gif) 50% 50% no-repeat;
+  opacity: .8;
+  border-radius: 3px;
+  position: relative;
+  float: left;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid rgba(80, 80, 80, 0.2);
+}
+
+/* line 167, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-loading-icon {
+  display: none;
+}
+
+/* line 170, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-bubble {
+  float: left;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* line 176, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-ui, .fr-info {
+  font: 400 13px/21px "Lucida Sans Unicode", "Lucida Sans", "Lucida Grande", Verdana, Arial, sans-serif;
+}
+
+/* line 179, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-frames {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: inline;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+/* line 188, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-frames-move {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 194, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-frame, .fr-ui {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 202, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-frame-touch {
+  position: relative;
+  float: left;
+  top: auto;
+  left: auto;
+  width: 100%;
+}
+
+/* line 208, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window :not(.fr-caption)::-moz-selection, .fr-window :not(.fr-caption)::-moz-selection, .fr-window :not(.fr-caption)::-webkit-selection {
+  background: transparent;
+}
+
+/* line 211, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window :not(.fr-caption)::selection, .fr-window :not(.fr-caption)::-moz-selection, .fr-window :not(.fr-caption)::-webkit-selection {
+  background: transparent;
+}
+
+/* line 214, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-mobile-touch-enabled .fr-frame .fr-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 220, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-frame-touch .fr-box {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 227, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-mobile-touch-enabled .fr-ui, .fr-mobile-touch-enabled .fr-ui-spacer, .fr-mobile-touch-enabled .fr-ui-wrapper, .fr-mobile-touch-enabled .fr-ui-padder, .fr-mobile-touch-enabled .fr-ui-toggle, .fr-mobile-touch-enabled .fr-ui-outer-border, .fr-mobile-touch-enabled .fr-side {
+  pointer-events: none;
+}
+
+/* line 230, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 236, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-box-has-ui-outside {
+  overflow: hidden;
+}
+
+/* line 239, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-box-spacer, .fr-ui-spacer {
+  position: absolute;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 247, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-box-wrapper, .fr-ui-wrapper {
+  position: relative;
+  background: url(skins/blank.gif);
+  overflow: hidden;
+}
+
+/* line 252, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-box-padder, .fr-ui-padder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  zoom: 1;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 0;
+  background: url(skins/blank.gif);
+}
+
+/* line 262, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-box-padder, .fr-ui-padder {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 267, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-ui-padder {
+  zoom: 1;
+}
+
+/* line 270, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-box-wrapper, .fr-ui-wrapper, .fr-ui-toggle {
+  position: relative;
+  float: left;
+  display: inline;
+  zoom: 1;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 281, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-box-wrapper {
+  background: #101010;
+}
+
+/* line 284, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-ui-wrapper-outside {
+  float: left;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 288, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-box-outer-border, .fr-ui-outer-border {
+  position: relative;
+  float: left;
+  display: inline;
+  height: 100%;
+  width: 100%;
+  zoom: 1;
+}
+
+/* line 296, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-ltIE9 .fr-box-outer-border, .fr-ltIE9 .fr-ui-outer-border {
+  border: 0 solid transparent;
+}
+
+/* line 299, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-content {
+  height: 100%;
+  width: 100%;
+  zoom: 1;
+  *display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 307, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-content-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  image-rendering: optimizeQuality;
+  max-width: none;
+}
+
+/* line 314, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-content-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* line 328, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-download-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  -webkit-user-drag: element;
+  user-drag: element;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: auto;
+}
+
+/* line 344, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-onclick-side {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: url(skins/blank.gif);
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* line 354, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-onclick-side img {
+  cursor: pointer;
+}
+
+/* line 357, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-onclick-previous {
+  left: 0;
+}
+
+/* line 360, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-onclick-next {
+  right: 0;
+}
+
+/* line 363, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-frame-onclick-next .fr-onclick-next {
+  width: 100%;
+}
+
+/* line 365, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-side {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  background: url(skins/blank.gif) 0 0 repeat;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  zoom: 1;
+}
+
+/* line 379, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-side-disabled {
+  cursor: default;
+}
+
+/* line 382, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-side-button {
+  position: absolute;
+  top: 50%;
+  width: 54px;
+  height: 72px;
+  margin: 0 9px;
+  margin-top: -36px;
+  pointer-events: auto;
+}
+
+/* line 391, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-side-button-icon {
+  float: left;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  zoom: 1;
+}
+
+/* line 398, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-side-previous {
+  left: 0;
+  width: 50%;
+}
+
+/* line 401, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-side-next {
+  right: 0;
+  width: 50%;
+}
+
+/* line 404, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-side-previous .fr-side-button {
+  left: 0;
+}
+
+/* line 407, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-side-next .fr-side-button {
+  right: 0;
+}
+
+/* line 410, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-ui-outside .fr-side {
+  width: 72px;
+  height: 72px;
+  top: 50%;
+  margin-top: -36px;
+}
+
+/* line 416, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-ui-outside .fr-side-button {
+  margin-top: 0;
+  top: 0;
+}
+
+/* line 420, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #efefef;
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+  pointer-events: auto;
+}
+
+/* line 433, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-info-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  line-height: 1%;
+  filter: alpha(opacity=80);
+  opacity: .8;
+  zoom: 1;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #000;
+}
+
+/* line 448, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-info-outside .fr-info-background {
+  background: #0d0d0d;
+  -webkit-filter: none;
+  filter: none;
+  opacity: 1;
+}
+
+/* line 454, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-info-padder {
+  padding: 12px;
+  display: block;
+  filter: alpha(opacity=99);
+  overflow: hidden;
+  width: auto;
+  position: relative;
+}
+
+/* line 462, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-caption {
+  position: relative;
+  filter: alpha(opacity=99);
+  opacity: .99;
+  width: auto;
+  word-wrap: no-wrap;
+}
+
+/* line 469, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-position-text {
+  position: relative;
+}
+
+/* line 472, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-has-position .fr-info-inside .fr-caption {
+  margin-right: 75px;
+}
+
+/* line 475, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-info-inside .fr-position {
+  filter: alpha(opacity=99);
+  opacity: .99;
+  position: relative;
+  text-align: right;
+  word-wrap: no-wrap;
+  line-height: 21px;
+  color: #b3b3b3;
+  float: right;
+  width: 75px;
+}
+
+/* line 486, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-no-caption .fr-info-inside .fr-position {
+  width: auto;
+  margin: 0 1px 1px 0;
+  color: #b9b9b9;
+  filter: alpha(opacity=99);
+}
+
+/* line 492, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-info-inside .fr-position-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 498, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-no-caption .fr-info-inside .fr-position-background {
+  border-radius: 12px;
+  background: #101010;
+  filter: alpha(opacity=80);
+  opacity: .8;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 506, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-info-inside .fr-position-text {
+  position: relative;
+}
+
+/* line 509, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-no-caption .fr-info-inside .fr-position-text {
+  float: left;
+  height: 13px;
+  line-height: 13px;
+  padding: 6px 10px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+@media all and (max-width: 568px) and (max-height: 320px), all and (max-width: 320px) and (max-height: 568px) {
+  /* line 517, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-has-position .fr-info-inside .fr-caption {
+    margin-right: 0;
+  }
+
+  /* line 520, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-position {
+    display: none !important;
+  }
+
+  /* line 523, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-ui-outside .fr-side {
+    width: 54px;
+    height: 50px;
+    margin-top: -25px;
+  }
+
+  /* line 528, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-side-button {
+    width: 40px;
+    height: 50px;
+    margin: 0 6px;
+    margin-top: -25px;
+  }
+}
+/* line 534, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-ui-outside .fr-position {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: inline;
+  width: auto;
+  margin: 0 1px 1px 0;
+  color: #b9b9b9;
+}
+
+/* line 543, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-ui-outside .fr-position-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  filter: alpha(opacity=80);
+  opacity: .8;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #1e1e1e;
+  border: 1px solid rgba(180, 180, 180, 0.2);
+}
+
+/* line 557, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-ui-outside .fr-position-text {
+  position: relative;
+  float: left;
+  width: auto;
+  text-align: right;
+  word-wrap: no-wrap;
+  color: #b3b3b3;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  word-wrap: no-wrap;
+  padding: 6px 10px;
+  height: 13px;
+  line-height: 13px;
+}
+
+/* line 574, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-ui-outside .fr-position-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 580, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-no-caption .fr-info-outside {
+  display: none;
+}
+
+/* line 583, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-no-caption .fr-info-padder {
+  pointer-events: none;
+}
+
+/* line 586, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-no-caption .fr-info-background {
+  pointer-events: none;
+  opacity: 0;
+  -webkit-filter: none;
+  filter: none;
+  display: none;
+}
+
+/* line 593, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-no-caption .fr-position-text, .fr-ui-outside .fr-position-text {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* line 596, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-ui-outside .fr-position {
+  float: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 15px;
+}
+
+/* line 603, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-ltIE8 .fr-info * {
+  zoom: 1;
+  filter: alpha(opacity=99);
+}
+
+/* line 607, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-ltIE8 .fr-box * {
+  zoom: 1;
+  filter: alpha(opacity=99);
+}
+
+/* line 611, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-info-outside {
+  bottom: auto;
+}
+
+/* line 614, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-no-caption .fr-info-outside .fr-info-padder {
+  padding: 10px 5px;
+}
+
+/* line 617, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-ui-outside .fr-no-caption .fr-position {
+  margin: 0;
+}
+
+/* line 620, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 47px;
+  height: 47px;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+/* line 629, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-close-background, .fr-close-icon {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  height: 23px;
+  width: 23px;
+}
+
+/* line 636, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-close-background {
+  filter: alpha(opacity=80);
+  opacity: .8;
+  -webkit-transition: background-color .2s ease-in;
+  transition: background-color .2s ease-in;
+  background-color: #282828;
+  cursor: pointer;
+}
+
+/* line 644, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-close:hover .fr-close-background {
+  background-color: #333;
+}
+
+/* line 647, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-ui-outside .fr-close-background {
+  background-color: #363636;
+}
+
+/* line 650, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-ui-outside .fr-close:hover .fr-close-background {
+  background-color: #434343;
+}
+
+/* line 653, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnails {
+  position: absolute;
+  width: 100%;
+  height: 9%;
+  -webkit-tap-highlight-color: transparent;
+  zoom: 1;
+  overflow: hidden;
+}
+
+/* line 661, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnails-horizontal {
+  left: 0;
+  bottom: 0;
+  min-height: 40px;
+  max-height: 120px;
+  padding: 20px 0;
+}
+
+/* line 668, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnails-vertical {
+  left: 0;
+  top: 0;
+  min-width: 40px;
+  max-width: 120px;
+  padding: 0 20px;
+}
+
+/* line 675, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnails, .fr-thumbnails * {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 682, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnails-wrapper {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+}
+
+/* line 687, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnails-vertical .fr-thumbnails-wrapper {
+  top: 50%;
+  left: 0;
+}
+
+/* line 691, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnails-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  float: left;
+  zoom: 1;
+}
+
+/* line 698, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnails-slider-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+/* line 703, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnails-thumbs {
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+/* line 711, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnails-slide {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 716, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnail-frame {
+  position: absolute;
+  zoom: 1;
+  overflow: hidden;
+}
+
+/* line 721, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnail {
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  zoom: 1;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+/* line 731, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-ltIE9 .fr-thumbnail * {
+  overflow: hidden;
+  z-index: 1;
+  zoom: 1;
+}
+
+/* line 736, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnail-wrapper {
+  position: relative;
+  background: #161616;
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  display: inline;
+  z-index: 0;
+}
+
+/* line 746, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnail-overlay {
+  cursor: pointer;
+}
+
+/* line 749, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnail-active .fr-thumbnail-overlay {
+  cursor: default;
+}
+
+/* line 752, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnail-overlay, .fr-thumbnail-overlay-background, .fr-thumbnail-overlay-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 758, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnail-overlay-border {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-width: 0;
+  overflow: hidden;
+  border-style: solid;
+  border-color: transparent;
+}
+
+/* line 766, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnail img {
+  position: absolute;
+  filter: alpha(opacity=85);
+  opacity: .85;
+  max-width: none;
+}
+
+/* line 772, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnail:hover img, .fr-thumbnail-active:hover img {
+  filter: alpha(opacity=99);
+  opacity: .99;
+}
+
+/* line 776, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnail-active img, .fr-thumbnail-active:hover img {
+  filter: alpha(opacity=35);
+  opacity: .35;
+}
+
+/* line 780, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnail-active {
+  cursor: default;
+}
+
+/* line 783, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnail-loading, .fr-thumbnail-loading-background, .fr-thumbnail-loading-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 789, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnail-loading-background {
+  background-color: #101010;
+  background-image: url(skins/loading.gif);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: .8;
+  position: relative;
+  float: left;
+}
+
+/* line 798, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnail-loading-icon {
+  display: none;
+}
+
+/* line 801, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnails-side {
+  float: left;
+  height: 100%;
+  width: 28px;
+  margin: 0 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 809, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnails-side-previous {
+  margin-left: 20px;
+}
+
+/* line 812, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnails-side-next {
+  margin-right: 20px;
+}
+
+/* line 815, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnails-side-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -14px;
+  margin-left: -14px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+/* line 825, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnails-side-button-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  filter: alpha(opacity=80);
+  opacity: .8;
+  -webkit-transition: background-color .2s ease-in;
+  transition: background-color .2s ease-in;
+  background-color: #333;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* line 839, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnails-side-button:hover .fr-thumbnails-side-button-background {
+  background-color: #3b3b3b;
+}
+
+/* line 842, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnails-side-button-disabled * {
+  cursor: default;
+}
+
+/* line 845, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnails-side-button-disabled:hover .fr-thumbnails-side-button-background {
+  background-color: #333;
+}
+
+/* line 848, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnails-side-button-icon {
+  height: 42px;
+  width: 42px;
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 856, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnails-vertical .fr-thumbnails-side, .fr-thumbnails-vertical .fr-thumbnails-thumbs, .fr-thumbnails-vertical .fr-thumbnail-frame {
+  clear: both;
+}
+
+/* line 859, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-frames-has-touch-ui {
+  top: 43px;
+}
+
+/* line 862, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-touch-menu {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 43px;
+}
+
+/* line 869, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-touch-menu-wrapper {
+  float: left;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* line 875, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-touch-caption {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  margin-top: -43px;
+}
+
+/* line 882, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-touch-menu-wrapper, .fr-touch-caption-wrapper {
+  float: left;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* line 888, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-touch-caption-overflow-scroll {
+  overflow-x: hidden;
+  overflow-y: scroll !important;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+/* line 894, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-touch-menu-background, .fr-touch-caption-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  line-height: 1%;
+  filter: alpha(opacity=80);
+  opacity: .8;
+  zoom: 1;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #000;
+}
+
+/* line 909, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-touch-caption-info {
+  float: left;
+  position: relative;
+  clear: both;
+  padding-right: 38px;
+  color: #efefef;
+}
+
+/* line 916, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-touch-caption-info-padder {
+  float: left;
+  padding: 11px;
+  display: block;
+  filter: alpha(opacity=99);
+  overflow: hidden;
+  width: auto;
+  position: relative;
+}
+
+/* line 925, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-touch-caption-text-wrapper {
+  float: left;
+  clear: both;
+  font-weight: 400;
+  font-family: "Lucida Sans Unicode", "Lucida Sans", "Lucida Grande", Verdana, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 21px;
+  height: 21px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 936, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-touch-caption-text {
+  float: left;
+}
+
+/* line 939, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-touch-caption-overflow .fr-touch-caption-text-wrapper {
+  overflow: visible;
+  height: auto;
+}
+
+/* line 943, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-touch-button {
+  padding: 10px 4px;
+  width: 23px;
+  height: 23px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* line 950, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-touch-button .fr-touch-button-background {
+  position: absolute;
+  top: 10px;
+  left: 4px;
+  height: 23px;
+  width: 23px;
+}
+
+/* line 957, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-touch-button .fr-touch-button-background {
+  background-color: #303030;
+}
+
+/* line 960, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-touch-button:hover .fr-touch-button-background {
+  background-color: #404040;
+}
+
+/* line 963, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-touch-button-icon {
+  float: left;
+  position: relative;
+  width: 23px;
+  height: 23px;
+}
+
+/* line 969, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-touch-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 11px;
+}
+
+/* line 975, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-touch-caption-more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 11px;
+  display: none;
+}
+
+/* line 982, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-touch-caption-padded .fr-touch-caption-more {
+  display: block;
+}
+
+@media all and (min-height: 0) {
+  /* line 986, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-thumbnails {
+    padding: 10px 0;
+  }
+
+  /* line 989, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-thumbnail, .fr-thumbnails-side {
+    margin: 0 4px;
+  }
+
+  /* line 992, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-thumbnails-side-previous {
+    margin-left: 8px;
+  }
+
+  /* line 995, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-thumbnails-side-next {
+    margin-right: 8px;
+  }
+
+  /* line 998, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-thumbnail-loading-background {
+    background-image: url(skins/loading-small.gif);
+  }
+}
+@media all and (min-height: 200px) {
+  /* line 1002, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-thumbnails {
+    padding: 12px 0;
+  }
+
+  /* line 1005, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-thumbnail, .fr-thumbnails-side {
+    margin: 0 6px;
+  }
+
+  /* line 1008, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-thumbnails-side-previous {
+    margin-left: 12px;
+  }
+
+  /* line 1011, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-thumbnails-side-next {
+    margin-right: 12px;
+  }
+}
+@media all and (min-height: 350px) {
+  /* line 1015, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-thumbnail-loading-background {
+    background-image: url(skins/loading-medium.gif);
+  }
+}
+@media all and (min-height: 500px) {
+  /* line 1019, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-thumbnails {
+    padding: 14px 0;
+  }
+
+  /* line 1022, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-thumbnail, .fr-thumbnails-side {
+    margin: 0 7px;
+  }
+
+  /* line 1025, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-thumbnails-side-previous {
+    margin-left: 14px;
+  }
+
+  /* line 1028, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-thumbnails-side-next {
+    margin-right: 14px;
+  }
+}
+@media all and (min-height: 700px) {
+  /* line 1032, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-thumbnails {
+    padding: 20px 0;
+  }
+
+  /* line 1035, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-thumbnail, .fr-thumbnails-side {
+    margin: 0 10px;
+  }
+
+  /* line 1038, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-thumbnails-side-previous {
+    margin-left: 20px;
+  }
+
+  /* line 1041, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-thumbnails-side-next {
+    margin-right: 20px;
+  }
+
+  /* line 1044, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-thumbnail-loading-background {
+    background-image: url(skins/loading.gif);
+  }
+}
+/* line 1047, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-ltIE8 * {
+  zoom: 1;
+  z-index: 1;
+}
+
+/* line 1051, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-ltIE9 .fr-content-image-overlay, .fr-ltIE9 .fr-has-caption .fr-info-outside .fr-info-background {
+  border: 0;
+}
+
+/* line 1054, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-side-button-icon, .fr-window-fresco .fr-close-icon, .fr-window-fresco .fr-touch-close .fr-touch-button-icon, .fr-window-fresco .fr-touch-caption-more .fr-touch-button-icon, .fr-window-fresco .fr-thumbnails-side-button-icon {
+  background-image: url(skins/fresco/sprite.png);
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  /* line 1058, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-window-fresco .fr-side-button-icon, .fr-window-fresco .fr-close-icon, .fr-window-fresco .fr-touch-close .fr-touch-button-icon, .fr-window-fresco .fr-touch-caption-more .fr-touch-button-icon, .fr-window-fresco .fr-side-button-icon {
+    background-image: url(skins/fresco/sprite@x2.png);
+    background-size: 500px 500px;
+  }
+}
+/* line 1062, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-box-outer-border {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+/* line 1065, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-box-wrapper {
+  background: #101010;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 0;
+}
+
+/* line 1071, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-content-image-overlay {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* line 1079, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-has-caption .fr-box-has-ui-outside .fr-content-image-overlay {
+  border-bottom-width: 0;
+}
+
+/* line 1082, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-no-caption .fr-box-has-ui-outside .fr-content-image-overlay {
+  border-bottom-width: 1px;
+}
+
+/* line 1085, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-ui-outside .fr-position-text {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* line 1088, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-no-caption .fr-info-inside .fr-position-background {
+  border: 1px solid rgba(180, 180, 180, 0.15);
+}
+
+/* line 1091, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-has-caption .fr-info-inside .fr-info-background {
+  border: 1px solid rgba(68, 68, 68, 0.1);
+  border-top-width: 0;
+}
+
+/* line 1095, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-has-caption .fr-info-outside .fr-info-background {
+  border: 1px solid rgba(80, 80, 80, 0.25);
+  border-top-width: 0;
+}
+
+/* line 1099, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-thumbnail-wrapper {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+/* line 1102, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-thumbnail-active .fr-thumbnail-wrapper {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+/* line 1105, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-side-previous .fr-side-button .fr-side-button-icon {
+  background-position: -13px -14px;
+}
+
+/* line 1108, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-side-next .fr-side-button .fr-side-button-icon {
+  background-position: -93px -14px;
+}
+
+/* line 1111, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-side-previous:hover .fr-side-button .fr-side-button-icon {
+  background-position: -13px -114px;
+}
+
+/* line 1114, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-side-next:hover .fr-side-button .fr-side-button-icon {
+  background-position: -93px -114px;
+}
+
+/* line 1117, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-side-previous .fr-side-button-disabled .fr-side-button-icon, .fr-window-fresco .fr-side-previous:hover .fr-side-button-disabled .fr-side-button-icon {
+  background-position: -13px -214px;
+}
+
+/* line 1120, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-side-next .fr-side-button-disabled .fr-side-button-icon, .fr-window-fresco .fr-side-next:hover .fr-side-button-disabled .fr-side-button-icon {
+  background-position: -93px -214px;
+}
+
+/* line 1123, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco:not(.fr-ltIE9) .fr-side-previous .fr-side-button .fr-side-button-icon {
+  background-position: -13px -114px;
+}
+
+/* line 1126, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco:not(.fr-ltIE9) .fr-side-next .fr-side-button .fr-side-button-icon {
+  background-position: -93px -114px;
+}
+
+/* line 1129, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco:not(.fr-ltIE9) .fr-side .fr-side-button .fr-side-button-icon {
+  -webkit-transition: opacity .2s ease-in;
+  transition: opacity .2s ease-in;
+  opacity: .5;
+}
+
+/* line 1134, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-side:hover .fr-side-button .fr-side-button-icon, .fr-window-fresco .fr-frame .fr-side .fr-side-button-active .fr-side-button-icon {
+  opacity: 1;
+}
+
+/* line 1137, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-ltIE9 .fr-frame .fr-side-previous .fr-side-button-active .fr-side-button-icon {
+  background-position: -13px -114px;
+}
+
+/* line 1140, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-ltIE9 .fr-frame .fr-side-next .fr-side-button-active .fr-side-button-icon {
+  background-position: -93px -114px;
+}
+
+/* line 1143, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco:not(.fr-ltIE9) .fr-ui-outside .fr-side .fr-side-button-disabled .fr-side-button-icon, .fr-window-fresco:not(.fr-ltIE9) .fr-ui-outside .fr-side .fr-side-button-disabled:hover .fr-side-button-icon {
+  opacity: .2;
+}
+
+/* line 1146, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-ui-inside .fr-side-button-disabled .fr-side-button-icon {
+  background-image: none;
+}
+
+@media all and (max-width: 568px) and (max-height: 320px), all and (max-width: 320px) and (max-height: 568px) {
+  /* line 1150, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-window-fresco .fr-side-previous .fr-side-button .fr-side-button-icon {
+    background-position: 0 -300px;
+  }
+
+  /* line 1153, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-window-fresco .fr-side-next .fr-side-button .fr-side-button-icon {
+    background-position: -40px -300px;
+  }
+
+  /* line 1156, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-window-fresco .fr-side-previous:hover .fr-side-button .fr-side-button-icon {
+    background-position: 0 -350px;
+  }
+
+  /* line 1159, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-window-fresco .fr-side-next:hover .fr-side-button .fr-side-button-icon {
+    background-position: -40px -350px;
+  }
+
+  /* line 1162, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-window-fresco:not(.fr-ltIE9) .fr-side-previous .fr-side-button .fr-side-button-icon {
+    background-position: 0 -350px;
+  }
+
+  /* line 1165, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-window-fresco:not(.fr-ltIE9) .fr-side-next .fr-side-button .fr-side-button-icon {
+    background-position: -40px -350px;
+  }
+}
+/* line 1168, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-close .fr-close-icon {
+  background-position: -169px -9px;
+}
+
+/* line 1171, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-close:hover .fr-close-icon {
+  background-position: -210px -9px;
+}
+
+/* line 1174, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco:not(.fr-ltIE9) .fr-close .fr-close-icon {
+  background-position: -210px -9px;
+  -webkit-transition: opacity .2s ease-in;
+  transition: opacity .2s ease-in;
+  opacity: .8;
+}
+
+/* line 1180, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-close:hover .fr-close-icon {
+  opacity: 1;
+}
+
+/* line 1183, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-thumbnail-wrapper {
+  border-color: transparent;
+  border-style: solid;
+  border-width: 0;
+}
+
+/* line 1188, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-thumbnail-wrapper {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+/* line 1191, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-thumbnail-active .fr-thumbnail-wrapper {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+/* line 1194, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-thumbnail-wrapper {
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* line 1197, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-thumbnail-overlay-border {
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* line 1201, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-thumbnail-active .fr-thumbnail-overlay-border, .fr-thumbnail-active:hover .fr-thumbnail-overlay-border {
+  border: 0;
+}
+
+/* line 1204, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-thumbnails-side-previous .fr-thumbnails-side-button-icon {
+  background-position: -160px -41px;
+}
+
+/* line 1207, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-thumbnails-side-previous:hover .fr-thumbnails-side-button-icon {
+  background-position: -202px -41px;
+}
+
+/* line 1210, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-thumbnails-side-next .fr-thumbnails-side-button-icon {
+  background-position: -160px -83px;
+}
+
+/* line 1213, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-thumbnails-side-next:hover .fr-thumbnails-side-button-icon {
+  background-position: -202px -83px;
+}
+
+/* line 1216, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-thumbnails-vertical .fr-thumbnails-side-previous .fr-thumbnails-side-button-icon {
+  background-position: -286px -41px;
+}
+
+/* line 1219, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-thumbnails-vertical .fr-thumbnails-side-previous:hover .fr-thumbnails-side-button-icon {
+  background-position: -328px -41px;
+}
+
+/* line 1222, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-thumbnails-vertical .fr-thumbnails-side-next .fr-thumbnails-side-button-icon {
+  background-position: -286px -83px;
+}
+
+/* line 1225, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-thumbnails-vertical .fr-thumbnails-side-next:hover .fr-thumbnails-side-button-icon {
+  background-position: -328px -83px;
+}
+
+/* line 1228, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco:not(.fr-ltIE9) .fr-thumbnails-side .fr-thumbnails-side-button-icon {
+  -webkit-transition: opacity .2s ease-in;
+  transition: opacity .2s ease-in;
+  opacity: .8;
+}
+
+/* line 1233, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco:not(.fr-ltIE9) .fr-thumbnails-side-previous .fr-thumbnails-side-button-icon, .fr-window-fresco:not(.fr-ltIE9) .fr-thumbnails-side-previous .fr-thumbnails-side-button-disabled {
+  background-position: -160px -41px;
+}
+
+/* line 1236, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco:not(.fr-ltIE9) .fr-thumbnails-side-next .fr-thumbnails-side-button-icon, .fr-window-fresco:not(.fr-ltIE9) .fr-thumbnails-side-next .fr-thumbnails-side-button-disabled {
+  background-position: -202px -83px;
+}
+
+/* line 1239, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco:not(.fr-ltIE9) .fr-thumbnails-side:hover .fr-thumbnails-side-button-icon {
+  opacity: 1;
+}
+
+/* line 1242, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco:not(.fr-ltIE9) .fr-thumbnails-vertical .fr-thumbnails-side-previous .fr-thumbnails-side-button-icon, .fr-window-fresco:not(.fr-ltIE9) .fr-thumbnails-vertical .fr-thumbnails-side-previous .fr-thumbnails-side-button-disabled {
+  background-position: -286px -41px;
+}
+
+/* line 1245, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco:not(.fr-ltIE9) .fr-thumbnails-vertical .fr-thumbnails-side-next .fr-thumbnails-side-button-icon, .fr-window-fresco:not(.fr-ltIE9) .fr-thumbnails-vertical .fr-thumbnails-side-next .fr-thumbnails-side-button-disabled {
+  background-position: -328px -83px;
+}
+
+/* line 1248, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco:not(.fr-ltIE9) .fr-thumbnails-side .fr-thumbnails-side-button-disabled, .fr-window-fresco:not(.fr-ltIE9) .fr-thumbnails-side:hover .fr-thumbnails-side-button-disabled {
+  opacity: .5;
+}
+
+/* line 1251, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco.fr-ltIE9 .fr-thumbnails-side-previous .fr-thumbnails-side-button-disabled .fr-thumbnails-side-button-icon, .fr-window-fresco.fr-ltIE9 .fr-thumbnails-side-previous:hover .fr-thumbnails-side-button-disabled .fr-thumbnails-side-button-icon {
+  background-position: -244px -41px;
+}
+
+/* line 1254, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco.fr-ltIE9 .fr-thumbnails-side-next .fr-thumbnails-side-button-disabled .fr-thumbnails-side-button-icon, .fr-window-fresco.fr-ltIE9 .fr-thumbnails-side-next:hover .fr-thumbnails-side-button-disabled .fr-thumbnails-side-button-icon {
+  background-position: -244px -83px;
+}
+
+/* line 1257, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco.fr-ltIE9 .fr-thumbnails-side .fr-thumbnails-side-button-disabled .fr-thumbnails-side-button-background, .fr-window-fresco.fr-ltIE9 .fr-thumbnails-side:hover .fr-thumbnails-side-button-disabled .fr-thumbnails-side-button-background {
+  filter: alpha(opacity=50);
+}
+
+/* line 1260, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco.fr-ltIE9 .fr-thumbnails-vertical .fr-thumbnails-side-previous .fr-thumbnails-side-button-disabled .fr-thumbnails-side-button-icon, .fr-window-fresco.fr-ltIE9 .fr-thumbnails-vertical .fr-thumbnails-side-previous:hover .fr-thumbnails-side-button-disabled .fr-thumbnails-side-button-icon {
+  background-position: -370px -41px;
+}
+
+/* line 1263, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco.fr-ltIE9 .fr-thumbnails-vertical .fr-thumbnails-side-next .fr-thumbnails-side-button-disabled .fr-thumbnails-side-button-icon, .fr-window-fresco.fr-ltIE9 .fr-thumbnails-vertical .fr-thumbnails-side-next:hover .fr-thumbnails-side-button-disabled .fr-thumbnails-side-button-icon {
+  background-position: -370px -83px;
+}
+
+/* line 1266, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-touch-menu-background, .fr-window-fresco .fr-touch-caption-background {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: transparent;
+  border-color: rgba(255, 255, 255, 0.12);
+  border-width: 0 0 1px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* line 1275, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-touch-caption-background {
+  border-width: 1px 0 0;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.3);
+}
+
+@media all and (max-width: 568px) and (max-height: 320px), all and (max-width: 320px) and (max-height: 568px) {
+  /* line 1280, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-window-fresco .fr-touch-caption-text-wrapper {
+    font-size: 12px;
+  }
+}
+/* line 1283, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-touch-close .fr-touch-button-icon {
+  background-position: -169px -9px;
+}
+
+/* line 1286, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-touch-close:hover .fr-touch-button-icon {
+  background-position: -210px -9px;
+}
+
+/* line 1289, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco:not(.fr-ltIE9) .fr-touch-close .fr-touch-button-icon {
+  background-position: -210px -9px;
+  -webkit-transition: opacity .2s ease-in;
+  transition: opacity .2s ease-in;
+  opacity: .8;
+}
+
+/* line 1295, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-touch-close .fr-touch-button-icon {
+  opacity: 1;
+}
+
+/* line 1298, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-touch-caption-more .fr-touch-button-icon {
+  background-position: -169px -134px;
+}
+
+/* line 1301, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-touch-caption-more:hover .fr-touch-button-icon {
+  background-position: -210px -134px;
+}
+
+/* line 1304, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco:not(.fr-ltIE9) .fr-touch-caption-more .fr-touch-button-icon {
+  background-position: -210px -134px;
+  -webkit-transition: opacity .2s ease-in;
+  transition: opacity .2s ease-in;
+  opacity: .8;
+}
+
+/* line 1310, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-touch-caption-more .fr-touch-button-icon {
+  opacity: 1;
+}
+
+/* line 1313, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-touch-caption-less .fr-touch-button-icon {
+  background-position: -169px -175px;
+}
+
+/* line 1316, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-touch-caption-less:hover .fr-touch-button-icon {
+  background-position: -210px -175px;
+}
+
+/* line 1319, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco:not(.fr-ltIE9) .fr-touch-caption-less .fr-touch-button-icon {
+  background-position: -210px -175px;
+  -webkit-transition: opacity .2s ease-in;
+  transition: opacity .2s ease-in;
+  opacity: .8;
+}
+
+/* line 1325, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-fresco .fr-touch-caption-less .fr-touch-button-icon {
+  opacity: 1;
+}
+
+/* line 1328, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-IE6 * {
+  zoom: 1;
+}
+
+/* line 1331, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-IE6 .fr-side-button-icon, .fr-window-IE6 .fr-close-icon, .fr-window-IE6 .fr-thumbnails-side-button-icon {
+  background-image: url(skins/IE6/sprite.png);
+}
+
+/* line 1334, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-IE6 .fr-side-previous .fr-side-button .fr-side-button-icon {
+  background-position: -13px -114px;
+}
+
+/* line 1337, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-IE6 .fr-side-next .fr-side-button .fr-side-button-icon {
+  background-position: -93px -114px;
+}
+
+/* line 1340, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-IE6 .fr-side-previous .fr-side-button-disabled .fr-side-button-icon, .fr-window-IE6 .fr-side-previous:hover .fr-side-button-disabled .fr-side-button-icon {
+  background-position: -13px -214px;
+}
+
+/* line 1343, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-IE6 .fr-side-next .fr-side-button-disabled .fr-side-button-icon, .fr-window-IE6 .fr-side-next:hover .fr-side-button-disabled .fr-side-button-icon {
+  background-position: -93px -214px;
+}
+
+/* line 1346, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-IE6 .fr-ui-inside .fr-side-button-disabled .fr-side-button-icon {
+  display: none;
+}
+
+@media all and (max-width: 568px) and (max-height: 320px), all and (max-width: 320px) and (max-height: 568px) {
+  /* line 1350, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-window-IE6 .fr-side-previous .fr-side-button .fr-side-button-icon {
+    background-position: 0 -350px;
+  }
+
+  /* line 1353, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-window-IE6 .fr-side-next .fr-side-button .fr-side-button-icon {
+    background-position: -40px -350px;
+  }
+
+  /* line 1356, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-window-IE6 .fr-side-previous .fr-side-button-disabled .fr-side-button-icon, .fr-window-IE6 .fr-side-previous:hover .fr-side-button-disabled .fr-side-button-icon {
+    background-position: 0 -400px;
+  }
+
+  /* line 1359, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .fr-window-IE6 .fr-side-next .fr-side-button-disabled .fr-side-button-icon, .fr-window-IE6 .fr-side-next:hover .fr-side-button-disabled .fr-side-button-icon {
+    background-position: -40px -400px;
+  }
+}
+/* line 1362, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-IE6 .fr-close .fr-close-icon {
+  background-position: -169px -9px;
+}
+
+/* line 1365, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-IE6 .fr-close:hover .fr-close-icon {
+  background-position: -210px -9px;
+}
+
+/* line 1368, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-IE6 .fr-info {
+  filter: alpha(opacity=99);
+}
+
+/* line 1371, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-IE6 .fr-ui-outside .fr-info {
+  background: #000;
+}
+
+/* line 1374, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-IE6 .fr-close-icon {
+  background-color: #232323;
+}
+
+/* line 1377, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-IE6 .fr-close .fr-close-background {
+  display: none;
+}
+
+/* line 1380, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-IE6 .fr-info-background {
+  display: none;
+}
+
+/* line 1383, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-IE6 .fr-has-caption .fr-ui-inside .fr-info, .fr-window-IE6 .fr-info-outside {
+  background: #0d0d0d;
+}
+
+/* line 1386, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-IE6 .fr-position {
+  background: #101010;
+}
+
+/* line 1389, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-IE6 .fr-has-caption .fr-ui-inside .fr-position {
+  background: 0 0;
+}
+
+/* line 1392, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fr-window-IE6 .fr-position .fr-position-background {
+  display: none;
+}
+
+/* line 1395, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.clear:before, .clear:after {
+  content: ' ';
+  display: table;
+}
+
+/* line 1399, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.clear {
+  *zoom: 1;
+}
+
+/* line 1402, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.clear:after {
+  clear: both;
+}
+
+/* line 1405, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* line 1411, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+body {
+  background: #fff;
+  color: #444;
+  font-size: 100%;
+  line-height: 1.6;
+}
+
+/* line 1417, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+a {
+  color: #232323;
+}
+
+@media (max-width: 1023px) {
+  /* line 1421, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  body {
+    font-size: 90%;
+  }
+}
+@media (max-width: 480px) {
+  /* line 1424, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  body {
+    font-size: 85%;
+  }
+}
+/* line 1426, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: 600;
+  margin: .5rem 0;
+}
+
+/* line 1430, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.h1 {
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+
+/* line 1434, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.h2 {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+/* line 1438, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.h3 {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+/* line 1442, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.h4 {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+/* line 1446, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.h5 {
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+/* line 1450, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.h6 {
+  font-size: 10px;
+  font-size: 1rem;
+}
+
+/* line 1454, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+p {
+  font-size: 14px;
+}
+
+/* line 1457, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.type--light {
+  font-weight: 300;
+}
+
+/* line 1460, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+a, .h5 type--light {
+  color: #333;
+  text-decoration: none;
+}
+
+/* line 1464, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.people--name a {
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: .5rem 0;
+  color: #fff;
+}
+
+/* line 1472, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.align-left {
+  text-align: left;
+}
+
+/* line 1475, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.header--fancy {
+  display: block;
+  position: relative;
+}
+
+/* line 1479, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.header--fancy:before, .header--fancy:after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 1px;
+  border-bottom: 1px solid #edeff0;
+  top: 50%;
+}
+
+/* line 1486, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.header--fancy:after {
+  left: 51%;
+}
+
+/* line 1488, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.header--fancy:before {
+  right: 51%;
+}
+
+@font-face {
+  font-family: ig-icons;
+  src: url(/assets/ig-icons.eot);
+  src: url(/assets/ig-icons.eot) format("embedded-opentype"), url(/assets/ig-icons.woff) format("woff"), url(/fonts/ig-icons.ttf) format("truetype"), url(/assets/ig-icons.svg) format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* line 1500, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+[class^=icon-]:before, [class*=" icon-"]:before {
+  font-family: ig-icons;
+  font-style: normal;
+  font-weight: 400;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+}
+
+/* line 1515, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.icon-pound:before {
+  content: '\e802';
+}
+
+/* line 1517, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.icon-play:before {
+  content: '\e804';
+}
+
+/* line 1519, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.icon-gp:before {
+  content: '\e806';
+}
+
+/* line 1521, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.icon-li:before {
+  content: '\e808';
+}
+
+/* line 1523, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.icon-twt:before {
+  content: '\e807';
+}
+
+/* line 1525, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.icon-fab:before {
+  content: '\e805';
+}
+
+/* line 1527, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.icon-person:before {
+  content: '\e803';
+}
+
+/* line 1529, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.icon-calendar:before {
+  content: '\e801';
+}
+
+/* line 1531, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.icon-lightbulb:before {
+  content: '\e800';
+}
+
+/* line 1533, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.icon-search:before {
+  content: '\e809';
+}
+
+/* line 1535, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 1539, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/* line 1543, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--landing {
+  font-weight: 300;
+  text-align: right;
+  padding: 15px;
+}
+
+/* line 1548, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--landing li {
+  padding: 0 10px;
+}
+
+/* line 1551, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--landing a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 1557, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .nav--landing {
+    text-align: center;
+  }
+}
+/* line 1560, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.js-main {
+  left: 0;
+  position: relative;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+/* line 1566, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.menu-link {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 300;
+  height: 70px;
+  padding: 20px 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  /* line 1576, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .menu-link {
+    display: none;
+  }
+}
+/* line 1579, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.menu-link--light {
+  color: #fff;
+}
+
+/* line 1582, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.js-main.active {
+  -webkit-transform: translateX(80px);
+  -ms-transform: translateX(80px);
+  transform: translateX(80px);
+}
+
+/* line 1587, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--main {
+  background-color: #232323;
+  height: 100%;
+  width: 80px;
+  top: 0;
+  left: -80px;
+  position: fixed;
+  padding: 10px;
+  z-index: 50;
+}
+
+/* line 1597, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--main:hover h1.logo {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 1024px) {
+  /* line 1601, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .nav--main {
+    left: 0;
+    position: fixed;
+  }
+}
+/* line 1605, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--main ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1609, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--main ul li {
+  font-size: 1.75em;
+  list-style-type: none;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* line 1615, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--main ul li a, .nav--main ul li a:visited {
+  color: #838484;
+  -webkit-transition: color .2s ease;
+  transition: color .2s ease;
+}
+
+/* line 1620, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--main ul li a:hover {
+  color: #fff;
+}
+
+/* line 1623, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--main__profile {
+  bottom: 10px;
+  border: 2px solid #edeff0;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  width: 60px;
+}
+
+/* line 1632, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--search {
+  text-align: right;
+}
+
+/* line 1635, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--search input {
+  border-radius: 4px 0 0 4px;
+  display: inline-block;
+  width: 85%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1024px) {
+  /* line 1642, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .nav--search input {
+    max-width: 350px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* line 1646, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .nav--search input {
+    border-radius: 4px 4px 0 0;
+    width: 100%;
+  }
+}
+/* line 1649, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--filter ul {
+  background: #fff;
+  border-radius: 4px;
+  float: right;
+  margin: 0;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+/* line 1657, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--filter li {
+  padding-right: 10px;
+}
+
+/* line 1660, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--filter li:first-child {
+  font-weight: 600;
+}
+
+/* line 1663, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--filter li:last-child {
+  padding-right: 0;
+}
+
+/* line 1666, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--filter li:not(:first-child):before {
+  content: "\2022";
+  font-size: 1.2em;
+  padding-right: 10px;
+  vertical-align: baseline;
+}
+
+/* line 1672, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--filter a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* line 1676, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--filter__all:before {
+  content: "";
+}
+
+/* line 1678, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--filter__design:before {
+  color: #f07023;
+}
+
+/* line 1681, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--filter__web:before {
+  color: #59bbff;
+}
+
+/* line 1684, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--filter__business:before {
+  color: #60b010;
+}
+
+/* line 1687, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--filter__social:before {
+  color: #c416c2;
+}
+
+/* line 1690, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--filter__events:before {
+  color: #de0d0d;
+}
+
+/* line 1693, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--tabs {
+  border-bottom: 1px solid #ccc;
+  margin: 0;
+  padding: 0 0 15px;
+  text-align: left;
+}
+
+/* line 1699, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--tabs li {
+  list-style: none;
+  display: inline-block;
+  padding-right: 15px;
+}
+
+/* line 1704, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--tabs li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* line 1708, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--tabs li a:hover {
+  color: #3ca1e2;
+}
+
+/* line 1711, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--tabs li a.current {
+  color: #3ca1e2;
+}
+
+/* line 1714, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.body--grey {
+  background-color: #edeff0;
+}
+
+/* line 1717, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.body--signup {
+  background: url(../img/signup-bg.jpg);
+  background-size: cover;
+}
+
+/* line 1721, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.main {
+  position: relative;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+@media only screen and (min-width: 1024px) {
+  /* line 1727, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .main {
+    margin-left: 80px;
+  }
+}
+/* line 1730, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.main--full {
+  height: 100%;
+}
+
+/* line 1732, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.main__content {
+  padding: 15px;
+  position: relative;
+}
+
+/* line 1736, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.body--profile {
+  background: url(http://31.media.tumblr.com/8ec07e49f33088c2e32c158ca4262eb2/tumblr_n5wav6Tz4R1st5lhmo1_1280.jpg);
+  background-size: cover;
+}
+
+/* line 1740, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.content--profile {
+  height: 90%;
+}
+
+/* line 1742, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.profile-content {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  bottom: 0;
+  color: #fff;
+  float: left;
+  padding: 15px;
+  position: relative;
+  margin-top: 40%;
+}
+
+/* line 1752, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.profile-content h1, .profile-content h2, .profile-content p {
+  margin: 0;
+}
+
+/* line 1755, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.profile-content .profile {
+  border-radius: 50%;
+  width: 100px;
+  margin-right: 1em;
+  vertical-align: middle;
+}
+
+/* line 1761, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.profile-content .profile__header {
+  text-transform: uppercase;
+}
+
+/* line 1764, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.profile__img--main, .profile__info--main {
+  float: left;
+}
+
+/* line 1767, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.profile__info--main i {
+  padding-right: 15px;
+}
+
+/* line 1770, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.profile__stub {
+  font-style: italic;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 1774, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.profile__activity {
+  bottom: 0;
+  right: 0;
+  padding: 0 15px 15px 0;
+  position: absolute;
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  /* line 1781, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .profile__activity {
+    display: block;
+    position: relative;
+    margin-left: 15px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* line 1787, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .profile__activity {
+    display: block;
+    position: relative;
+    margin-left: 15px;
+  }
+}
+/* line 1792, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.profile__activity {
+  border-left: 1px solid #fff;
+  color: #fff;
+}
+
+/* line 1796, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.profile__activity a {
+  color: #fff;
+}
+
+/* line 1799, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.profile__activity i {
+  padding: 0 15px;
+}
+
+/* line 1802, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.profile__activity p {
+  margin: 0;
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  /* line 1806, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .profile__activity {
+    border-left: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* line 1810, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .profile__activity {
+    border-left: 0;
+  }
+}
+/* line 1813, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.activity__time {
+  color: #838484;
+}
+
+/* line 1816, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.activity__single {
+  padding-left: 30px;
+}
+
+/* line 1819, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.activity__single--event:before {
+  background: #3ca1e2;
+  content: "\f133";
+  color: #114d74;
+  font-family: FontAwesome;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  left: -13px;
+}
+
+/* line 1831, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.activity__single--post:before {
+  background: #d22632;
+  content: "\f0eb";
+  color: #7c161d;
+  font-family: FontAwesome;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  left: -13px;
+}
+
+/* line 1843, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.page-head {
+  padding: 15px;
+}
+
+/* line 1846, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.profile__social {
+  color: #fff;
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 1850, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .content__heading {
+    text-align: center;
+  }
+}
+/*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
+/* line 1853, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-wrap, .fancybox-skin, .fancybox-outer, .fancybox-inner, .fancybox-image, .fancybox-wrap iframe, .fancybox-wrap object, .fancybox-nav, .fancybox-nav span, .fancybox-tmp {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: top;
+}
+
+/* line 1860, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8020;
+}
+
+/* line 1866, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-skin {
+  position: relative;
+  background: #f9f9f9;
+  color: #444;
+  text-shadow: none;
+  border-radius: 4px;
+}
+
+/* line 1873, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-opened {
+  z-index: 8030;
+}
+
+/* line 1876, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-opened .fancybox-skin {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* line 1879, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-outer, .fancybox-inner {
+  position: relative;
+}
+
+/* line 1882, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-inner {
+  overflow: hidden;
+}
+
+/* line 1885, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-type-iframe .fancybox-inner {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 1888, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-error {
+  color: #444;
+  font: 14px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 15px;
+  white-space: nowrap;
+}
+
+/* line 1895, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-image, .fancybox-iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 1899, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* line 1902, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+  background-image: url(../img/fancybox/fancybox_sprite.png);
+}
+
+/* line 1905, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+#fancybox-loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -22px;
+  margin-left: -22px;
+  background-position: 0 -108px;
+  opacity: .8;
+  cursor: pointer;
+  z-index: 8060;
+}
+
+/* line 1916, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+#fancybox-loading div {
+  width: 44px;
+  height: 44px;
+  background: url(../img/fancybox/fancybox_loading.gif) center center no-repeat;
+}
+
+/* line 1921, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-close {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 8040;
+}
+
+/* line 1930, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-nav {
+  position: absolute;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  background: transparent url(../img/fancybox/blank.gif);
+  -webkit-tap-highlight-color: transparent;
+  z-index: 8040;
+}
+
+/* line 1941, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-prev {
+  left: 0;
+}
+
+/* line 1944, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-next {
+  right: 0;
+}
+
+/* line 1947, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-nav span {
+  position: absolute;
+  top: 50%;
+  width: 36px;
+  height: 34px;
+  margin-top: -18px;
+  cursor: pointer;
+  z-index: 8040;
+  visibility: hidden;
+}
+
+/* line 1957, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-prev span {
+  left: 10px;
+  background-position: 0 -36px;
+}
+
+/* line 1961, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-next span {
+  right: 10px;
+  background-position: 0 -72px;
+}
+
+/* line 1965, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-nav:hover span {
+  visibility: visible;
+}
+
+/* line 1968, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-tmp {
+  position: absolute;
+  top: -99999px;
+  left: -99999px;
+  visibility: hidden;
+  max-width: 99999px;
+  max-height: 99999px;
+  overflow: visible !important;
+}
+
+/* line 1977, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-lock {
+  overflow: hidden !important;
+  width: auto;
+}
+
+/* line 1981, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-lock body {
+  overflow: hidden !important;
+}
+
+/* line 1984, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-lock-test {
+  overflow-y: hidden !important;
+}
+
+/* line 1987, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: none;
+  z-index: 8010;
+  background: url(../img/fancybox/fancybox_overlay.png);
+}
+
+/* line 1996, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-overlay-fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+/* line 2001, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-lock .fancybox-overlay {
+  overflow: auto;
+  overflow-y: scroll;
+}
+
+/* line 2005, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-title {
+  visibility: hidden;
+  font: 400 13px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: relative;
+  text-shadow: none;
+  z-index: 8050;
+}
+
+/* line 2012, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-opened .fancybox-title {
+  visibility: visible;
+}
+
+/* line 2015, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-title-float-wrap {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  margin-bottom: -35px;
+  z-index: 8050;
+  text-align: center;
+}
+
+/* line 2023, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-title-float-wrap .child {
+  display: inline-block;
+  margin-right: -100%;
+  padding: 2px 20px;
+  background: transparent;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  text-shadow: 0 1px 2px #222;
+  color: #FFF;
+  font-weight: 700;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+/* line 2036, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-title-outside-wrap {
+  position: relative;
+  margin-top: 10px;
+  color: #fff;
+}
+
+/* line 2041, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-title-inside-wrap {
+  padding-top: 10px;
+}
+
+/* line 2044, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.fancybox-title-over-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  padding: 10px;
+  background: #000;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* line 2054, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-image: url(../img/fancybox/fancybox_sprite@2x.png);
+    background-size: 44px 152px;
+  }
+
+  /* line 2058, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  #fancybox-loading div {
+    background-image: url(../img/fancybox/fancybox_loading@2x.gif);
+    background-size: 24px 24px;
+  }
+}
+/* line 2062, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.btn--primary, .btn--secondary {
+  border-radius: 4px;
+  border: 0;
+  display: inline-block;
+  font-weight: 200;
+  font-size: 1rem;
+  margin: 15px 0;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: background-color .2s ease;
+  transition: background-color .2s ease;
+}
+
+/* line 2075, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.btn--posts {
+  margin-left: 15px;
+}
+
+/* line 2078, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.btn--delete {
+  border-radius: 4px;
+  border: 0;
+  display: inline-block;
+  font-weight: 200;
+  font-size: 1rem;
+  margin: 15px 0;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: background-color .2s ease;
+  transition: background-color .2s ease;
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 2092, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .btn--primary, .btn--secondary {
+    width: 100%;
+  }
+}
+/* line 2094, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.btn--primary {
+  background-color: #3ca1e2;
+  color: #fff;
+}
+
+/* line 2098, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.btn--primary:hover {
+  background-color: #1e88cd;
+  cursor: pointer;
+}
+
+/* line 2102, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.btn--secondary {
+  background-color: #78d367;
+  color: #fff;
+}
+
+/* line 2106, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.btn--secondary:hover {
+  background-color: #55c83f;
+  cursor: pointer;
+}
+
+/* line 2110, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.btn--delete {
+  background-color: #d22632;
+  color: #fff;
+}
+
+/* line 2114, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.btn--delete:hover {
+  background-color: #a71e28;
+  cursor: pointer;
+}
+
+/* line 2118, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.btn--centered {
+  margin: 15px auto;
+}
+
+/* line 2121, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.btn-social {
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  margin: 0 5px;
+  width: 150px;
+}
+
+/* line 2130, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.btn-social i {
+  font-size: 1.2em;
+  padding-right: 20px;
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 2135, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .btn-social {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+/* line 2140, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.btn-fab {
+  background-color: #4c699e;
+}
+
+/* line 2143, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.btn-gp {
+  background-color: #d9563a;
+}
+
+/* line 2146, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.btn-twt {
+  background-color: #22aee4;
+}
+
+/* line 2149, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.btn--search {
+  border: 1px solid #3ca1e2;
+  border-radius: 0 4px 4px 0;
+  background-color: #3ca1e2;
+  color: #fff;
+  display: inline;
+  font-size: 16px;
+  left: -4px;
+  height: 41px;
+  width: 50px;
+  position: relative;
+  margin: 0;
+  vertical-align: top;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+/* line 2165, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.btn--search:hover {
+  background-color: #1e88cd;
+  border: 1px solid #1e88cd;
+  cursor: pointer;
+}
+
+/* line 2170, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.btn--search:focus {
+  outline: 0;
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 2174, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .btn--search {
+    border-radius: 0 0 4px 4px;
+    left: 0;
+    width: 100%;
+  }
+}
+/* line 2178, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+input, textarea {
+  background-color: #fff;
+  border: 1px solid transparent;
+  display: block;
+  font-size: .75em;
+  border-radius: 4px;
+  padding: 13px;
+  -webkit-transition: border .2s ease;
+  transition: border .2s ease;
+}
+
+/* line 2188, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+input:focus, textarea:focus {
+  border: 1px solid #d1d6d9;
+  outline: 0;
+}
+
+/* line 2192, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+input, textarea, button {
+  font-size: .75em;
+  font-weight: 300;
+}
+
+/* line 2196, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+label {
+  display: block;
+  padding: 15px 0;
+}
+
+/* line 2200, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.input--full {
+  width: 100%;
+}
+
+/* line 2202, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.input--settings {
+  width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  /* line 2205, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .input--settings {
+    max-width: 350px;
+  }
+}
+/* line 2208, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.sub-label {
+  font-size: 10px;
+  font-size: 1rem;
+}
+
+/* line 2212, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.label--inline {
+  display: inline-block;
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 2216, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .label--inline {
+    display: block;
+  }
+}
+/* line 2219, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.input--full {
+  display: block;
+}
+
+/* line 2222, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.bordered {
+  border: 1px solid #d1d6d9;
+}
+
+/* line 2225, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+::-webkit-input-placeholder {
+  color: #d1d6d9;
+}
+
+/* line 2228, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+:-moz-placeholder {
+  color: #d1d6d9;
+}
+
+/* line 2231, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+::-moz-placeholder {
+  color: #d1d6d9;
+}
+
+/* line 2234, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+:-ms-input-placeholder {
+  color: #d1d6d9;
+}
+
+/* line 2237, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+::-moz-selection {
+  background: #333;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* line 2242, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+::selection {
+  background: #333;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* line 2247, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+html, body {
+  height: 100%;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+}
+
+/* line 2254, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+body {
+  position: relative;
+}
+
+/* line 2257, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+h1.logo {
+  background: url(http://lewis-phillips.co.uk/app2/assets/img/logo.png) center center no-repeat;
+  background-size: contain;
+  height: 55px;
+  margin: 0;
+  opacity: .5;
+  text-indent: -9999px;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 2268, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  h1.logo {
+    width: 51px;
+  }
+}
+/* line 2271, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.top-bar {
+  background: #232323 url(../img/logo.png) center center no-repeat;
+  background-size: 40px 45px;
+  height: 70px;
+}
+
+@media only screen and (min-width: 1024px) {
+  /* line 2277, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .top-bar {
+    display: none;
+  }
+}
+/*.overlay {
+  background: url(data:image/svg+xml;
+  base64, PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjY1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjY2JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjY1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, .65)), color-stop(66%, rgba(0, 0, 0, .65)), color-stop(100%, transparent));
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, .65) 0, rgba(0, 0, 0, .65) 66%, transparent 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, .65) 0, rgba(0, 0, 0, .65) 66%, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000',  endColorstr='#00000000',  GradientType=1);
+  height: 100%
+}*/
+/* line 2290, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.landing {
+  background: url(../img/landing-bg.png) center center no-repeat;
+  background-size: cover;
+}
+
+/* line 2294, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.landing-intro {
+  color: #fff;
+  padding: 100px 15px 15px;
+  text-align: center;
+}
+
+/* line 2299, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.landing-intro h1, .landing-intro h2 {
+  font-weight: 300;
+}
+
+/* line 2302, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.landing-intro .icon-play {
+  font-size: 24px;
+  font-size: 2.4rem;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  padding: .7em .55em;
+}
+
+/* line 2311, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+#step-1 {
+  display: none;
+}
+
+/* line 2314, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+/* line 2322, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.modal__content {
+  background-color: #edeff0;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* line 2327, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.modal__head h1 + p {
+  color: #838484;
+}
+
+/* line 2330, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.modal__features {
+  margin: 30px 0 10px;
+}
+
+/* line 2333, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.modal__feature {
+  padding: 0 20px;
+  width: 20%;
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 2337, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .modal__feature {
+    width: 100%;
+  }
+}
+/* line 2339, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.modal__feature h3 {
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #838484;
+}
+
+/* line 2344, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.modal__sign-up {
+  background-color: #fff;
+  padding: 20px 0;
+}
+
+/* line 2348, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.modal__sign-up p {
+  color: #838484;
+  margin: 20px auto;
+  width: 90%;
+}
+
+/* line 2352, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.modal__footer p {
+  color: #838484;
+}
+
+/* line 2355, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.modal__footer a {
+  color: #232323;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* line 2360, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.l-event {
+  padding: 15px;
+}
+
+/* line 2363, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.event-info {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+/* line 2368, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.event-date {
+  margin-top: 2.5em;
+  text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 2373, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .event-date {
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  /* line 2377, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .event-date {
+    margin-top: 0;
+  }
+}
+/* line 2380, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.event-date h3 {
+  font-size: 3em;
+  margin: .25em 0 0;
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 2385, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .event-date h3 {
+    margin: .75em 0 0;
+  }
+}
+/* line 2388, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.event-date p {
+  background-color: #d22632;
+  color: #fff;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  width: 75px;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+/* line 2397, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.event-blurb {
+  padding-left: 15px;
+}
+
+/* line 2400, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.event-blurb h4 {
+  margin-bottom: 0;
+}
+
+/* line 2403, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.event-blurb small {
+  display: block;
+  font-weight: 300;
+}
+
+/* line 2407, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.profile {
+  border-radius: 4px;
+  padding: 15px;
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 2412, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .profile {
+    padding: 15px 0;
+  }
+}
+/* line 2415, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.profile__info, .profile__info--alt-1, .profile__info--alt-2 {
+  color: #fff;
+  border-radius: 4px;
+  padding: 15px 0px 0px 0px;
+  height: 170px;
+}
+
+/* line 2421, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.profile__info {
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/profile-bg.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/profile-bg.png);
+}
+
+/* line 2425, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.profile__info--alt-1 {
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/profile-bg-alt-1.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/profile-bg-alt-1.png);
+}
+
+/* line 2429, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.profile__info--alt-2 {
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/profile-bg-alt-2.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/profile-bg-alt-2.png);
+}
+
+/* line 2433, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.profile__img {
+  text-align: center;
+}
+
+/* line 2436, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.profile__img img {
+  padding: 20px 0;
+  border-radius: 50%;
+}
+
+/* line 2440, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.profile__blurb {
+  padding-left: 10px;
+}
+
+/* line 2443, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.profile__blurb h1 {
+  margin: 0;
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  /* line 2447, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .search-bar {
+    text-align: center;
+  }
+}
+/* line 2450, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.is-active {
+  color: #fff;
+}
+
+/* line 2453, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.l-article {
+  overflow: hidden;
+  padding: 15px;
+  position: relative;
+}
+
+/* line 2458, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.article-content {
+  background-color: #fff;
+  border-radius: 0 0 4px 4px;
+  padding: 15px;
+}
+
+/* line 2463, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.article-content .btn {
+  margin-bottom: 0;
+}
+
+/* line 2466, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.article-content h1 {
+  margin-top: 0;
+}
+
+/* line 2469, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.article-content h1 + p {
+  margin-top: 0;
+}
+
+/* line 2472, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.article-img {
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+}
+
+/* line 2476, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.article-img img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+/* line 2480, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.body-post {
+  background: url(http://i.imgur.com/p4qDEoC.jpg);
+  background-size: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 2488, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.article-post {
+  background-color: #fff;
+  border-radius: 4px;
+  width: 90%;
+  max-width: 720px;
+  margin: 15px auto;
+}
+
+/* line 2495, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.article-post__head {
+  position: relative;
+}
+
+/* line 2498, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.article-post__detail {
+  bottom: 10px;
+  color: #fff;
+  left: 15px;
+  min-width: 225px;
+  text-shadow: 0 0 10px #000;
+  position: absolute;
+}
+
+/* line 2506, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.article-post__detail h1 {
+  display: inline-block;
+  bottom: 15px;
+  position: absolute;
+  left: 55px;
+  min-width: 300px;
+}
+
+/* line 2513, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.article-post__img {
+  height: auto;
+  width: 100%;
+}
+
+/* line 2517, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.article-post__img--head {
+  border-radius: 4px 4px 0 0;
+}
+
+/* line 2520, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.profile__article--img {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  margin: 15px 0;
+  float: left;
+  border-radius: 50%;
+}
+
+/* line 2528, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.article-post__content {
+  padding: 30px;
+}
+
+/* line 2531, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.article-post__content h1 {
+  margin-top: 0;
+}
+
+/* line 2534, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.article-post__content p {
+  font-size: 1.15rem;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 2540, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.article-post__content p:first-of-type {
+  margin-top: 0;
+}
+
+/* line 2543, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.post-social {
+  text-align: center;
+}
+
+/* line 2546, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.post-social i {
+  color: #838484;
+  padding-right: 15px;
+}
+
+/* line 2550, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.ribbon {
+  color: #fff;
+  left: 3px;
+  font-weight: 300;
+  padding: 3px 10px;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+/* line 2558, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.ribbon:after {
+  border-width: 5px 10px;
+  border-style: solid;
+  content: ' ';
+  left: 0;
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 100%;
+  z-index: -1;
+}
+
+/* line 2569, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.ribbon--design {
+  background-color: #f07023;
+}
+
+/* line 2572, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.ribbon--design:after {
+  border-color: #ea6210 #ea6210 transparent transparent;
+}
+
+/* line 2575, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.ribbon--web {
+  background-color: #59bbff;
+}
+
+/* line 2578, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.ribbon--web:after {
+  border-color: #40b1ff #40b1ff transparent transparent;
+}
+
+/* line 2581, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.ribbon--business {
+  background-color: #60b010;
+}
+
+/* line 2584, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.ribbon--business:after {
+  border-color: #53990e #53990e transparent transparent;
+}
+
+/* line 2587, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.ribbon--social {
+  background-color: #c416c2;
+}
+
+/* line 2590, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.ribbon--social:after {
+  border-color: #ad13ab #ad13ab transparent transparent;
+}
+
+/* line 2593, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.ribbon--events {
+  background-color: #de0d0d;
+}
+
+/* line 2596, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.ribbon--events:after {
+  border-color: #c60c0c #c60c0c transparent transparent;
+}
+
+/* line 2599, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.discussion__post {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 15px;
+  margin: 15px;
+  overflow: hidden;
+  _overflow: visible;
+  zoom: 1;
+  display: inline-block;
+  min-width: 47%;
+  position: relative;
+}
+
+@media (max-width: 1016px) {
+  /* line 2612, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .discussion__post {
+    min-width: 96%;
+  }
+}
+/* line 2616, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.discussion__post h1, .discussion__post p {
+  display: inline-block;
+}
+
+/* line 2619, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.discussion__post--reply {
+  border-top: 1px solid #edeff0;
+  float: right;
+  padding: 25px 0 0 125px;
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 2625, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .discussion__post--reply {
+    padding: 25px 0 0 25px;
+  }
+}
+/* line 2628, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.discussion__post--reply img {
+  height: 50px;
+  width: 50px;
+}
+
+/* line 2632, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.discussion__post--reply h1, .discussion__post--reply p {
+  font-size: 9px;
+  font-size: .9rem;
+}
+
+/* line 2636, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.reply--new {
+  background-color: #edeff0;
+  border-radius: 0 0 4px 4px;
+  padding: 15px 15px 15px 125px;
+}
+
+/* line 2641, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.discussion__profile {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* line 2646, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.discussion__content {
+  overflow: hidden;
+  _overflock: visible;
+  zoom: 1;
+}
+
+/* line 2651, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.discussion__content p {
+  margin-top: 0;
+}
+
+/* line 2654, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.discussion__content img {
+  width: 100%;
+}
+
+/* line 2656, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.settings__profile img, .settings__profile p, .settings__background img, .settings__background p {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+/* line 2660, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.settings__profile a, .settings__background a {
+  float: right;
+}
+
+/* line 2663, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.settings__profile p, .settings__background p {
+  padding-bottom: 10px;
+  vertical-align: bottom;
+}
+
+/* line 2667, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.tabs__content {
+  padding: 15px 0;
+  display: none;
+}
+
+/* line 2671, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.tabs__content.currentTab {
+  display: block;
+}
+
+/* line 2674, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.sign-up {
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 2680, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.sign-up__header, .sign-up__footer {
+  border-radius: 4px;
+  background-color: #edeff0;
+  padding: 15px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* line 2687, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.no-padding {
+  padding: 0;
+}
+
+/* line 2690, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.sign-up__footer {
+  color: #838484;
+}
+
+/* line 2693, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.features {
+  margin: 65px auto 35px;
+}
+
+/* line 2696, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.featurette {
+  color: #838484;
+}
+
+/* line 2699, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.featurette i {
+  font-size: 32px;
+  font-size: 3.2rem;
+}
+
+/* line 2703, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.featurette h5 {
+  font-weight: 300;
+}
+
+/* line 2706, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+footer {
+  padding: 15px;
+}
+
+/* line 2709, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--footer {
+  text-align: center;
+}
+
+/* line 2712, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.nav--footer ul li {
+  padding-right: 15px;
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 2716, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .nav--footer ul li :first-of-type {
+    display: block;
+  }
+}
+/* line 2719, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.footer--light {
+  color: #edeff0;
+  font-weight: 300;
+}
+
+/* line 2723, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.footer--light a {
+  color: #edeff0;
+}
+
+/* line 2726, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.right {
+  float: right;
+}
+
+/* line 2729, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+.left {
+  float: left;
+}
+
+@media print {
+  /* line 2733, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* line 2739, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  a, a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 2742, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 2744, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 2746, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 2748, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 2752, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* line 2755, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  /* line 2758, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: .5cm;
+}
+
+  /* line 2764, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 2768, /Users/lewisphillips/Documents/CAMPFIRE/Dev/imframe/app/assets/stylesheets/style.css.scss */
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}
