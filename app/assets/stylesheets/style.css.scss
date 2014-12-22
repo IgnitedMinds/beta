@@ -1490,9 +1490,9 @@ a, .h5 type--light {
     font-family: ig-icons;
     src: font-url('ig-icons.eot');
 		src: font-url('ig-icons.eot') format("embedded-opentype"),
-			url('/assets/ig-icons.woff') format("woff"),
-			url('/assets/ig-icons.ttf') format("truetype"),
-			url('/assets/ig-icons.svg') format("svg");
+			font-url('ig-icons.woff') format("woff"),
+			font-url('ig-icons.ttf') format("truetype"),
+			font-url('ig-icons.svg') format("svg");
     font-weight: 400;
     font-style: normal;
 }
