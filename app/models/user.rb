@@ -4,10 +4,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-has_attached_file :avatar, :styles => {:thumb => '100x100#' }
+has_attached_file :avatar, :styles => {:thumb => '100x100#' }, :default_url => "http://www.ignitedminds.co.uk/images/missing.png"
 validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
-has_attached_file :backgroundimg
+has_attached_file :backgroundimg, :default_url => "http://www.ignitedminds.co.uk/images/profile-bg.jpg"
 validates_attachment_content_type :backgroundimg, :content_type => /\Aimage\/.*\Z/
 
 has_many :posts
