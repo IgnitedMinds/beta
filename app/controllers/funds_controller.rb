@@ -1,7 +1,7 @@
 class FundsController < InheritedResources::Base
   actions :index, :show, :edit, :update, :destroy
 
-
+  http_basic_authenticate_with :name => "lewis", :password => "password", only: :new
 
   def index
     @funds = Fund.all
