@@ -1,0 +1,21 @@
+<%= simple_form_for(@fund) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :source %>
+    <%= f.input :type %>
+    <%= f.input :age_range %>
+    <%= f.input :deadline %>
+    <%= f.input :location %>
+    <%= f.input :ext_url %>
+  </div>
+  
+<br />
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+  
+
+<% end %>
