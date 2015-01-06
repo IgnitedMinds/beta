@@ -1,26 +1,19 @@
-
-
-
-         <div class="page-head">
-        <h3 class="content__heading">Inspiration</h3><!--
-        --><nav class="nav nav--filter">
-          <ul>
-            <li><a href="">Filter:</a></li>
-            <li class="nav--filter__all"><%= link_to 'All', articles_path %></li>
-            <li class="nav--filter__design"><%= link_to 'Design', articles_path(has_tag: "design") %></li>
-            <li class="nav--filter__web"><%= link_to 'Web', articles_path(has_tag: "web") %></li>
-            <li class="nav--filter__business"><%= link_to 'Business', articles_path(has_tag: "business") %></li>
-            <li class="nav--filter__social"><%= link_to 'Social', articles_path(has_tag: "social") %></li>
-            <li class="nav--filter__events"><%= link_to 'Events', articles_path(has_tag: "events") %></li>
-          </ul>
-        </nav>
-      </div>
+<div class="page-head">
+  <h3 class="content__heading">Inspiration</h3>
+  <nav class="nav nav--filter">
+    <ul>
+      <li><a href="">Filter:</a></li>
+      <li class="nav--filter__all"><%= link_to 'All', articles_path %></li>
+      <li class="nav--filter__design"><%= link_to 'Design', articles_path(has_tag: "design") %></li>
+      <li class="nav--filter__web"><%= link_to 'Web', articles_path(has_tag: "web") %></li>
+      <li class="nav--filter__business"><%= link_to 'Business', articles_path(has_tag: "business") %></li>
+      <li class="nav--filter__social"><%= link_to 'Social', articles_path(has_tag: "social") %></li>
+      <li class="nav--filter__events"><%= link_to 'Events', articles_path(has_tag: "events") %></li>
+    </ul>
+  </nav>
+</div>
 
 <div class="main__content">
-
-
-
-
   <% @articles.each do |article| %>
   		<div class="l-article">
           <h5 class="ribbon ribbon--<%=article.tag%>"><%= article.tag %></h5>
@@ -34,6 +27,4 @@
           </article>
         </div>
 	<% end %>
-
-
  </div>

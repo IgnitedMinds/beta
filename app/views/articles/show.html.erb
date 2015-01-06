@@ -1,26 +1,26 @@
- <article class="article-post">
-        <div class="article-post__head">
-          <img src="<%= @article.header.url %>" class="article-post__img article-post__img--head" alt="">
-          <div class="article-post__detail">
-            <h1 class="h5 type--light">Created By <a href="/<%=@article.user.user_name%>"><%= @article.user.first_name %></a></h1>
-            <a href="/<%=@article.user.user_name%>"><img src="<%= @article.user.avatar_url %>" class=" profile__article--img" alt=""></a>
-          </div>
-        </div>
-        <div class="article-post__content">
-          <h1><%= @article.description %></h1>
-          <p><%= @article.content %></p>
-        </div>
-        <img src="<%= @article.body1.url %>" class="article-post__img" alt="">
-        <div class="article-post__content">
+<article class="article-post">
+  <div class="article-post__head">
+    <img src="<%= @article.header.url %>" class="article-post__img article-post__img--head" alt="">
+    <div class="article-post__detail">
+      <h1 class="h5 type--light">Created By <a href="/<%=@article.user.user_name%>"><%= @article.user.first_name %></a></h1>
+      <a href="/<%=@article.user.user_name%>"><img src="<%= @article.user.avatar_url %>" class=" profile__article--img" alt=""></a>
+    </div>
+  </div>
+  <div class="article-post__content">
+    <h1><%= @article.description %></h1>
+    <p><%= @article.content %></p>
+  </div>
+  <img src="<%= @article.body1.url %>" class="article-post__img" alt="">
+  <div class="article-post__content">
 
-          <p><%= @article.content2 %></p>
-          <section class="post-social">
-            <i class="fa fa-facebook"></i>
-            <i class="fa fa-twitter"></i>
-            <i class="fa fa-google-plus"></i>
-          </section>
-        </div>
-      </article>
+    <p><%= @article.content2 %></p>
+    <section class="post-social">
+      <i class="fa fa-facebook"></i>
+      <i class="fa fa-twitter"></i>
+      <i class="fa fa-google-plus"></i>
+    </section>
+  </div>
+</article>
 
 <style>
 body{

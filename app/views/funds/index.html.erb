@@ -1,26 +1,22 @@
 <div class="page-head">
-        <h3 class="content__heading">Funding</h3>
+  <h3 class="content__heading">Funding</h3>
+</div>
+
+<% @funds.each do |fund| %>
+  <div class="l-events">
+    <div class="l-event">
+      <div class="event-info">
+        <div class="event-date">
+          <h3></h3>
+          <p><%= fund.type %></p>
+        </div>
+        <div class="event-blurb">
+          <h4><a href="http://<%=fund.ext_url%>"><%= fund.title %></a></h4>
+          <small><%= fund.source %>, <%= fund.location %></small>
+          <small>Expires: <%= fund.deadline.strftime("%e %b %Y") %></small>
+          <p></p>
+        </div>
       </div>
-
-
-         <% @funds.each do |fund| %>
-
-        <div class="l-events">
-          <div class="l-event">
-            <div class="event-info">
-              <div class="event-date">
-                <h3></h3>
-                <p><%= fund.type %></p>
-              </div><!--
-              --><div class="event-blurb">
-                <h4><a href="http://<%=fund.ext_url%>"><%= fund.title %></a></h4>
-                <small><%= fund.source %>, <%= fund.location %></small>
-                <small>Expires: <%= fund.deadline.strftime("%e %b %Y") %></small>
-                <p></p>
-              </div>
-            </div>
-          </div>
-
-
-
-        <% end %>
+    </div>
+  </div>
+<% end %>
