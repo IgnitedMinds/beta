@@ -12,7 +12,7 @@
         </div>
         <img src="<%= @article.body1.url %>" class="article-post__img" alt="">
         <div class="article-post__content">
-          
+
           <p><%= @article.content2 %></p>
           <section class="post-social">
             <i class="fa fa-facebook"></i>
@@ -22,21 +22,12 @@
         </div>
       </article>
 
-
-
-<br />
-<br />
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
-
 <style>
 body{
-  background: url(<%= @article.background.url %>)no-repeat center center fixed; 
+  background: url(<%= @article.background.url %>)no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 </style>
-
