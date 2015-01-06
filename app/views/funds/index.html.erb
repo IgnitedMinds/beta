@@ -1,63 +1,22 @@
 <div class="page-head">
-        <h3 class="content__heading">Funding</h3>
+  <h3 class="content__heading">Funding</h3>
+</div>
+
+<% @funds.each do |fund| %>
+  <div class="l-events">
+    <div class="l-event">
+      <div class="event-info">
+        <div class="event-date">
+          <h3></h3>
+          <p><%= fund.type %></p>
+        </div>
+        <div class="event-blurb">
+          <h4><a href="http://<%=fund.ext_url%>"><%= fund.title %></a></h4>
+          <small><%= fund.source %>, <%= fund.location %></small>
+          <small>Expires: <%= fund.deadline.strftime("%e %b %Y") %></small>
+          <p></p>
+        </div>
       </div>
-
-
-         <% @funds.each do |fund| %>
-
-        <div class="l-events">
-          <div class="l-event">
-            <div class="event-info">
-              <div class="event-date">
-                <h3></h3>
-                <p><%= fund.type %></p>
-              </div><!--
-              --><div class="event-blurb">
-                <h4><a href="http://<%=fund.ext_url%>"><%= fund.title %></a></h4>
-                <small><%= fund.source %>, <%= fund.location %></small>
-                <small>Expires: <%= fund.deadline.strftime("%e %b %Y") %></small>
-                <p></p>
-              </div>
-            </div>
-          </div>
-
-
-
-        <% end %>
-
-<% if @user_admin = false %>
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Source</th>
-      <th>Type</th>
-      <th>Age range</th>
-      <th>Deadline</th>
-      <th>Location</th>
-      <th>External URL</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @funds.each do |fund| %>
-      <tr>
-        <td><%= fund.title %></td>
-        <td><%= fund.source %></td>
-        <td><%= fund.type %></td>
-        <td><%= fund.age_range %></td>
-        <td><%= fund.deadline %></td>
-        <td><%= fund.location %></td>
-        <td><%= fund.ext_url %></td>
-        <td><%= link_to 'Show', fund %></td>
-        <td><%= link_to 'Edit', edit_fund_path(fund) %></td>
-        <td><%= link_to 'Destroy', fund, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
+    </div>
+  </div>
 <% end %>
