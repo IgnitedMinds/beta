@@ -13,11 +13,11 @@ ActiveAdmin.register Article do
   #   permitted << :other if resource.something?
   #   permitted
   # end
-  permit_params :user, :name, :content, :content2, :description, :cta_button, :background, :thumbnail, :header, :body1
+  permit_params :user_id, :name, :content, :content2, :description, :cta_button, :background, :thumbnail, :header, :body1
 
   form html: {multipart: true} do |f|
     f.inputs "Article" do
-      f.input :user
+      f.input :user_id, label: "User", as: :select, collection: User.all.map { |u| [u.full_name, u.id] }
       f.input :name
       f.input :content
       f.input :content2
