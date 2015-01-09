@@ -20,6 +20,8 @@ scope :has_skill, ->(skill) { tagged_with(skill, on: :skill) }
 acts_as_taggable
 acts_as_taggable_on :skill, :location
 
+validates :username, uniqueness: true
+
 def avatar_url
 	avatar.url(:thumb)
 end

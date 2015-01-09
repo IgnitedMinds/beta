@@ -13,6 +13,6 @@ ActiveAdmin.register Fund do
   #   permitted << :other if resource.something?
   #   permitted
   # end
-
+  permit_params :title, :source, :type, :age_range, :deadline, :location, :ext_url
 
 end

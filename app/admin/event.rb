@@ -13,6 +13,6 @@ ActiveAdmin.register Event do
   #   permitted << :other if resource.something?
   #   permitted
   # end
-
+  permit_params :title, :location, :venue, :date_time, :description, :ext_url
 
 end
