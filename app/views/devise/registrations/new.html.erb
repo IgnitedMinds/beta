@@ -420,7 +420,7 @@
   </div>
 
   <div><%= f.label :date_of_birth %><br />
-        <%= f.date_select :date_of_birth %></div><br />
+        <%= f.date_select :date_of_birth, start_year: 1960, end_year: Time.now.year %></div><br />
 
  <div class="field">
   <%= f.label :location_list, "Location" %><br />
