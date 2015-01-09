@@ -8,12 +8,12 @@
         </div>
         <div class="article-post__content">
           <h1><%= @article.description %></h1>
-          <p><%= @article.content %></p>
+          <p><%= @article.content.html_safe %></p>
         </div>
         <img src="<%= @article.body1.url %>" class="article-post__img" alt="">
         <div class="article-post__content">
 
-          <p><%= @article.content2 %></p>
+          <p><%= @article.content2.html_safe %></p>
           <section class="post-social">
             <i class="fa fa-facebook"></i>
             <i class="fa fa-twitter"></i>

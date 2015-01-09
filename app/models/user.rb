@@ -17,10 +17,12 @@ has_many :articles
 scope :by_name, ->(name) { where("lower(first_name) LIKE lower(?) or lower(last_name) LIKE lower(?) or lower(first_name || ' ' || last_name) LIKE lower(?)", name, name, name)}
 scope :has_skill, ->(skill) { tagged_with(skill, on: :skill) }
 
+scope :by_skill_or_location, ->(thing) {tagged_with(thing)}
+
 acts_as_taggable
 acts_as_taggable_on :skill, :location
 
-validates :username, uniqueness: true
+
 
 def avatar_url
 	avatar.url(:thumb)

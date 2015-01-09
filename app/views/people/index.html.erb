@@ -4,9 +4,8 @@
     --><aside class="nav nav--search">
 
     <%= form_tag people_path, class: 'search-bar', method: :get do |f| %>
-    <%= text_field_tag :by_name, params[:by_name], :placeholder => 'Search for names or skills...' %>
+    <%= text_field_tag :by_skill_or_location, params[:by_skill_or_location], :placeholder => 'Search for locations or skills...' %>
     <button class="btn btn--search"><span class="icon-search"></span></button>
-    <%= hidden_field_tag :has_skill, params[:has_skill] %>
     <% end %>
 
   </aside>

@@ -3,4 +3,5 @@ class PeopleController < InheritedResources::Base
   actions :index
   has_scope :by_name
   has_scope :has_skill
+  has_scope :by_skill_or_location
 end
