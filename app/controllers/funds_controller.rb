@@ -1,4 +1,5 @@
-class FundsController < InheritedResources::Base
+class FundsController < AuthController
+  inherit_resources
   actions :index, :show, :edit, :update, :destroy
 
   http_basic_authenticate_with :name => "lewis", :password => "password", only: :new

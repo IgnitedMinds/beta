@@ -10,6 +10,8 @@ validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 has_attached_file :backgroundimg, :default_url => "http://www.ignitedminds.co.uk/images/profile-bg.jpg"
 validates_attachment_content_type :backgroundimg, :content_type => /\Aimage\/.*\Z/
 
+validates :user_name, uniqueness: true, presence: true
+
 has_many :posts
 has_many :comments
 has_many :articles

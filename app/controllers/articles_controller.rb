@@ -1,4 +1,5 @@
-class ArticlesController < InheritedResources::Base
+class ArticlesController < AuthController
+  inherit_resources
   actions :index, :show
   has_scope :has_tag
 

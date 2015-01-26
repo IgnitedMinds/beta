@@ -16,6 +16,8 @@ validates_attachment_content_type :header, :content_type => /\Aimage\/.*\Z/
 has_attached_file :body1, :styles => { :full => "1200x650" }
 validates_attachment_content_type :body1, :content_type => /\Aimage\/.*\Z/
 
+default_scope {order('created_at DESC')}
+
 private
 
 # Use strong_parameters for attribute whitelisting

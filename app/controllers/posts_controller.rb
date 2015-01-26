@@ -1,4 +1,5 @@
-class PostsController < InheritedResources::Base
+class PostsController < AuthController
+  inherit_resources
   load_and_authorize_resource :post
 
   def create

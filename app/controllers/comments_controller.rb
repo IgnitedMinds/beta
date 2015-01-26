@@ -1,16 +1,16 @@
 class CommentsController < ApplicationController
-        
+
         def comment_params
 		  params.require(:comment).permit(
-		  	:comment, 
+		  	:comment,
 		  	:user_id,
 		  	:body,
 		  	:content,
-		  	:post,	
+		  	:post,
 		  	)
 		end
-		
-		
+
+
  		def create
                 @post = Post.find(params[:post_id])
                 @comment = @post.comments.create(comment_params)
@@ -18,7 +18,7 @@ class CommentsController < ApplicationController
         end
 
 		def destroy
-			@comment.destroy
+			Comment.find(params[:id]).destroy
 			respond_to do |format|
 			  format.html { redirect_to :back }
 			  format.json { head :no_content }
