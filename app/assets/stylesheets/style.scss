@@ -70,7 +70,7 @@ font-style:normal
 }
 
 .navbar .navbar-nav li a{
-    
+
     color:rgba(255,255,255,.6);
     font-weight: 400;
     font-size: 13px;
@@ -112,21 +112,21 @@ font-style:normal
     .collapse ul li{
         padding-bottom: 14px;
     }
-    
+
     .navbar-toggle{
         border:none;
     }
-    
+
     .navbar-toggle:hover{
         background-color: transparent;
     }
-    
+
     .navbar{
     background-color:#2C2E2F;
     margin-top:0px;
     border-color: #424242;
    }
-    
+
 }
 
 .btn-signup{
@@ -147,12 +147,12 @@ font-style:normal
 .header-home{
     height:630px;
     background:
-        url(/img/header.jpg);
+        image-path('header.jpg');
     background-size: cover;
     position: relative;
     margin-top: -130px;
-    
-    
+
+
 }
 
 .header-home h1{
@@ -161,7 +161,7 @@ font-style:normal
     font-size: 29px;
     text-align: center;
     padding-top: 230px;
-   
+
 }
 
 .header-home h3{
@@ -250,7 +250,7 @@ Video
  background:linear-gradient(
         rgba(38,40,43,.9),
         rgba(38,40,43,.95));
-min-height: 630px; 
+min-height: 630px;
 
     position: absolutea;
 /* Incase of overlay problems just increase the min-height*/
@@ -288,7 +288,7 @@ opacity: 1!important;
     .btn-mobile{
         display: block!important;
     }
-    
+
     .btn-desktop{
         display: none!important;
     }
@@ -390,22 +390,22 @@ opacity: 1!important;
 }
 
 #forms :-moz-placeholder { /* Firefox 18- */
-   color: #fff;  
+   color: #fff;
 }
 
 #forms ::-moz-placeholder {  /* Firefox 19+ */
-   color: #fff;  
+   color: #fff;
 }
 
-#forms:-ms-input-placeholder {  
-   color: #fff;  
+#forms:-ms-input-placeholder {
+   color: #fff;
 }
 
 @media(max-width:998px){
     #forms{
         display: none;
     }
-    
+
     .refresh{
         display: block;
     }
@@ -516,14 +516,14 @@ display: inline-block;
     background: white;
     cursor: inherit;
     display: block;
-    
+
 }
 
 #blah{
       border-radius:50%;
     width:80px;
     height:80px;
-    background-image: url(/img/man.png);
+    background-image: image-url('man.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -611,7 +611,7 @@ fieldset[disabled] .btn-skill.active {
 
 body{
     background-color: #edeff0 ;
-    
+
 }
 
 .main-container{
@@ -634,7 +634,7 @@ padding-top: 80px;
     height:80px;
     background-color:#000;
     position: absolute;
- 
+
 }
 
 .live-example i{
@@ -652,7 +652,7 @@ padding-top: 80px;
         text-align: center;
         padding:20px;
     }
-    
+
     .icon-btns{
         padding:30px;
         text-align: center;
@@ -669,17 +669,17 @@ padding-top: 80px;
 }
 
 .i-header-one{
-    background-image: url(/img/i-one.jpg);
+    background-image: image-url('i-one.jpg');
     background-size: cover;
 }
 
 .i-header-two{
-    background-image: url(/img/im.jpg);
+    background-image: image-url('im.jpg');
     background-size: cover;
 }
 
 .i-header-three{
-    background-image: url(/img/ten.jpg);
+    background-image: image-url('ten.jpg');
     background-size: cover;
 }
 
@@ -739,7 +739,7 @@ padding-top: 80px;
     background: linear-gradient(
         rgba(0,0,0, .7),
         rgba(0, 0, 0, .7)
-    ), url(/img/stories.jpg);
+    ), image-url('stories.jpg');
     background-size: cover;
     color:#fff;
 }
@@ -763,7 +763,7 @@ footer{
     background-color:#fff;
     min-height:190px;
 }
- 
+
 }
 
 footer ul{
@@ -849,7 +849,7 @@ About
      background:linear-gradient(
         rgba(0,0,0,.5),
         rgba(0,0,0,.8)
-     ),url(/img/background.jpg);
+     ),image-url('background.jpg');
     background-size: cover;
     position: relative;
 }
@@ -870,7 +870,7 @@ About
 .about-intro h3{
     padding-bottom: 15px;
     font-size: 21px;
-    
+
 }
 
 .about-intro p{
@@ -897,7 +897,7 @@ About
     overflow: hidden;
     position: relative;
     margin-bottom: 15px;
-    
+
 }
 
 .team .member img{
@@ -943,7 +943,7 @@ About
     padding: 10px 30px;
     background-color: #1E79ED ;
     color:#fff;
-   
+
     transition: .2s;
 }
 
@@ -1001,26 +1001,26 @@ Blog
 }
 
 .post-one{
-    background-image: url(/img/dj.jpg);
+    background-image: image-url('dj.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .post-two{
-    background-image: url(/img/dundee-waterfront.jpg);
+    background-image: image-url('dundee-waterfront.jpg');
     background-size: cover;
     background-position: center;
 }
 
 
 .post-three{
-    background-image: url(/img/melrose.jpg);
+    background-image: image-url('melrose.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .post-four{
-    background-image: url(/img/people.JPG);
+    background-image: image-url('people.JPG');
     background-size: cover;
     background-position: bottom;
 }
@@ -1057,7 +1057,7 @@ Blog
     transition: .2s;
     font-weight: 500;
     font-size: 13px;
-    
+
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -1135,7 +1135,7 @@ Careers
      background:linear-gradient(
         rgba(0,0,0,.3),
         rgba(0,0,0,.6)
-     ),url(/img/team.jpg);
+     ),image-url('team.jpg');
     background-size: cover;
     position: relative;
 }
@@ -1240,7 +1240,7 @@ Blog Post Styles
     background-image: linear-gradient(
         rgba(0,0,0,.4),
         rgba(0,0,0,.4)
-    ), url(/img/people.jpg);
+    ), image-url('people.jpg');
     background-size: cover;
     background-position: center;
     color:#fff;
@@ -1406,21 +1406,21 @@ small{
 
 .single-other-post-header{
     height:170px;
-    background-image: url(/img/melrose.jpg);
+    background-image: image-url('melrose.jpg');
     background-size: cover;
     border-radius: 4px;
 }
 
 .single-other-post-header.two{
     height:170px;
-    background-image: url(/img/dundee-waterfront.jpg);
+    background-image: image-url('dundee-waterfront.jpg');
     background-size: cover;
     border-radius: 4px;
 }
 
 .single-other-post-header.three{
     height:170px;
-    background-image: url(/img/header.jpg);
+    background-image: image-url('header.jpg');
     background-size: cover;
     border-radius: 4px;
 }
@@ -1494,7 +1494,7 @@ min-height: 400px;
     background:linear-gradient(
         rgba(66,66,66,.9),
         rgba(66,66,66,.93)
-    ),url(/img/background-blur.jpg);
+    ),image-url('background-blur.jpg');
     background-size: cover;
     border-radius: 4px 4px 0px 0px
 }
@@ -1525,7 +1525,7 @@ min-height: 400px;
     border:none;
     box-shadow: none;
     margin-top:15px;
-    background-color:#DCDCE2 
+    background-color:#DCDCE2
 }
 
 .l-modal .btn-submit{
@@ -1549,7 +1549,7 @@ FAQ
 .faq-intro h3{
     padding-bottom: 15px;
     font-size: 21px;
-    
+
 }
 
 .faq-intro p{
@@ -1602,7 +1602,7 @@ Sponsorship
      background:linear-gradient(
         rgba(0,0,0,.3),
         rgba(0,0,0,.6)
-     ),url(/img/girl2.jpg);
+     ),image-url('girl2.jpg');
     background-size: cover;
     position: relative;
 }
@@ -1627,7 +1627,7 @@ Sponsorship
     padding: 20px;
     margin-bottom: 20px;
     position: relative;
-    
+
 }
 
 .reward-content{
@@ -1678,7 +1678,7 @@ Sponsorship
     background:linear-gradient(
         rgba(0,0,0,.5),
         rgba(0,0,0,.5)
-    ), url(/img/934.jpeg);
+    ), image-url('934.jpeg');
     background-size: cover;
     background-position: center;
 }
@@ -1722,16 +1722,3 @@ Sponsorship
 .sponsor-main{
     padding-top:30px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

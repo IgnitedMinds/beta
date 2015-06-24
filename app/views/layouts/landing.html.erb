@@ -1,19 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Campfire // Jamie Halvorson">
-    
-      <title>Ignited Minds</title>
-	  <%= stylesheet_link_tag 'landing' %>
 
-        <script src="js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="createdbycampfire.com">
+  <title>Ignited Minds</title>
 
-    </head>
+  <!-- Stylesheets -->
+  <%= stylesheet_link_tag "landing" %>
+
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <%= javascript_tag "application" %>
+
+  <%= yield :head %>
+    <script>
+      $(document).ready(function() {
+
+        $(".player").mb_YTPlayer();
+
+      });
+
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function(e) {
+            $('#objectID').css('background', 'transparent url(' + e.target.result + ') left top no-repeat');
+          }
+
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+
+      $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+      });
+    </script>
+</head>
 
 <body>
-<%= yield %>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <%= image_tag 'logo.png' %>
+        </a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="">FAQ</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="#" class="btn btn-signup">Signup</a> </li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </nav>
+  <!-- content -->
+  <%= yield %>
+    <!-- /content -->
+    <div class="stories">
+      <h3>100's of incredible stories from around the world</h3>
+      <a class="get-started-btn btn" href="#">Get Started</a>
+    </div>
+
+    <footer>
+      <div class="col-md-4">
+        <h3 style="padding-left:30px;">© Ignited Minds 2015</h3>
+        <h4>Brought to you by <a href="#">Campfire</a></h4>
+      </div>
+      <div class="col-md-8">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li>Blog</li>
+          <li>FAQ</li>
+          <li>Login</li>
+          <li>Signup</li>
+
+        </ul>
+      </div>
+    </footer>
+    <%= yield :body_end %>
 </body>
 
+</html>
