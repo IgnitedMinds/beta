@@ -1,27 +1,57 @@
-<div class="page-head">
-        <h3 class="content__heading">Funding</h3>
-      </div>
+<div class="col-md-11 events-main" style="margin-top:30px;">
+<!--<div class="col-md-5 event-search">
+   <div class="input-group">
+     <input type="text" class="form-control" placeholder="Find an incredible event">
+     <span class="input-group-btn">
+       <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+     </span>
+   </div>
+ </div>-->
 
-      <div class="l-events">
- <div class="main__content">
-         <% @funds.each do |fund| %>
+  <div class="fund-filter">
 
+    <ul>
+      <li>Filter</li>
+      <li class="fund-filter_all">
+        <a href="#">Creative</a>
+      </li>
+      <li class="fund-filter_design">
+        <a href="#">Marketing</a>
+      </li>
+      <li class="fund-filter_business">
+        <a href="#">Business Dev</a>
+      </li>
+      <li class="fund-filter_social">
+        <a href="#">Grants</a>
+      </li>
+      <li class="fund-filter_events">
+        <a href="#">Loans</a>
+      </li>
+    </ul>
 
-          <div class="l-event">
-            <div class="event-info">
-              <div class="event-date">
-                <h3></h3>
-                <p><%= fund.type %></p>
-              </div><!--
-              --><div class="event-blurb">
-                <h4><a href="http://<%=fund.ext_url%>"><%= fund.title %></a></h4>
-                <small><%= fund.source %>, <%= fund.location %></small>
-                <small>Expires: <%= fund.deadline.strftime("%e %b %Y") %></small>
-                <p></p>
-              </div>
-            </div>
+  </div>
+  <div class="body-content funding-body">
+
+    <h3 style="padding-bottom:60px;padding-left:20px;">Funding</h3>
+
+    <div class="row">
+      <% @funds.each do |fund| %>
+      <div class="col-md-4">
+
+        <div class="single-fund fund-one">
+
+<!--  <div class="fund-type">Grant</div>-->
+          <div class="fund-header">
+            <h3><%= fund.title %></h3>
           </div>
 
-        <% end %>
+          <p class="fund-cite"><%= fund.source %>, <%= fund.location %></p>
+
+          <a class="bt btn-fund-apply" href="<%= fund.ext_url %>">Apply 4 $</a>
+
         </div>
- </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
