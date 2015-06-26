@@ -1,37 +1,37 @@
+<div class="col-md-5 event-search p-search">
+  <%= form_tag people_path, method: :get do |f| %>
+  <div class="input-group">
+    <%= text_field_tag :by_skill_or_location, params[:by_skill_or_location], :placeholder => 'Find incredible humans', class: 'form-control' %>
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="button">
+        <i class="fa fa-search"></i>
+      </button>
+    </span>
+  </div>
+  <% end %>
+<!-- /input-group -->
+</div>
+<!-- /.col-lg-6 -->
+<div class="body-content profile-main">
 
-  <div class="page-head">
-    <h3 class="content__heading">People</h3><!--
-    --><aside class="nav nav--search">
+  <h3 style="padding-left:20px;">People</h3>
+  <div class="" style="margin-top:50px;">
+    <% @users.each do |user| %>
+    <div class="col-md-4 col-sm-6">
 
-    <%= form_tag people_path, class: 'search-bar', method: :get do |f| %>
-    <%= text_field_tag :by_skill_or_location, params[:by_skill_or_location], :placeholder => 'Search for locations or skills...' %>
-    <button class="btn btn--search"><span class="icon-search"></span></button>
+      <a href="/<%= user.user_name %>">
+        <div class="user user_one">
+          <div class="profile-image">
+            <%= image_tag user.avatar_url, class: "user-avatar" %>
+          </div>
+          <div class="profile-body">
+            <h3><%= user.full_name %></h3>
+            <p><%= user.bio %></p>
+          </div>
+        </div>
+      </a>
+    </div>
     <% end %>
 
-  </aside>
-</div>
-<div class="main__content">
-  <div class="profiles">
-
-    <% @users.each do |user| %>
-    <div class="profile">
-      <div class="profile__info"
-          style="background-image: url('<%= user.backgroundimg.url %>'); width: 100%; background-size: 100%; 		background-color: #555; ">
-        <div class="profile__img">
-          <a href="/<%= user.user_name %>"><img src="<%= user.avatar_url %>" alt=""></a>
-        </div><!--
-        --><div class="profile__blurb">
-        <h1 class="people--name"><a href="/<%= user.user_name %>"><%= user.full_name %></a></h1>
-        <p><%= truncate(user.bio, :length => 150) %></p>
-      </div>
-    </div>
   </div>
-
-
-
-
-  <% end %>
-
-
-</div>
 </div>

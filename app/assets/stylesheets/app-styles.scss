@@ -206,7 +206,7 @@ Custom column for Inspiration
     .col-xxs-offset-11 {
         margin-left: 91.66666666666666%;
     }
-}    
+}
 
 
 .row{
@@ -217,7 +217,7 @@ Custom column for Inspiration
 .nav-sidebar{
     height: 100%;
     width:80px;
-    background-color:#2C2E2F; 
+    background-color:#2C2E2F;
     position: fixed;
     margin-left: -15px;
 }
@@ -244,7 +244,7 @@ Custom column for Inspiration
 .nav-sidebar-lower{
    position: absolute;
     bottom:0px;
-    
+
 }
 
 .nav-sidebar-lower img{
@@ -257,8 +257,8 @@ Custom column for Inspiration
     .nav-sidebar{
         display: none;
     }
-    
- 
+
+
 }
 
 .navbar-fixed-top{
@@ -403,7 +403,7 @@ border:none!important;
 .nav-sidebar-lower{
    position: absolute;
     bottom:0px;
-    
+
 }
 
 .nav-sidebar-lower img{
@@ -467,8 +467,8 @@ border:none!important;
         display: block!important;
         visibility: visible!important;
     }
-    
-   
+
+
 }
 
 /*---------------
@@ -481,36 +481,36 @@ Profile
     background:linear-gradient(
         rgba(0,0,0,.4),
         rgba(0,0,0,.8)
-    ), url(/img/background.jpg);
+    ), image-url('background.jpg');
     background-size: cover;
     background-position: center;
     text-align: center;
     color:#fff;
     position: relative;
-    
+
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    
+
     -webkit-flex-pack:center;
 	-webkit-justify-content:center;
 	-moz-justify-content:center;
 	-ms-flex-pack:center;
 	justify-content:center;
-    
+
     -webkit-flex-line-pack:center;
 	-ms-flex-line-pack:center;
 	-webkit-align-content:center;
 	align-content:center;
-    
+
     -webkit-flex-direction:column;
 	-moz-flex-direction:column;
 	-ms-flex-direction:column;
 	flex-direction:column;
-    
-    
+
+
 }
 
 @media(max-width:998px){
@@ -567,15 +567,15 @@ Profile
 }
 
 .hire-me-overlay :-moz-placeholder { /* Firefox 18- */
-   color: #fff;  
+   color: #fff;
 }
 
 .hire-me-overlay ::-moz-placeholder {  /* Firefox 19+ */
-   color: #fff;  
+   color: #fff;
 }
 
-.hire-me-overlay:-ms-input-placeholder {  
-   color: #fff;  
+.hire-me-overlay:-ms-input-placeholder {
+   color: #fff;
 }
 
 .hire-me-overlay textarea{
@@ -604,7 +604,7 @@ Profile
     .btn-hire{
         display: none;
     }
-    
+
     .hore-overlay{
         display: none;
     }
@@ -653,13 +653,13 @@ position: absolute;
 }
 
 @media(max-width:998px){
-    
+
     .profile-lower{
         padding-top: 20px;
         margin-right: 20px;
         margin-left: 20px;
     }
-    
+
     .ideas{
         margin-top:20px;
         margin-left: -15px;
@@ -740,7 +740,7 @@ position: absolute;
 }
 
 .mission-main{
-    
+
 }
 
 .body-content{
@@ -837,7 +837,7 @@ position: absolute;
     background:linear-gradient(
         rgba(0,0,0,.1),
         rgba(0,0,0,.1)
-    ), url(/img/big-issue.jpg);
+    ), image-url('big-issue.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 4px 4px 0px 0px;;
@@ -902,7 +902,7 @@ Events
     background:linear-gradient(
         rgba(0,0,0,.4),
         rgba(0,0,0,.8)
-    ), url(/img/background.jpg);
+    ), image-url('background.jpg');
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -954,7 +954,7 @@ Events
     right:40px;
     border:2px solid #fff;
     color:#fff;
-    font-size:12px; 
+    font-size:12px;
     padding:9px 15px;
     transition: .2s;
 }
@@ -971,37 +971,37 @@ Events
     background:linear-gradient(
         rgba(0,0,0,.4),
         rgba(0,0,0,.8)
-    ), url(/img/background.jpg);
+    ), image-url('background.jpg');
     background-size: cover;
     background-position: center;
     text-align: left;
     color:#fff;
     position: relative;
     margin-bottom:20px;
-    width:100%
-    
+    width:100%;
+
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    
+
     -webkit-flex-pack:center;
 	-webkit-justify-content:center;
 	-moz-justify-content:center;
 	-ms-flex-pack:center;
 	justify-content:center;
-    
+
     -webkit-flex-line-pack:center;
 	-ms-flex-line-pack:center;
 	-webkit-align-content:center;
 	align-content:center;
-    
+
     -webkit-flex-direction:column;
 	-moz-flex-direction:column;
 	-ms-flex-direction:column;
 	flex-direction:column;
- 
+
 }
 
 .sub-event-content{
@@ -1013,7 +1013,7 @@ position: absolute;
 .sub-event h2{
    font-size: 22px;
     font-weight: 500;
-    
+
 }
 
 .sub-event .btn-book {
@@ -1024,7 +1024,7 @@ position: absolute;
      background:linear-gradient(
         rgba(0,0,0,.1),
         rgba(0,0,0,.6)
-    ), url(/img/event-one.jpg);
+    ), image-url('event-one.jpg');
     background-size: cover;
 }
 
@@ -1032,7 +1032,7 @@ position: absolute;
      background:linear-gradient(
         rgba(0,0,0,.1),
         rgba(0,0,0,.6)
-    ), url(/img/934.jpeg);
+    ), image-url('934.jpeg');
     background-size: cover;
     background-position: center;
 }
@@ -1041,7 +1041,7 @@ position: absolute;
      background:linear-gradient(
         rgba(0,0,0,.1),
         rgba(0,0,0,.6)
-    ), url(/img/916.jpeg);
+    ), image-url('916.jpeg');
     background-size: cover;
     background-position: center;
 }
@@ -1050,7 +1050,7 @@ position: absolute;
      background:linear-gradient(
         rgba(0,0,0,.1),
         rgba(0,0,0,.6)
-    ), url(/img/885.jpeg);
+    ), image-url('885.jpe.');
     background-size: cover;
     background-position: center;
 }
@@ -1059,7 +1059,7 @@ position: absolute;
      background:linear-gradient(
         rgba(0,0,0,.1),
         rgba(0,0,0,.6)
-    ), url(/img/852.jpeg);
+    ), image-url('852.jpe.');
     background-size: cover;
     background-position: center;
 }
@@ -1068,7 +1068,7 @@ position: absolute;
      background:linear-gradient(
         rgba(0,0,0,.1),
         rgba(0,0,0,.6)
-    ), url(/img/car.jpg);
+    ), image-url('car.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -1077,7 +1077,7 @@ position: absolute;
      background:linear-gradient(
         rgba(0,0,0,.1),
         rgba(0,0,0,.6)
-    ), url(/img/business.jpg);
+    ), image-url('business.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -1086,7 +1086,7 @@ position: absolute;
      background:linear-gradient(
         rgba(0,0,0,.1),
         rgba(0,0,0,.6)
-    ), url(/img/pug.jpg);
+    ), image-url('pug.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -1139,7 +1139,7 @@ position: absolute;
     background:linear-gradient(
         rgba(0,0,0,.4),
         rgba(0,0,0,.8)
-    ), url(/img/background-blur.jpg);
+    ), image-url('background-blur.jpg');
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -1153,16 +1153,16 @@ position: absolute;
     .single-event-header{
         width:100%;
     }
-    
+
     .attending-main{
         margin-top:50px;
         margin-bottom: 20px;
     }
-    
+
     .single-event-header-content{
         margin-left: 0px!important;
     }
-    
+
     .single-event-header .date-header{
         -moz-transform: translate(-50%, -50%)!important;
     -ms-transform: translate(-50%, -50%)!important;
@@ -1170,7 +1170,7 @@ position: absolute;
     transform: translate(-50%, -50%)!important;
         bottom:70px;
     }
-    
+
     .single-event-header .btn-interested{
         left:50%;
       bottom:20px;
@@ -1205,7 +1205,7 @@ position: absolute;
 .single-event-header-content {
     margin-left: 50px;
     text-align: center;
- 
+
 }
 
 .date-header{
@@ -1239,7 +1239,7 @@ position: absolute;
     width:110px;
     border:2px solid #fff;
     color:#fff;
-    font-size:12px; 
+    font-size:12px;
     padding:9px 15px;
     transition: .2s;
 }
@@ -1255,7 +1255,7 @@ position: absolute;
     right:40px;
     border:2px solid #fff;
     color:#fff;
-    font-size:12px; 
+    font-size:12px;
     padding:9px 15px;
     transition: .2s;
     border-radius: 4px;
@@ -1343,9 +1343,9 @@ position: absolute;
 
 .attending-main {
     border-radius: 4px;
-  
+
     background-color:#fff;
-    border: 1px solid #e9e9e9; 
+    border: 1px solid #e9e9e9;
 }
 
 .attending-main_title h5{
@@ -1355,7 +1355,7 @@ position: absolute;
   color: #4d4d4d;
   padding: 16px;
     font-weight: 600
- 
+
 }
 
 .attending-main_title h6{
@@ -1395,7 +1395,7 @@ position: absolute;
     background-color:#fff;
     padding:20px 40px;
     border-radius: 4px;
-    border: 1px solid #e9e9e9; 
+    border: 1px solid #e9e9e9;
     margin-bottom: 20px;
 }
 
@@ -1425,28 +1425,28 @@ position: absolute;
     .event-header-content .attending{
         display: none;
     }
-    
+
     .event-header-content .going{
         display: none;
     }
-    
+
     .sub-event-content{
         top:20px;
     }
-    
+
     .sub-event{
         min-height: 230px;
     }
-    
+
     .event-search{
         margin-left: 80px;
         margin-top: 120px!important;
     }
-    
+
     .sub-event-content{
         padding-right: 30px;
     }
-    
+
     .sub-event .date-header{
     background-color: rgba(0,0,0,.15);
     border: 2px solid #fff;
@@ -1460,16 +1460,16 @@ position: absolute;
     left:30px;
     opacity: 1;
 }
-    
+
     .event-header-content{
         top:40px;
     }
-    
+
     .event-header{
         height: 330px;
         margin-top: 20px;
     }
-    
+
     .event-header .date-header{
         left:30px;
         top:230px;
@@ -1490,7 +1490,7 @@ Missions
     background:linear-gradient(
         rgba(0,0,0,.4),
         rgba(0,0,0,.8)
-    ), url(/img/big-issue.jpg);
+    ), image-url('big-issue.jpg');
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -1530,11 +1530,11 @@ Missions
         margin-top:90px;
         padding-left: 15px;
     }
-    
+
     .mission-header{
         margin-top: 90px;
     }
-    
+
     .mission-search{
         width:100%;
         margin-left: -50px!important;
@@ -1552,25 +1552,25 @@ Missions
         margin-right: 20px;
         margin-left: 20px;
     }
-    
+
     .missions-main h3{
         margin-top:110px;
         margin-left: 20px;
     }
-    
+
     .missions-main ul{
         padding-right: 30px;
     }
-    
+
     .event-search{
         width:98%;
         margin-right: 20px;
         margin-left: 10px!important;
         margin-top: 20px;
     }
-    
-    
-    
+
+
+
     .main-missions{
     margin-left: 0px!important;
     margin-right: 0px!important;
@@ -1631,7 +1631,7 @@ Missions
     background:linear-gradient(
         rgba(0,0,0,.3),
         rgba(0,0,0,.3)
-    ), url(/img/background-blur.jpg);
+    ), image-url('background-blur.jpg');
     background-position: center;
     background-size: cover;
     border-radius: 4px 4px 0px 0px!important;
@@ -1647,11 +1647,11 @@ Missions
     color:#fff;
     box-shadow: none;
     margin-top:-43px;
-    
+
 }
 
 .modal .modal-content{
-    border-radius: 5px!important;   
+    border-radius: 5px!important;
 }
 
 .mission-modal .modal-body{
@@ -1664,15 +1664,15 @@ Missions
 }
 
 .mission-modal :-moz-placeholder { /* Firefox 18- */
-   color: #424242;  
+   color: #424242;
 }
 
 .mission-modal ::-moz-placeholder {  /* Firefox 19+ */
-   color: #424242;  
+   color: #424242;
 }
 
-.mission-modal :-ms-input-placeholder {  
-   color: #424242;  
+.mission-modal :-ms-input-placeholder {
+   color: #424242;
 }
 
 .mission-modal .radio{
@@ -1735,7 +1735,7 @@ Missions
     background:linear-gradient(
         rgba(0,0,0,.4),
         rgba(0,0,0,.8)
-    ), url(/img/background.jpg);
+    ), image-url('background.jpg');
     background-size: cover;
     background-position: center;
     text-align: left;
@@ -1743,34 +1743,34 @@ Missions
     position: relative;
     margin-bottom:20px;
     width:100%;
-    
+
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    
+
     -webkit-flex-pack:center;
 	-webkit-justify-content:center;
 	-moz-justify-content:center;
 	-ms-flex-pack:center;
 	justify-content:center;
-    
+
     -webkit-flex-line-pack:center;
 	-ms-flex-line-pack:center;
 	-webkit-align-content:center;
 	align-content:center;
-    
+
     -webkit-flex-direction:column;
 	-moz-flex-direction:column;
 	-ms-flex-direction:column;
 	flex-direction:column;
- 
+
 }
 
 .sub-mission-content{
 text-align: center;
-    
+
 }
 
 .sub-mission-content p{
@@ -1781,7 +1781,7 @@ text-align: center;
 .sub-mission h2{
    font-size: 22px;
     font-weight: 500;
-    
+
 }
 
 .p-missions{
@@ -1815,25 +1815,25 @@ text-align: center;
 }
 
 .p-mission-single.one{
-    background-image:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url(/img/852.jpeg);
+    background-image:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),image-url('852.jpe.');
     background-size: cover;
     border-radius: 4px;
 }
 
 .p-mission-single.two{
-    background-image:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url(/img/business.jpg);
+    background-image:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),image-url('business.jpg');
     background-size: cover;
     border-radius: 4px;
 }
 
 .p-mission-single.three{
-    background-image:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url(/img/885.jpeg);
+    background-image:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),image-url('885.jpe.');
     background-size: cover;
     border-radius: 4px;
 }
 
 .p-mission-single.four{
-    background-image:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url(/img/pug.jpg);
+    background-image:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),image-url('pug.jpg');
     background-size: cover;
     border-radius: 4px;
 }
@@ -1881,7 +1881,7 @@ text-align: center;
      background:linear-gradient(
         rgba(0,0,0,.1),
         rgba(0,0,0,.6)
-    ), url(/img/event-one.jpg);
+    ), image-url('event-one.jpg');
     background-size: cover;
 }
 
@@ -1910,7 +1910,7 @@ text-align: center;
     background:linear-gradient(
         rgba(0,0,0,.4),
         rgba(0,0,0,.8)
-    ), url(/img/background-blur.jpg);
+    ), image-url('background-blur.jpg');
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -1949,12 +1949,12 @@ text-align: center;
     .single-mission-header{
         width:100%;
     }
-    
+
     .single-mission-header-content {
     margin-left: 0px;
     text-align: center;
     }
-    
+
     .mission-body-mobile{
         margin-top:50px;
     }
@@ -1990,7 +1990,7 @@ text-align: center;
 .team-info{
     font-size: 12px;
     font-weight: 600;
-    
+
 }
 
 .btn-join-team{
@@ -2116,7 +2116,7 @@ Discussions
 .chat-box{
     border-radius: 4px;
     background-color: #fff;
-    width:48%;  
+    width:48%;
     margin-left: 1%;
     margin-right: 1%;
     margin-bottom: 2%;
@@ -2149,8 +2149,8 @@ Discussions
     margin-left: 25px;
     margin-bottom: 20px;
     border-radius: 4px;
-    margin-top:10px; 
- 
+    margin-top:10px;
+
 }
 
 #im-discussion[data-columns]::before {
@@ -2356,7 +2356,7 @@ Inspiration
 .inspiration-single-header{
     min-height: 300px;
     border-radius: 4px 4px 0px 0px;
-    background-image: url(/img/852.jpeg);
+    background-image: image-url('852.jpe.');
     background-size: cover;
     background-position: center;
 }
@@ -2414,7 +2414,7 @@ Inspiration
     .inspiration-single{
     padding: 0 1%;
     }
-    
+
     .inspiration-single-header{
         margin-top:90px;
     }
@@ -2465,8 +2465,8 @@ img.settings-profile{
     font-weight: 500;
     font-size: 13px;
     padding:9px 30px;
-    
-    
+
+
 }
 .btn-file-settings input[type=file] {
     position: absolute;
@@ -2538,7 +2538,7 @@ People
 .user{
     padding: 20px;
     border-radius: 4px;
-    background-image:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(/img/background.jpg);
+    background-image:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),image-url('background.jpg');
     color:#fff;
     position: relative;
     width:100%;
@@ -2575,7 +2575,7 @@ right:0px;
         margin-left: 0px;
         margin-right: 0px;
     }
-    
+
     .user{
         margin-bottom: 30px;
     }
@@ -2625,11 +2625,11 @@ Funding
         rgba(0,0,0,.3),
         rgba(0,0,0,.3)
     )
-        ,url(/img/background-blur.jpg);*/
+        ,image-url('background-blur.jpg');*/
     background-color:#fff ;
     background-size: cover;
     color:#999;
-   
+
 }
 
 .fund-header{
@@ -2638,7 +2638,7 @@ Funding
     border-radius: 4px 4px 0px 0px;
     background-color:#f0a161 ;
     color:#fff;
-    
+
 }
 
 .business-dev-fund-header{
@@ -2780,7 +2780,3 @@ Funding
 .fund-filter_all:before {
   content: "";
 }
-
-
-
-
