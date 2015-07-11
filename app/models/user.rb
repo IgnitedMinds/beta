@@ -15,6 +15,9 @@ class User < ActiveRecord::Base
   has_many :posts
   has_many :comments
   has_many :articles
+  has_many :ideas
+
+  accepts_nested_attributes_for :ideas
 
   scope :by_name, ->(name) { where("lower(first_name) LIKE lower(?) or lower(last_name) LIKE lower(?) or lower(first_name || ' ' || last_name) LIKE lower(?)", name, name, name)}
   scope :has_skill, ->(skill) { tagged_with(skill, on: :skill) }

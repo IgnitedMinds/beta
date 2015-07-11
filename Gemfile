@@ -23,6 +23,7 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'cancan'
 gem 'inherited_resources'
 gem 'has_scope'
+gem "nested_form"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'

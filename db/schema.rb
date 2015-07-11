@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141218172609) do
+ActiveRecord::Schema.define(version: 20150628140118) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -110,6 +110,17 @@ ActiveRecord::Schema.define(version: 20141218172609) do
     t.string   "ext_url"
   end
 
+  create_table "ideas", force: true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.string   "bio"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ideas", ["user_id"], name: "index_ideas_on_user_id"
+
   create_table "posts", force: true do |t|
     t.text     "content"
     t.string   "img_url"
@@ -173,6 +184,9 @@ ActiveRecord::Schema.define(version: 20141218172609) do
     t.string   "backgroundimg_content_type"
     t.integer  "backgroundimg_file_size"
     t.datetime "backgroundimg_updated_at"
+    t.string   "instagram"
+    t.string   "twitter"
+    t.string   "dribble"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
