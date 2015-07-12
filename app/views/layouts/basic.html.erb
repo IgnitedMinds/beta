@@ -1,149 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="createdbycampfire.com">
   <title>Ignited Minds</title>
-  <%= stylesheet_link_tag   'style' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+
+  <!-- Stylesheets -->
+  <%= stylesheet_link_tag "application" %>
+
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <%= javascript_include_tag "application" %>
+
+      <%= yield :head %>
+        <script>
+          $(document).ready(function() {
+
+            $(".player").mb_YTPlayer();
+
+          });
+
+          function readURL(input) {
+            if (input.files && input.files[0]) {
+              var reader = new FileReader();
+
+              reader.onload = function(e) {
+                $('#objectID').css('background', 'transparent url(' + e.target.result + ') left top no-repeat');
+              }
+
+              reader.readAsDataURL(input.files[0]);
+            }
+          }
+
+          $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+            event.preventDefault();
+            $(this).ekkoLightbox();
+          });
+        </script>
 </head>
-<body>
-<!doctype html>
-<html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <title>Ignited Minds</title>
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-
-    <link href="//ajax.googleapis.com" rel="dns-prefetch">
-    <link href="assets/css/style.min.css" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="assets/js/jquery.fancybox.js"></script>
-    <script src="assets/js/jquery.fancybox-media.js"></script>
-
-    <!-- TypeKit Fonts -->
-    <script type="text/javascript" src="//use.typekit.net/jww5dsd.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-    <script src="assets/components/modernizr.js"></script>
 
 
+<body class="app">
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body" style="float:left">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
 
-<% if user_signed_in? %>
-
-
-
-
-
-      	<nav class="nav--main" role="navigation">
-      <ul>
-        <li>
-          <a href="#">
-            <h1 class="logo">Logo</h1>
-          </a>
-        </li>
-        <li>
-          <a href="<%= articles_path %>">
-            <i class="icon-lightbulb <%= "is-active" if current_page?(articles_path) || current_page?(root_path) %>"></i>
-          </a>
-        </li>
-        <li>
-          <a href="<%= events_path %>">
-            <i class="icon-calendar <%= "is-active" if current_page?(events_path) %>"></i>
-		  </a>
-        </li>
-        <li>
-          <a href="<%= funds_path %>">
-            <i class="icon-pound <%= "is-active" if current_page?(funds_path) %>"></i>
-          </a>
-        </li>
-        <li>
-          <a href="<%= people_path %>">
-            <i class="icon-person <%= "is-active" if current_page?(people_path) %>"></i>
-          </a>
-        </li>
-        <li>
-          <a href="<%= posts_path %>">
-            <i class="fa fa-comment-o <%= "is-active" if current_page?(posts_path) %>"></i>
-          </a>
-        </li>
-        <li class="nav--main__profile-cont">
-          <a href="/<%= current_user.user_name %>">
-            <img src="<%= current_user.avatar_url %>" alt="" class="nav--main__profile">
-          </a>
-        </li>
-      </ul>
-    </nav>
-
-
-      <div class="top-bar">
-        <a href="#" class="menu-link menu-link--light"><i class="fa fa-bars"></i> Menu</a>
+        </button>
       </div>
 
 
-<% end %>
-
-
-
-<div class="main">
-<%= yield %>
-</div>
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-
-
-  <footer>
-      <nav class="nav nav--footer">
-        <ul>
-          <li>&copy; Ignited Minds</li>
+      <div class="btn-group settings-buttons">
+        <button type="button" class="btn btn-settings dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+          <i class="fa fa-cog"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu" style="margin-left:-30px;">
+          <li><a href="app.settings.html">Settings</a></li>
           <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
-          <li><%= link_to "Settings", edit_user_registration_path %></li>
-          <li><a href="">About</a></li>
-          <li><a href="#">Terms &amp; Conditions</a></li>
+
         </ul>
-      </nav>
-    </footer>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="assets/components/jquery.js"><\/script>');</script>
-    <script src="assets/js/scripts.min.js"></script>
+      </div>
 
-    <script>
-    (function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
-    (f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
-    l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-XXXXXXXX-XX');
-    ga('send', 'pageview');
-    </script>
-
-    <script>
-      $(document).ready(function() {
-        $('body').addClass('js');
-
-        var $menu = $('.nav--main'),
-          $menulink = $('.menu-link'),
-          $wrap = $('.js-main');
-
-        $menulink.click(function() {
-          $menulink.toggleClass('active');
-          $wrap.toggleClass('active');
-          return false;
-        });
-      });
-    </script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $(".fancybox-media").fancybox();
-      });
-    </script>
+    </div>
+  </nav>
 
 
+  <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
 
-</head>
-<body class="js-main body--grey">
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="app.index.html">
+          <%= image_tag 'logo.png' %>
+        </a>
+      </li>
+      <li class=""><a href="<%= people_path %>"><i class="icon-person"></i> <span class="sr-only">(current)</span></a></li>
+      <li><a href="<%= articles_path %>"><i class="icon-lightbulb"></i></a></li>
+      <li><a href="<%= events_path %>"><i class="icon-calendar"></i></a></li>
+      <li><a href="<%= funds_path %>"><i class="icon-pound"></i></a></li>
+      <li><a href="app.missions.html"><i class="fa fa-rocket"></i></a></li>
+      <li><a href="<%= posts_path %>"><i class="fa fa-comment-o"></i></a></li>
+
+      <ul class="nav nav-sidebar-lower">
+        <li>
+          <a href="app.profile.html">
+            <%= image_tag current_user.avatar.url %>
+          </a>
+        </li>
+      </ul>
+
+    </ul>
+  </nav>
+
+
+  <div class="row">
+    <div class="col-sm-2 col-md-1 sidebar">
+      <ul class="nav nav-sidebar">
+        <li>
+          <a href="#">
+            <%= image_tag 'logo.png' %>
+          </a>
+        </li>
+        <li class=""><a href="<%= people_path %>" data-toggle="tooltip" class="tip-right" data-original-title="People" class="nav-tooltip"><i class="icon-person"></i> <span class="sr-only">(current)</span></a></li>
+        <li><a href="<%= articles_path %>" data-toggle="tooltip" class="tip-right" data-original-title="Inspiration"><i class="icon-lightbulb"></i></a></li>
+        <li><a href="<%= events_path %>" data-toggle="tooltip" class="tip-right" data-original-title="Events"><i class="icon-calendar"></i></a></li>
+        <li><a href="<%= funds_path %>" data-toggle="tooltip" class="tip-right" data-original-title="Funding"><i class="icon-pound"></i></a></li>
+        <li><a href="app.missions.html" data-toggle="tooltip" class="tip-right" data-original-title="Missions"><i class="fa fa-rocket"></i></a></li>
+        <li><a href="<%= posts_path %>" data-toggle="tooltip" class="tip-right" data-original-title="Discussions"><i class="fa fa-comment-o"></i></a></li>
+
+        <ul class="nav nav-sidebar-lower">
+          <li>
+            <a href="/<%= current_user.user_name %>">
+              <%= image_tag current_user.avatar.url %>
+            </a>
+          </li>
+        </ul>
+
+      </ul>
+    </div>
+
+    <div class="col-md-11 body-content">
+      <!-- content -->
+      <%= yield %>
+      <!-- /content -->
+    </div>
+  </div>
+  <%= yield :body_end %>
+</body>
 
 </html>

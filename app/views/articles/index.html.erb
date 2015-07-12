@@ -1,39 +1,27 @@
-
-
-
-         <div class="page-head">
-        <h3 class="content__heading">Inspiration</h3><!--
-        --><nav class="nav nav--filter">
-          <ul>
-            <li><a href="">Filter:</a></li>
-            <li class="nav--filter__all"><%= link_to 'All', articles_path %></li>
-            <li class="nav--filter__design"><%= link_to 'Design', articles_path(has_tag: "design") %></li>
-            <li class="nav--filter__web"><%= link_to 'Web', articles_path(has_tag: "web") %></li>
-            <li class="nav--filter__business"><%= link_to 'Business', articles_path(has_tag: "business") %></li>
-            <li class="nav--filter__social"><%= link_to 'Social', articles_path(has_tag: "social") %></li>
-            <li class="nav--filter__events"><%= link_to 'Events', articles_path(has_tag: "events") %></li>
-          </ul>
-        </nav>
-      </div>
-
-<div class="main__content">
-
-
-
-
+<div class="inspiration">
+  <div class="row">
+    <div class="inspiration-filter">
+      <ul>
+        <li>Filter</li>
+        <li class="inspiration-filter_all"><a href="#">All</a></li>
+        <li class="inspiration-filter_design"><a href="#">Design</a></li>
+        <li class="inspiration-filter_business"><a href="#">Business</a></li>
+        <li class="inspiration-filter_social"><a href="#">Social</a></li>
+        <li class="inspiration-filter_events"><a href="#">Events</a></li>
+      </ul>
+    </div>
+  </div>
   <% @articles.each do |article| %>
-  		<div class="l-article">
-          <h5 class="ribbon ribbon--<%=article.tag%>"><%= article.tag %></h5>
-          <div class="article-img">
-            <img src="<%= article.thumbnail.url(:thumb) %>" alt="">
-          </div>
-          <article class="article-content">
-            <h1 class="h6"><%= article.name %></h1>
-            <p><%= truncate( article.description , length: 180, separator: ' ') %></p>
-            <%= link_to article.cta_button, article, class: "btn btn--primary" %>
-          </article>
-        </div>
-	<% end %>
+  <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3">
+    <div class="inspiration-header i-header-one">
+      <h5 class="ribbon ribbon--business"><%= article.tag %></h5>
+    </div>
 
-
- </div>
+    <div class="inspiration-body">
+      <h4><%= article.name %></h4>
+      <%= truncate( article.description , length: 180, separator: ' ') %>
+      <%= link_to article.cta_button, article, class: "btn btn-inspiration" %>
+    </div>
+  </div>
+  <% end %>
+</div>

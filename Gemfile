@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby "2.0.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
@@ -23,6 +22,7 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'cancan'
 gem 'inherited_resources'
 gem 'has_scope'
+gem "nested_form"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -45,6 +45,11 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+gem 'capistrano'
+gem 'capistrano-rails'
+gem 'capistrano-rvm'
+gem 'capistrano-sidekiq'
+gem 'puma'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

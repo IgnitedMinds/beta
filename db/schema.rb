@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141218172609) do
+ActiveRecord::Schema.define(version: 20150711165750) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -110,10 +110,32 @@ ActiveRecord::Schema.define(version: 20141218172609) do
     t.string   "ext_url"
   end
 
-  create_table "people", force: true do |t|
+  create_table "ideas", force: true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.string   "bio"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "ideas", ["user_id"], name: "index_ideas_on_user_id"
+
+  create_table "missions", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.boolean  "private"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "missions_users", id: false, force: true do |t|
+    t.integer "mission_id", null: false
+    t.integer "user_id",    null: false
+  end
+
+  add_index "missions_users", ["mission_id"], name: "index_missions_users_on_mission_id"
+  add_index "missions_users", ["user_id"], name: "index_missions_users_on_user_id"
 
   create_table "posts", force: true do |t|
     t.text     "content"
@@ -174,34 +196,13 @@ ActiveRecord::Schema.define(version: 20141218172609) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-    t.string   "thumbnail_file_name"
-    t.string   "thumbnail_content_type"
-    t.integer  "thumbnail_file_size"
-    t.datetime "thumbnail_updated_at"
-    t.string   "header_file_name"
-    t.string   "header_content_type"
-    t.integer  "header_file_size"
-    t.datetime "header_updated_at"
-    t.string   "body1_file_name"
-    t.string   "body1_content_type"
-    t.integer  "body1_file_size"
-    t.datetime "body1_updated_at"
-    t.string   "body2_file_name"
-    t.string   "body2_content_type"
-    t.integer  "body2_file_size"
-    t.datetime "body2_updated_at"
-    t.string   "body3_file_name"
-    t.string   "body3_content_type"
-    t.integer  "body3_file_size"
-    t.datetime "body3_updated_at"
-    t.string   "background_file_name"
-    t.string   "background_content_type"
-    t.integer  "background_file_size"
-    t.datetime "background_updated_at"
     t.string   "backgroundimg_file_name"
     t.string   "backgroundimg_content_type"
     t.integer  "backgroundimg_file_size"
     t.datetime "backgroundimg_updated_at"
+    t.string   "instagram"
+    t.string   "twitter"
+    t.string   "dribble"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

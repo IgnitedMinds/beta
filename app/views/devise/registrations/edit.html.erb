@@ -1,85 +1,181 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="col-md-6">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
+  <h3>General Settings</h3>
 
+  <%= nested_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: "form-horizontal settings-form" }) do |f| %>
+    <div class="settings-form"
+    <fieldset>
 
-  <div><%= f.label :first_name %><br />
-  	<%= f.text_field :first_name %>
+<!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-3 col-xs-2 control-label" for="textinput">First Name</label>
+        <div class="col-md-9 col-xs-10">
+          <%= f.text_field :first_name, class: "form-control input-md" %>
+        </div>
+      </div>
+
+<!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-3 col-xs-2 control-label" for="textinput">Last Name</label>
+        <div class="col-md-9 col-xs-10">
+          <%= f.text_field :last_name, class: "form-control input-md" %>
+        </div>
+      </div>
+
+<!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-3 col-xs-2 control-label" for="textinput">Username</label>
+        <div class="col-md-9 col-xs-10">
+          <%= f.text_field :user_name, class: "form-control input-md" %>
+        </div>
+      </div>
+
+<!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-3 col-xs-2 control-label" for="textinput">Email Address</label>
+        <div class="col-md-9 col-xs-10">
+          <%= f.text_field :email, class: "form-control input-md" %>
+        </div>
+      </div>
+
+<!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-3 col-xs-2 control-label" for="textinput">Location</label>
+        <div class="col-md-9 col-xs-10">
+          <%= f.select :location_list, options_for_select(
+          				%w[Edinburgh Perth Aberdeen Dundee Glasgow Inverness Stirling]) %>
+        </div>
+      </div>
+
+<!-- Textarea -->
+      <div class="form-group">
+        <label class="col-md-3 col-xs-2 control-label" for="textarea">Bio</label>
+        <div class="col-md-9 col-xs-10">
+          <%= f.text_area :bio, class: "form-control input-md" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-3 col-xs-2 control-label" for="textinput">Skills</label>
+        <div class="col-md-9 col-xs-10">
+          <%= f.text_field :skill_list, class: "form-control input-md" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-3 col-xs-2 control-label" for="textinput">Current Password</label>
+        <div class="col-md-9 col-xs-10">
+          <%= f.password_field :current_password, class: "form-control input-md" %>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  <div class="settings-form">
+    <fieldset>
+      <h3>Your Ideas / Organisations</h3>
+
+      <p>Tell us what you're involved in, this could be your own idea or an organisation that you work with.</p>
+      <%= f.fields_for :ideas do |idea_form| %>
+
+      <div class="form-group">
+        <label class="col-md-3 col-xs-2 control-label" for="textinput">Name</label>
+        <div class="col-md-9 col-xs-10">
+          <%= idea_form.text_field :name, class: "form-control input-md" %>
+        </div>
+      </div>
+
+<!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-3 col-xs-2 control-label" for="textinput">URL</label>
+        <div class="col-md-9 col-xs-10">
+          <%= idea_form.text_field :url, class: "form-control input-md" %>
+        </div>
+      </div>
+
+<!-- Textarea -->
+      <div class="form-group">
+        <label class="col-md-3 col-xs-2 control-label" for="textarea">Bio</label>
+        <div class="col-md-9 col-xs-10">
+          <%= idea_form.text_area :bio, class: "form-control input-md" %>
+        </div>
+      </div>
+      <%= idea_form.link_to_remove "Remove this idea" %>
+      <% end %>
+      <%= f.link_to_add "Add an idea", :ideas %>
+    </fieldset>
   </div>
 
-  <div><%= f.label :last_name %><br />
-  	<%= f.text_field :last_name %>
+  <div class="settings-form">
+    <fieldset>
+      <h3>Social Links</h3>
+
+      <div class="form-group">
+        <label class="col-md-3 col-xs-2 control-label" for="textinput">
+          <i class="fa fa-instagram"></i>
+        </label>
+        <div class="col-md-9 col-xs-10">
+          <%= f.text_field :instagram, class: "form-control input-md" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-3 col-xs-2 control-label" for="textinput">
+          <i class="fa fa-twitter"></i>
+        </label>
+        <div class="col-md-9 col-xs-10">
+          <%= f.text_field :twitter, class: "form-control input-md" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-3 col-xs-2 control-label" for="textinput">
+          <i class="fa fa-dribbble"></i>
+        </label>
+        <div class="col-md-9 col-xs-10">
+          <%= f.text_field :dribble, class: "form-control input-md" %>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+</div>
+
+<div class="col-md-6" style="padding-left:40px;">
+
+  <h3 style="padding-left:20px;">Profile Photo &amp; Background</h3>
+  <div class="col-md-3">
+    <img class="settings-profile" src="/img/me.jpg">
+  </div>
+  <div class="col-md-9" style="margin-bottom:20px;">
+
+    <p class="settings-explain">Upload a new profile photo for your profile</p>
+
+    <span class="btn btn-default btn-file-settings">
+      Upload Photo
+
+    </span>
   </div>
 
-  <div><%= f.label :user_name %><br />
-  	<%= f.text_field :user_name %>
+  <div class="row">
+    <hr/>
+    <div style="width: 100%; height: 200px; background-image: url(/img/background.jpg); background-repeat: no-repeat; background-size:cover; border-radius:4px; background-position:center; margin-top:30px;text-align:center">
+      <span class="btn btn-default btn-file-settings" style="margin-top:80px;">
+        Upload Background Photo
+
+      </span>
+    </div>
+
   </div>
 
-  <div>
-  <%= f.radio_button :its_female, 'female', :checked => true %>
-  <%= label :its_female, 'Female' %>
-  <%= f.radio_button :its_female, 'male' %>
-  <%= label :its_female, 'Male' %>
-  </div>
+</div>
 
-  <div><%= f.label :date_of_birth %><br />
-        <%= f.date_select :date_of_birth %></div><br />
+<div class="actions">
+  <%= f.submit "Update" %>
+</div>
 
- <div class="field">
-  <%= f.label :location_list, "Location" %><br />
-  <%= f.select :location_list, options_for_select(
-  				%w[Edinburgh Perth Aberdeen Dundee Glasgow Inverness Stirling]) %>
-  </div>
-
-      <div><%= f.label :bio %><br />
-  	<%= f.text_field :bio %>
-  </div>
-
-  Avatar:<br/>
-   <%= f.file_field :avatar %>
-
-   Background:<br/>
-   <%= f.file_field :backgroundimg %>
-
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-  <%= f.label :skill_list, "Skills (separated by commas)" %><br />
-  <%= f.text_field :skill_list %>
-  </div>
-
-<br />
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
 <% end %>
 
 <h3>Cancel my account</h3>
 
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-<%= link_to "Back", :back %>
+
+
+</div>

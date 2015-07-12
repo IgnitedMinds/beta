@@ -1,70 +1,254 @@
-<div class="main__content content--profile">
-        <div class="profile-content">
-          <div class="profile__img--main">
-            <img src="<%= @user.avatar.url(:thumb) %>" alt="User Profile Image" class="profile">
+<div class="profile-header" style="background-image: url(<%= @user.backgroundimg.url %>);">
+
+  <div class="hire-me-overlay">
+
+    <form class="form-horizontal">
+      <fieldset>
+
+<!-- Text input-->
+        <div class="form-group">
+
+          <div class="col-md-6">
+
+            <input class="form-control input-md" id="textinput" name="textinput" placeholder="Name" type="text">
+
           </div>
-          <div class="profile__info--main">
-            <h1 class="profile__header type--light"><%= @user.first_name %> <%= @user.last_name %></h1>
-            <h2 class="h6 type--light"><i class="fa fa-map-marker"></i><%= @user.location_list %></h2>
-            <p class="profile__stub"><%= @user.bio %> </p>
-            <p class="profile__stub">Skills: <%= @user.skill_list %></p>
-            <% if can? :edit, @user %>
-            	<%= link_to "Edit Profile", edit_user_registration_path, :class => "btn btn--primary" %>
-            <% end %>
+
+          <div class="col-md-6">
+
+            <input class="form-control input-md" id="textinput" name="textinput" placeholder="Email Address" type="text">
+
+          </div>
+
+        </div>
+
+<!-- Textarea -->
+        <div class="form-group">
+
+          <div class="col-md-12">
+            <textarea class="form-control" id="textarea" name="textarea">Tell me about the project/job</textarea>
           </div>
         </div>
 
-<style>
-body {
-	background: url(<%= @user.backgroundimg.url %>) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+<!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="singlebutton"></label>
+          <div class="col-md-4">
+            <button class="btn btn-hire-send" id="singlebutton" name="singlebutton">Hire Me</button>
+          </div>
+        </div>
 
-</style>
+      </fieldset>
+    </form>
 
-<% if @user.admin = false %>
+  </div>
+<!-- Single button -->
+  <div class="btn-group settings-buttons settings-main">
+    <button aria-expanded="false" class="btn btn-settings dropdown-toggle" data-toggle="dropdown" type="button">
+      <i class="fa fa-cog"></i>
+    </button>
+    <ul class="dropdown-menu" role="menu" style="margin-left:-30px;">
+      <li>
+        <a href="app.settings.html">Settings</a>
+      </li>
+      <li>
+        <a href="#">Log Out</a>
+      </li>
 
-		<div>
+    </ul>
+  </div>
 
-				<h1>Profile</h1>
-				<p>Find me in app/views/profiles/show.html.erb</p>
+  <button class="btn btn-hire">
 
-				<h2>User_name</h2>
-				<%= @user.user_name %> <br />
-				<br />
-				<%= @user.first_name %>
-				<br />
-				<%= @user.last_name %>
-				<br />
-				<%= @user.email %>
-				<br />
-				<%= @user.encrypted_password %>
-				<br />
-				<%= @user.location %>
-				<br />
-				<%= @user.its_female %>
-				<br />
-				<%= @user.date_of_birth %>
-				<br />
-				<%= @user.bio %>
-				<br />
-				<%= image_tag @user.avatar.url %>
-				<br />
-				<%= @user.bg_url %>
-				<br />
-				- - - -
-				<br />
-				<strong>Avatar avatar_url</strong><br />
-				<img src="<%= @user.backgroundimg.url %> " height="50px">
+    <span class="hire">
+      Hire Me
+    </span >
+  </button>
 
-				<br /><strong>Background bg_url </strong><br />
-				<img src="<%= @user.bg_url %> " height="200px">
+  <%= image_tag @user.avatar.url, class: "profile-avatar" %>
 
-				<br />
+  <h3><%= @user.full_name %></h3>
 
-		</div>
+  <p><%= @user.bio %></p>
 
+  <div class="social">
 
-<% end %>
+    <i class="fa fa-instagram"></i>
+    <i class="fa fa-twitter"></i>
+    <i class="fa fa-dribbble"></i>
+
+  </div>
+
+</div>
+
+<div class="profile-lower">
+
+  <div class="col-md-6 events">
+
+    <h3>Events that Jamie is interested in</h3>
+
+    <div class="event">
+
+      <h4>Campfire Office Launch</h4>
+
+      <p class="date">1st July 2015</p>
+
+      <div class="with-others">
+
+        <img src="img/me.jpg">
+
+        <img src="img/me.jpg">
+
+        <img src="img/me.jpg">
+
+        <img src="img/me.jpg">
+
+        <p>
+          and 29 others are also going</p>
+
+      </div>
+
+    </div>
+
+    <div class="event">
+
+      <h4>Campfire Office Launch</h4>
+
+      <p class="date">1st July 2015</p>
+
+      <div class="with-others">
+
+        <img src="img/me.jpg">
+
+        <img src="img/me.jpg">
+
+        <img src="img/me.jpg">
+
+        <img src="img/me.jpg">
+
+        <p>
+          and 29 others are also going</p>
+
+      </div>
+
+    </div>
+
+    <div class="event">
+
+      <h4>Campfire Office Launch</h4>
+
+      <p class="date">1st July 2015</p>
+
+      <div class="with-others">
+
+        <img src="img/me.jpg">
+
+        <img src="img/me.jpg">
+
+        <img src="img/me.jpg">
+
+        <img src="img/me.jpg">
+
+        <p>
+          and 29 others are also going</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="col-md-6 ideas">
+
+    <div class="idea">
+
+      <p>Jamie runs two organisations - Campfire and Ignitd Minds.</p>
+
+      <h5>Ignited Minds</h5>
+
+      <p class="idea-explain">incididunt ubi velit eu summis probant veniam distinguantur ullamco despicationes non possumus vidisse efflorescere fore efflorescere iis qui aut consectetur</p>
+
+      <a class="btn btn-idea">Visit Ignited Minds</a>
+
+      <h5>Campfire</h5>
+
+      <p class="idea-explain">incididunt ubi velit eu summis probant veniam distinguantur ullamco despicationes non possumus vidisse efflorescere fore efflorescere iis qui aut consectetur</p>
+
+      <a class="btn btn-idea">Visit Ignited Minds</a>
+
+    </div>
+
+  </div>
+
+  <div class="col-md-12 missions">
+
+    <div class="mission-main">
+
+      <p>Missions allow our community to have a real-life impact on their communities. Jamie's part of the following missions:</p>
+
+      <div class="col-md-4">
+
+        <div class="im-mission-one">
+
+          <div class="mission-header-profile">
+            <span>Private Mission</span>
+          </div>
+
+          <div class="mission-body">
+
+            <h4>Campfire</h4>
+
+            <p>et imitarentur ut quorum tractavissent cernantur illum o fabulas transferrem vidisse nam se instituendarum varias</p>
+
+            <a class="btn-mission" href="app.example-mission.html">Learn More</a>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-4">
+
+        <div class="im-mission-one">
+
+          <div class="mission-header-profile"></div>
+
+          <div class="mission-body">
+
+            <h4>The Big Issue</h4>
+
+            <p>et imitarentur ut quorum tractavissent cernantur illum o fabulas transferrem vidisse nam se instituendarum varias</p>
+
+            <a class="btn-mission" href="app.example-mission.html">Learn More</a>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-4">
+
+        <div class="im-mission-one">
+
+          <div class="mission-header-profile"></div>
+
+          <div class="mission-body">
+
+            <h4>The Big Issue</h4>
+
+            <p>et imitarentur ut quorum tractavissent cernantur illum o fabulas transferrem vidisse nam se instituendarum varias</p>
+
+            <a class="btn-mission" href="app.example-mission.html">Learn More</a>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
